@@ -1,0 +1,143 @@
+{
+  "sheetsWebhookSecret": "8c752d73be56ce329278a1a6053c31ec94e2380ae7a1c930",
+  "sheetsLastSync": "2026-06-18T03:36:29.824Z",
+  "sheetsSyncCount": 76,
+  "sheetsLastResult": {
+    "added": 0,
+    "updated": 231,
+    "total": 231
+  },
+  "sheetsAutoSync": true,
+  "sheetsAutoSyncInterval": 15,
+  "sheetsPushQueue": [
+    {
+      "id": 1780412306967,
+      "type": "SYNC_PUSH",
+      "queuedAt": "2026-06-02T14:58:26.967Z",
+      "attempts": 109,
+      "lastError": "HTTP 405",
+      "lastAttempt": "2026-06-18T03:36:39.771Z"
+    }
+  ],
+  "sheetsWebAppUrl": "https://script.google.com/macros/s/AKfycbw-EwZzsAFLLUFeKlzbN7Pqks4dnVhM2l0DuVSzPBDXbTBYbKYhz_XTIcegu3xYaU_oWw/exec",
+  "sheetsPushUrl": "https://script.google.com/macros/s/AKfycbyUHerFQ0-gV0JdpIckF2xWEru4sGJFogGqUrbbvL6azBZV6YYqZY-tib8S5unIWHpx4g/exec",
+  "masterStatuses": [
+    {
+      "name": "Production",
+      "color": "#ca8a04"
+    },
+    {
+      "name": "Stuffing",
+      "color": "#ea580c"
+    },
+    {
+      "name": "Sailed",
+      "color": "#2563eb"
+    },
+    {
+      "name": "Arrived",
+      "color": "#7c3aed"
+    },
+    {
+      "name": "Delivered",
+      "color": "#16a34a"
+    },
+    {
+      "name": "Cleared",
+      "color": "#475569"
+    }
+  ],
+  "masterTags": [
+    "HONEY BOO",
+    "REEBIT",
+    "PANDAOMA",
+    "NVMEE",
+    "RONAN",
+    "HQ",
+    "GROSIR"
+  ],
+  "tagRules": [
+    {
+      "keyword": "BBB",
+      "tag": "HONEY BOO",
+      "field": "po"
+    },
+    {
+      "keyword": "RRR",
+      "tag": "REEBIT",
+      "field": "po"
+    },
+    {
+      "keyword": "SSS",
+      "tag": "PANDAOMA",
+      "field": "po"
+    },
+    {
+      "keyword": "GIM",
+      "tag": "NVMEE",
+      "field": "po"
+    },
+    {
+      "keyword": "IAM",
+      "tag": "RONAN",
+      "field": "po"
+    },
+    {
+      "keyword": "-08",
+      "tag": "HQ",
+      "field": "po"
+    },
+    {
+      "keyword": "COM/SUB-04",
+      "tag": "GROSIR",
+      "field": "po"
+    }
+  ],
+  "gudangRules": [
+    {
+      "field": "container",
+      "keyword": "AIR",
+      "days": 3
+    },
+    {
+      "field": "container",
+      "keyword": "AJKY",
+      "days": 7
+    },
+    {
+      "field": "po",
+      "keyword": "CTR",
+      "days": 7
+    }
+  ],
+  "forwarderRules": [
+    {
+      "keyword": "AJKY",
+      "forwarder": "HARVEST-AIR"
+    },
+    {
+      "keyword": "AIR",
+      "forwarder": "AIR"
+    },
+    {
+      "keyword": "SJP",
+      "forwarder": "HARVEST"
+    },
+    {
+      "keyword": "HA",
+      "forwarder": "HECHUAN"
+    },
+    {
+      "keyword": "HV",
+      "forwarder": "HECHUAN"
+    },
+    {
+      "keyword": "YW",
+      "forwarder": "JH"
+    },
+    {
+      "keyword": "GZ",
+      "forwarder": "JH"
+    }
+  ]
+}
