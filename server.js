@@ -5,6 +5,17 @@ import { fileURLToPath } from 'url';
 import { createHmac, randomBytes } from 'crypto';
 import { networkInterfaces } from 'os';
 
+// Ensure fetch is available (Node 18+ has global fetch). If not, load node-fetch.
+if (typeof fetch === 'undefined') {
+  try {
+    const { default: fetchPoly } = await import('node-fetch');
+    globalThis.fetch = fetchPoly;
+    console.log('Using node-fetch polyfill for fetch()');
+  } catch (e) {
+    console.warn('Fetch API not available and node-fetch could not be loaded. Some features may fail.');
+  }
+}
+
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -720,6 +731,12 @@ app.post('/api/comments/cleanup', admin, (req,res) => {
   const {ids}=req.body||{}; if(!Array.isArray(ids)) return res.status(400).json({error:'ids harus array'});
   const all=readJ(COMMENTS_FILE); ids.forEach(id=>{ delete all[String(id)]; }); writeJ(COMMENTS_FILE,all);
   res.json({success:true});
+});
+app.get('/api/comments/latest', auth, (req,res) => {
+  // Kembalikan komentar terakhir untuk SETIAP shipment dalam satu panggilan
+  const all=readJ(COMMENTS_FILE); const out={};
+  Object.entries(all).forEach(([shipId,comments])=>{ if(comments&&comments.length) out[shipId]=comments[0]; });
+  res.json(out);
 });
 app.get('/api/comments/:id', auth, (req,res) => { const all=readJ(COMMENTS_FILE); res.json(all[req.params.id]||[]); });
 app.post('/api/comments/:id', auth, (req,res) => {

@@ -1,7 +1,7 @@
 {
   "sheetsWebhookSecret": "8c752d73be56ce329278a1a6053c31ec94e2380ae7a1c930",
-  "sheetsLastSync": "2026-06-18T03:36:29.824Z",
-  "sheetsSyncCount": 76,
+  "sheetsLastSync": "2026-06-18T13:13:44.094Z",
+  "sheetsSyncCount": 81,
   "sheetsLastResult": {
     "added": 0,
     "updated": 231,
@@ -14,13 +14,13 @@
       "id": 1780412306967,
       "type": "SYNC_PUSH",
       "queuedAt": "2026-06-02T14:58:26.967Z",
-      "attempts": 109,
+      "attempts": 118,
       "lastError": "HTTP 405",
-      "lastAttempt": "2026-06-18T03:36:39.771Z"
+      "lastAttempt": "2026-06-18T13:13:53.678Z"
     }
   ],
   "sheetsWebAppUrl": "https://script.google.com/macros/s/AKfycbw-EwZzsAFLLUFeKlzbN7Pqks4dnVhM2l0DuVSzPBDXbTBYbKYhz_XTIcegu3xYaU_oWw/exec",
-  "sheetsPushUrl": "https://script.google.com/macros/s/AKfycbyUHerFQ0-gV0JdpIckF2xWEru4sGJFogGqUrbbvL6azBZV6YYqZY-tib8S5unIWHpx4g/exec",
+  "sheetsPushUrl": "https://script.google.com/macros/s/AKfycbwT1dlp341PDnEn4Jp5wQE_u1wMyuHrJPFrV5HnFWlXllhKfsQPRp9M-JqvU0uiGQtVRg/exec",
   "masterStatuses": [
     {
       "name": "Production",
@@ -102,7 +102,7 @@
     {
       "field": "container",
       "keyword": "AJKY",
-      "days": 7
+      "days": 3
     },
     {
       "field": "po",

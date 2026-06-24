@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>GII Commerce — Shipment Monitor</title>
+<title>GII Commerce — Shipment Monitor (Lokal)</title>
 <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
 <style>
@@ -1333,9 +1333,122 @@ function getStatusClass(name){return's-'+name.toLowerCase().replace(/\s+/g,'-');
 
 // ── API ──
 function aH(){return{'Content-Type':'application/json','Authorization':'Bearer '+authToken};}
+// ══════════════════════════════════════════════════════
+// STANDALONE STORAGE — localStorage (no server needed)
+// ══════════════════════════════════════════════════════
+const SM={
+  r:(k,d=[])=>{try{const v=localStorage.getItem('sm_'+k);return v!==null?JSON.parse(v):d;}catch{return d;}},
+  w:(k,v)=>{try{localStorage.setItem('sm_'+k,JSON.stringify(v));}catch(e){console.warn('Storage full:',e);}},
+};
+function smHash(s){let h=0;for(let i=0;i<s.length;i++){h=(Math.imul(31,h)+s.charCodeAt(i))|0;}return h.toString(36);}
+function initDB(){
+  if(!SM.r('users',null)){
+    SM.w('users',[
+      {username:'admin',password:smHash('admin123gii'),role:'admin',name:'Administrator'},
+      {username:'viewer',password:smHash('viewer123gii'),role:'viewer',name:'Viewer'},
+    ]);
+  }
+}
+
 async function api(method,url,body){
-  const r=await fetch(url,{method,headers:aH(),body:body?JSON.stringify(body):undefined});
-  if(r.status===401){showLogin();return null;}return r.json();
+  const base=url.split('?')[0];
+  const qs=url.includes('?')?url.split('?')[1]:'';
+  const p=base.replace(/^\/api\//,'').split('/');
+  if(p[0]==='shipments'){
+    if(method==='GET'&&!p[1])return SM.r('shipments',[]);
+    if(method==='POST'&&!p[1]){SM.w('shipments',body);return{success:true};}
+    if(method==='PUT'&&p[1]){const id=parseInt(p[1]);let sh=SM.r('shipments',[]);const i=sh.findIndex(s=>s.id===id);if(i>=0){const oldS={...sh[i]};const merged={...sh[i],...body,id};const ch=typeof diffShipment==='function'?diffShipment(oldS,merged):[];if(ch.length){addChangelog(id,merged.po,merged.item,'edit',ch);addLog('SINGLE_EDIT',`Update ${merged.po}/${merged.item}: ${ch.map(c=>c.field).join(', ')}`);}sh[i]=merged;SM.w('shipments',sh);}return{success:true};}
+    if(method==='DELETE'&&p[1]){SM.w('shipments',SM.r('shipments',[]).filter(s=>s.id!==parseInt(p[1])));return{success:true};}
+    if(method==='DELETE')return(SM.w('shipments',[]),SM.w('comments',{}),{success:true});
+  }
+  if(p[0]==='comments'){
+    if(p[1]==='search'){const q=decodeURIComponent((qs.match(/q=([^&]+)/)||[])[1]||'').toLowerCase();const cm=SM.r('comments',{});const sh=SM.r('shipments',[]);const res=[];Object.entries(cm).forEach(([sid,cs])=>{const s=sh.find(x=>String(x.id)===sid);if(!s)return;(cs||[]).forEach(c=>{if(c.text.toLowerCase().includes(q))res.push({shipId:+sid,po:s.po,supplier:s.supplier||'',item:s.item,commentId:c.id,text:c.text,time:c.time});});});return res.sort((a,b)=>new Date(b.time)-new Date(a.time)).slice(0,50);}
+    if(p[1]==='cleanup'){const cm=SM.r('comments',{});(body?.ids||[]).forEach(id=>{delete cm[String(id)];});SM.w('comments',cm);return{success:true};}
+    if(p[1]==='latest'){const cm=SM.r('comments',{});const out={};Object.entries(cm).forEach(([sid,cs])=>{if(cs&&cs.length)out[sid]=cs[0];});return out;}
+    if(method==='GET'&&p[1])return SM.r('comments',{})[p[1]]||[];
+    if(method==='POST'&&p[1]){const cm=SM.r('comments',{});if(!cm[p[1]])cm[p[1]]=[];const c={id:Date.now(),user:currentUser.username,name:currentUser.name,text:body.text.trim(),time:new Date().toISOString()};cm[p[1]].unshift(c);SM.w('comments',cm);return{success:true,comment:c};}
+    if(method==='DELETE'&&p[1]&&p[2]){const cm=SM.r('comments',{});if(cm[p[1]])cm[p[1]]=cm[p[1]].filter(c=>c.id!==parseInt(p[2]));SM.w('comments',cm);return{success:true};}
+  }
+  if(p[0]==='logs')return SM.r('logs',[]).slice(0,100);
+  if(p[0]==='changelog'){
+    const all=SM.r('changelog',[]);
+    const qp=new URLSearchParams(qs);
+    const q=(qp.get('q')||'').toLowerCase();
+    const source=qp.get('source')||'';
+    const page=parseInt(qp.get('page'))||0;
+    const limit=parseInt(qp.get('limit'))||50;
+    let filtered=all;
+    if(q)filtered=filtered.filter(e=>(e.po||'').toLowerCase().includes(q)||(e.item||'').toLowerCase().includes(q)||e.changes.some(c=>(c.field||'').toLowerCase().includes(q)||(c.from||'').toLowerCase().includes(q)||(c.to||'').toLowerCase().includes(q)));
+    if(source)filtered=filtered.filter(e=>e.source===source);
+    return{data:filtered.slice(page*limit,(page+1)*limit),total:filtered.length};
+  }
+  if(p[0]==='users'){
+    if(method==='GET'&&!p[1])return SM.r('users',[]).map(u=>({username:u.username,role:u.role,name:u.name}));
+    if(method==='POST'){const us=SM.r('users',[]);if(us.find(u=>u.username===body.username))return{error:'Username sudah ada'};us.push({username:body.username,password:smHash(body.password+'gii'),role:body.role,name:body.name||body.username});SM.w('users',us);return{success:true};}
+    if(method==='PUT'&&p[1]){const us=SM.r('users',[]);const i=us.findIndex(u=>u.username===p[1]);if(i>=0){if(body.password)us[i].password=smHash(body.password+'gii');if(body.role)us[i].role=body.role;if(body.name)us[i].name=body.name;SM.w('users',us);}return{success:true};}
+    if(method==='DELETE'&&p[1]){SM.w('users',SM.r('users',[]).filter(u=>u.username!==p[1]));return{success:true};}
+  }
+  if(p[0]==='me'&&p[1]==='password'){const us=SM.r('users',[]);const i=us.findIndex(u=>u.username===currentUser.username);if(i>=0&&us[i].password===smHash(body.oldPassword+'gii')){us[i].password=smHash(body.newPassword+'gii');SM.w('users',us);return{success:true};}return{error:'Password lama salah'};}
+  if(p[0]==='sheets'){
+    if(p[1]==='status'){const cfg=SM.r('sheets_cfg',{});return{webAppUrl:cfg.webAppUrl||'',pushUrl:cfg.pushUrl||'',lastSync:cfg.lastSync,syncCount:cfg.syncCount||0,lastResult:cfg.lastResult||null};}
+    if(p[1]==='save-url'){SM.w('sheets_cfg',{...SM.r('sheets_cfg',{}),webAppUrl:body.url});return{success:true};}
+    if(p[1]==='save-push-url'){SM.w('sheets_cfg',{...SM.r('sheets_cfg',{}),pushUrl:body.url});return{success:true};}
+    if(p[1]==='pull')return await localPull();
+    if(p[1]==='push')return await localPush();
+  }
+  // Master data: gunakan localStorage saja (tidak perlu server)
+  if(p[0]==='master'){
+    if(method==='GET')return{
+      statuses:JSON.parse(localStorage.getItem('master_statuses')||'null')||[],
+      tags:JSON.parse(localStorage.getItem('master_tags')||'null')||[],
+      tagRules:JSON.parse(localStorage.getItem('tag_rules')||'null')||[],
+      gudang:JSON.parse(localStorage.getItem('gudang_rules')||'null')||[],
+      forwarder:JSON.parse(localStorage.getItem('forwarder_rules')||'null')||[],
+    };
+    if(method==='POST'){return{success:true};} // localStorage sudah dihandle di saveMaster()
+  }
+  return null;
+}
+
+async function localPull(){
+  const cfg=SM.r('sheets_cfg',{});const url=cfg.webAppUrl;
+  if(!url)return{error:'URL sumber belum diisi.'};
+  try{
+    const r=await fetch(url+(url.includes('?')?'&':'?')+'action=pull');
+    const data=await r.json();if(!data.success)throw new Error(data.error||'Error');
+    const incoming=data.shipments||[];const existing=SM.r('shipments',[]);
+    const makeKey=s=>`${s.po}||${s.container||'_PROD_'}||${s.item}`;
+    const toISO=d=>{if(!d)return'';d=String(d).trim();if(/^\d{4}-\d{2}-\d{2}$/.test(d))return d;const m=d.match(/^(\d{1,2})[\/\-](\d{1,2})[\/\-](\d{4})$/);if(m)return`${m[3]}-${m[2].padStart(2,'0')}-${m[1].padStart(2,'0')}`;return'';};
+    const map={};existing.forEach(s=>{map[makeKey(s)]=s;});
+    let added=0,updated=0;
+    incoming.forEach((s,i)=>{
+      if(!s.po)return;
+      s.etd=toISO(s.etd);s.eta=toISO(s.eta);s.stuffing=toISO(s.stuffing);
+      const key=makeKey(s);const old=map[key];
+      if(old){const fs={container:s.container||old.container,etd:s.etd||old.etd,eta:s.eta||old.eta,stuffing:s.stuffing||old.stuffing,tags:s.tags?.length?s.tags:(old.tags||[]),item:s.item||old.item,qty:s.qty||old.qty,value:s.value||old.value,supplier:s.supplier||old.supplier||'',forwarder:s.forwarder||old.forwarder||'',tgl_production:s.tgl_production||old.tgl_production||''};if(s.status==='Delivered'&&!['Cleared'].includes(old.status)){fs.status='Delivered';if(s.deliveredDate)fs.deliveredDate=s.deliveredDate;}else if(s.status==='Production'&&(!old.status||old.status==='Production')){fs.status='Production';}if(fs.tgl_production&&!fs.status&&!old.status)fs.status='Production';const merged={...old,...fs,id:old.id,po:s.po};const chg=typeof diffShipment==='function'?diffShipment(old,merged):[];if(chg.length)addChangelog(old.id,s.po,s.item||old.item,'sync',chg,'Sheets Pull');map[key]=merged;updated++;}
+      else{const newS={id:Date.now()+i,po:s.po,container:s.container||'',item:s.item||'',qty:s.qty||'',value:s.value||'',etd:s.etd||'',eta:s.eta||'',stuffing:s.stuffing||'',tags:s.tags||[],status:s.status||(s.tgl_production?'Production':''),supplier:s.supplier||'',deliveredDate:s.deliveredDate||'',tgl_production:s.tgl_production||'',forwarder:s.forwarder||'',notes:'',docs:{invoice:false,pl:false,do:false,pib:false,ls:false}};if(typeof addChangelog==='function')addChangelog(newS.id,newS.po,newS.item,'sync',[{field:'_new',to:`${newS.po} — ${newS.item}`}],'Sheets Pull');map[key]=newS;added++;}
+    });
+    SM.w('shipments',Object.values(map));
+    addLog('SHEETS_PULL',`Tarik dari Sheets: +${added} baru, ~${updated} update`);
+    const cfg2={...SM.r('sheets_cfg',{}),lastSync:new Date().toISOString(),syncCount:(SM.r('sheets_cfg',{}).syncCount||0)+1,lastResult:{added,updated,total:incoming.length}};
+    SM.w('sheets_cfg',cfg2);
+    return{success:true,added,updated,total:incoming.length};
+  }catch(err){return{error:err.message};}
+}
+
+async function localPush(){
+  const cfg=SM.r('sheets_cfg',{});const url=cfg.pushUrl;
+  if(!url)return{skipped:true,message:'URL tujuan belum diisi'};
+  const ships=SM.r('shipments',[]);if(!ships.length)return{success:true,count:0};
+  const BATCH=5;let added=0,updated=0,errors=[];
+  for(let i=0;i<ships.length;i+=BATCH){
+    const batch=ships.slice(i,i+BATCH);const encoded=encodeURIComponent(JSON.stringify(batch));const getUrl=url+(url.includes('?')?'&':'?')+'action=receive&data='+encoded;
+    try{const resp=await fetch(getUrl,{mode:'cors'});const body=await resp.json();if(body.success){added+=(body.added||0);updated+=(body.updated||0);}else if(body.error)errors.push(body.error);}
+    catch(e){try{await fetch(getUrl,{mode:'no-cors'});added+=batch.length;}catch(e2){errors.push('Batch '+(Math.floor(i/BATCH)+1)+': '+e2.message);}}
+    if(i+BATCH<ships.length)await new Promise(r=>setTimeout(r,200));
+  }
+  if(errors.length>0&&added===0)return{error:'Push gagal: '+errors[0]};
+  return{success:true,count:ships.length,added,updated,errors:errors.length};
 }
 
 // ── Mobile Sidebar ──
@@ -1374,23 +1487,20 @@ function applySidebar() {
 function toggleLoginPw(){const i=document.getElementById('login_pass'),b=document.getElementById('pwToggleBtn');if(i.type==='password'){i.type='text';b.textContent='🙈';}else{i.type='password';b.textContent='👁️';}}
 function showLogin(){document.getElementById('loginOverlay').style.display='flex';}
 async function doLogin(){
-  const u=document.getElementById('login_user').value.trim(),p=document.getElementById('login_pass').value;
+  const u=document.getElementById('login_user').value.trim();
+  const p=document.getElementById('login_pass').value;
   const e=document.getElementById('loginErr');e.textContent='';
   if(!u||!p){e.textContent='Harap isi username dan password.';return;}
-  try{
-    const r=await fetch('/api/login',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({username:u,password:p})});
-    const d=await r.json();
-    if(!d.success){e.textContent=d.error||'Login gagal.';return;}
-    authToken=d.token;sessionStorage.setItem('auth_token',authToken);
-    currentUser={username:d.username,role:d.role,name:d.name};
-    document.getElementById('loginOverlay').style.display='none';
-    applyMode();initUI();await loadData();
-  }catch(err){
-    e.textContent='Tidak bisa terhubung ke server. Pastikan node server.js sudah berjalan. ('+err.message+')';
-    console.error('Login error:',err);
-  }
+  initDB();
+  const users=SM.r('users',[]);
+  const found=users.find(us=>us.username===u&&us.password===smHash(p+'gii'));
+  if(!found){e.textContent='Username atau password salah.';return;}
+  currentUser={username:found.username,role:found.role,name:found.name};
+  sessionStorage.setItem('sm_user',JSON.stringify(currentUser));
+  document.getElementById('loginOverlay').style.display='none';
+  applyMode();initUI();await loadData();
 }
-async function doLogout(){await fetch('/api/logout',{method:'POST',headers:aH()}).catch(()=>{});authToken='';sessionStorage.removeItem('auth_token');currentUser=null;showLogin();}
+function doLogout(){currentUser=null;sessionStorage.removeItem('sm_user');showLogin();}
 function applyMode(){
   if(!currentUser)return;
   document.getElementById('sidebarAvatar').textContent=currentUser.name.substring(0,2).toUpperCase();
@@ -1399,10 +1509,12 @@ function applyMode(){
   document.body.classList.toggle('viewer-mode',currentUser.role!=='admin');
 }
 async function checkSession(){
-  if(!authToken){showLogin();return;}
-  const d=await fetch('/api/me',{headers:aH()}).then(r=>r.json()).catch(()=>null);
-  if(!d||d.error){showLogin();return;}
-  currentUser=d;applyMode();document.getElementById('loginOverlay').style.display='none';
+  initDB();
+  const saved=sessionStorage.getItem('sm_user');
+  if(saved){try{currentUser=JSON.parse(saved);}catch{currentUser=null;}}
+  if(!currentUser){showLogin();return;}
+  applyMode();
+  document.getElementById('loginOverlay').style.display='none';
   initUI();await loadData();
 }
 function isAdmin(){return currentUser?.role==='admin';}
@@ -1468,7 +1580,7 @@ function applyAutoForwarder(){
   });
   return changed;
 }
-function save(){if(!isAdmin())return;api('POST','/api/shipments',shipments).catch(e=>console.error(e));}
+function save(){if(!isAdmin())return;SM.w('shipments',shipments);}
 
 // Cache komentar terakhir
 let lastCommentCache={};
@@ -1555,7 +1667,7 @@ function calcAutoStatus(s){
   return s.status||'Production';
 }
 function autoUpdateStatus(){
-  let c=0;shipments=shipments.map(s=>{const ns=calcAutoStatus(s);if(ns!==s.status){c++;return{...s,status:ns};}return s;});
+  let c=0;shipments=shipments.map(s=>{const ns=calcAutoStatus(s);if(ns!==s.status){c++;addChangelog(s.id,s.po,s.item,'auto_status',[{field:'status',from:s.status,to:ns}],'Auto');return{...s,status:ns};}return s;});
   if(c>0){save();showToast('info','Status diperbarui',`${c} shipment diupdate otomatis.`);}
 }
 function getRef(s){return s.gudang||calcGudang(s.po,s.eta,s.container);}
@@ -1626,28 +1738,52 @@ function setStatFilter(k){activeStatFilter=activeStatFilter===k?'':k;renderStats
 
 
 // ── Changelog / Riwayat Perubahan ──
-// ── Unified Log (merged Activity + Changelog via API) ──
+function addChangelog(shipId,po,item,source,changes,user){
+  if(!changes||!changes.length)return;
+  const logs=SM.r('changelog',[]);
+  logs.unshift({shipId,po:po||'',item:item||'',source,changes,user:user||(currentUser?.name||'system'),time:new Date().toISOString()});
+  if(logs.length>500)logs.length=500;
+  SM.w('changelog',logs);
+}
+function diffShipment(oldS,newS){
+  const fields=['po','item','qty','value','container','supplier','forwarder','status','stuffing','etd','eta','tgl_production','deliveredDate','gudang','notes'];
+  const changes=[];
+  fields.forEach(f=>{
+    const ov=String(oldS[f]||''),nv=String(newS[f]||'');
+    if(ov!==nv)changes.push({field:f,from:oldS[f]||'',to:newS[f]||''});
+  });
+  const oldTags=(oldS.tags||[]).join(','),newTags=(newS.tags||[]).join(',');
+  if(oldTags!==newTags)changes.push({field:'tags',from:oldTags,to:newTags});
+  return changes;
+}
+function addLog(action,detail,user){
+  const logs=SM.r('logs',[]);
+  logs.unshift({action,detail,name:currentUser?.name||'system',user:currentUser?.username||'system',time:new Date().toISOString()});
+  if(logs.length>200)logs.length=200;
+  SM.w('logs',logs);
+}
+// ── Unified Log (merged Activity + Changelog) ──
 let _logPage=0;
-async function loadUnifiedLog(){
+function loadUnifiedLog(){
   const q=(document.getElementById('logSearch')?.value||'').toLowerCase();
   const src=document.getElementById('logSourceFilter')?.value||'';
   const box=document.getElementById('unifiedLogList');if(!box)return;
   box.innerHTML='<div style="text-align:center;padding:20px;color:var(--muted);">Memuat...</div>';
-  const [logsData,changesData]=await Promise.all([api('GET','/api/logs?limit=200'),api('GET','/api/changelog?limit=500')]);
-  const logs=(logsData||[]).map(l=>({type:'log',time:l.time,action:l.action,detail:l.detail,user:l.name||l.user||'system',username:l.user||'system'}));
-  const cArr=changesData?.data||changesData||[];
-  const changes=cArr.map(c=>({type:'change',time:c.time,source:c.source,po:c.po||'',item:c.item||'',user:c.user||'system',changes:c.changes||[],shipId:c.shipId}));
+  const logs=SM.r('logs',[]).map(l=>({type:'log',time:l.time,action:l.action,detail:l.detail,user:l.name||l.user||'system',username:l.user||'system'}));
+  const changes=SM.r('changelog',[]).map(c=>({type:'change',time:c.time,source:c.source,po:c.po||'',item:c.item||'',user:c.user||'system',changes:c.changes||[],shipId:c.shipId}));
   let all=[...logs,...changes].sort((a,b)=>new Date(b.time)-new Date(a.time));
   if(src==='user') all=all.filter(e=>e.type==='log'&&['ADD_USER','DELETE_USER','CHANGE_PWD','UPDATE_USER'].includes(e.action));
   else if(src) all=all.filter(e=>e.type==='change'&&e.source===src);
   if(q) all=all.filter(e=>{
-    if(e.type==='log')return(e.detail||'').toLowerCase().includes(q);
+    if(e.type==='log')return(e.detail||'').toLowerCase().includes(q)||(e.action||'').toLowerCase().includes(q);
     return(e.po||'').toLowerCase().includes(q)||(e.item||'').toLowerCase().includes(q)||(e.changes||[]).some(c=>(c.field||'').toLowerCase().includes(q));
   });
+  // Dedup: skip activity logs that have matching changelog within 2s
   const cTimes=new Set();changes.forEach(c=>{const t=Math.round(new Date(c.time).getTime()/1000);for(let d=-2;d<=2;d++)cTimes.add(t+d);});
   const deduped=all.filter(e=>{
-    if(e.type==='log'&&['SINGLE_EDIT','UPDATE_SHIP','DELETE_SHIP','ADD_SHIP'].includes(e.action))return!cTimes.has(Math.round(new Date(e.time).getTime()/1000));
-    return true;
+    if(e.type==='log'&&['SINGLE_EDIT','UPDATE_SHIP','DELETE_SHIP','ADD_SHIP'].includes(e.action)){
+      return!cTimes.has(Math.round(new Date(e.time).getTime()/1000));
+    }return true;
   });
   const limit=50,total=deduped.length,paged=deduped.slice(_logPage*limit,(_logPage+1)*limit);
   const icons={ADD_USER:'👤',UPDATE_USER:'✏️',DELETE_USER:'🗑️',CHANGE_PWD:'🔑',BULK_SAVE:'💾',BULK_EDIT:'📝',SHEETS_PULL:'📥',SHEETS_PUSH:'📤',DELETE_ALL:'⚠️',ADD_SHIP:'➕',SINGLE_EDIT:'✏️',AUTO_SYNC_PUSH:'📤'};
@@ -1665,11 +1801,17 @@ async function loadUnifiedLog(){
         <div style="font-size:11px;color:var(--muted);white-space:nowrap;">${fmtT(e.time)}</div>
       </div>`;
     }
-    const sl=srcLabel[e.source]||e.source;const col=srcColor[e.source]||'var(--muted)';const uid='cl_'+_logPage+'_'+idx;
+    const sl=srcLabel[e.source]||e.source;const col=srcColor[e.source]||'var(--muted)';
+    const uid='cl_'+_logPage+'_'+idx;
     const isND=e.changes.some(c=>c.field==='_new'||c.field==='_delete');
     const summary=isND?(e.changes[0].field==='_new'?'Shipment baru':'Shipment dihapus'):e.changes.map(c=>fldLabel[c.field]||c.field).join(', ');
     const detHtml=e.changes.filter(c=>c.field!=='_new'&&c.field!=='_delete').map(c=>
-      `<div style="display:flex;gap:6px;align-items:center;padding:2px 0;font-size:12px;"><span style="min-width:70px;color:var(--muted);font-weight:600;">${fldLabel[c.field]||c.field}</span><span style="color:var(--red);text-decoration:line-through;font-size:11px;">${c.from||'—'}</span><span style="color:var(--muted);">→</span><span style="color:var(--green);font-weight:500;font-size:11px;">${c.to||'—'}</span></div>`).join('');
+      `<div style="display:flex;gap:6px;align-items:center;padding:2px 0;font-size:12px;">
+        <span style="min-width:70px;color:var(--muted);font-weight:600;">${fldLabel[c.field]||c.field}</span>
+        <span style="color:var(--red);text-decoration:line-through;font-size:11px;max-width:120px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;">${c.from||'—'}</span>
+        <span style="color:var(--muted);">→</span>
+        <span style="color:var(--green);font-weight:500;font-size:11px;max-width:120px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;">${c.to||'—'}</span>
+      </div>`).join('');
     return`<div style="border-bottom:1px solid var(--border2);padding:10px 8px;${e.shipId&&e.source!=='delete'?'cursor:pointer;':''}">
       <div style="display:flex;gap:10px;align-items:flex-start;" ${e.shipId&&e.source!=='delete'?`onclick="openDetail(${e.shipId})"`:''}> 
         <div style="width:30px;height:30px;border-radius:8px;background:${col}18;display:flex;align-items:center;justify-content:center;flex-shrink:0;"><span style="font-size:11px;font-weight:700;color:${col};">${sl.split(' ')[0]}</span></div>
@@ -1872,12 +2014,16 @@ function bulkAction(action){
   if(!ids.length){showToast('warning','Pilih dulu','Centang shipment yang ingin diproses.');return;}
   if(action==='delete'){
     if(!confirm('Hapus '+ids.length+' shipment?'))return;
+    ids.forEach(id=>{const s=shipments.find(x=>x.id===id);if(s)addChangelog(id,s.po,s.item,'delete',[{field:'_delete',to:''}]);});
+    addLog('DELETE_SHIP',`Hapus massal ${ids.length} shipment`);
     shipments=shipments.filter(s=>!ids.includes(s.id));save();render();
     showToast('info','Dihapus',ids.length+' shipment dihapus.');
   }else if(action==='status'){
     const st=document.getElementById('be_status')?.value;
     if(!st)return;
-    shipments=shipments.map(s=>ids.includes(s.id)?{...s,status:st}:s);save();render();
+    shipments=shipments.map(s=>{if(!ids.includes(s.id))return s;if(s.status!==st)addChangelog(s.id,s.po,s.item,'edit',[{field:'status',from:s.status,to:st}]);return{...s,status:st};});
+    addLog('BULK_EDIT',`Ubah status massal ${ids.length} shipment → ${st}`);
+    save();render();
     showToast('info','Status diubah',ids.length+' shipment → '+st);
   }
   document.querySelectorAll('.row-check').forEach(c=>c.checked=false);
@@ -1891,15 +2037,17 @@ function deleteSelected(){
   if(!guardAdmin('Hanya admin.'))return;
   const ids=getSelIds();if(!ids.length)return;
   if(!confirm(`Hapus ${ids.length} shipment?`))return;
-  // Cleanup komentar orphan
+  ids.forEach(id=>{const s=shipments.find(x=>x.id===id);if(s)addChangelog(id,s.po,s.item,'delete',[{field:'_delete',to:''}]);delete lastCommentCache[id];});
+  addLog('DELETE_SHIP',`Hapus massal ${ids.length} shipment`);
   api('POST','/api/comments/cleanup',{ids}).catch(()=>{});
-  ids.forEach(id=>{delete lastCommentCache[id];});
   shipments=shipments.filter(s=>!ids.includes(s.id));
   save();clearSel();render();
 }
 function deleteAll(){
   if(!guardAdmin())return;
   if(!confirm('Hapus SEMUA data?'))return;
+  shipments.forEach(s=>addChangelog(s.id,s.po,s.item,'delete',[{field:'_delete',to:''}]));
+  addLog('DELETE_SHIP',`Hapus semua ${shipments.length} shipment`);
   lastCommentCache={};
   api('POST','/api/comments/cleanup',{ids:shipments.map(s=>s.id)}).catch(()=>{});
   shipments=[];save();render();
@@ -1949,8 +2097,11 @@ async function applyBulkEdit(){
     if(ud)u.docs={invoice:document.getElementById('be_inv').checked,pl:document.getElementById('be_pl').checked,do:document.getElementById('be_do').checked,pib:document.getElementById('be_pib').checked,ls:document.getElementById('be_ls').checked};
     if(un)u.notes=document.getElementById('be_notes').value.trim();
     if((ue||ua||uctr)&&!us)u.status=calcAutoStatus(u);
+    const changes=diffShipment(s,u);
+    if(changes.length)addChangelog(s.id,s.po,s.item,'edit',changes);
     return u;
   });
+  addLog('BULK_EDIT',`Edit massal ${ids.length} shipment`);
   save();
   if(uc){
     const commentText=document.getElementById('be_comment').value.trim();
@@ -2027,12 +2178,28 @@ function saveShipment(){
     tgl_production:document.getElementById('f_tgl_production')?.value||'',
     tags:mergeTags(po,getSelectedTags())};
   obj.status=calcAutoStatus(obj);
-  if(editId){const i=shipments.findIndex(x=>x.id===editId);shipments[i]=obj;}else shipments.unshift(obj);
+  if(editId){
+    const oldS=shipments.find(x=>x.id===editId);
+    const i=shipments.findIndex(x=>x.id===editId);
+    const changes=diffShipment(oldS,obj);
+    if(changes.length)addChangelog(editId,obj.po,obj.item,'edit',changes);
+    if(changes.length)addLog('SINGLE_EDIT',`Update ${obj.po}/${obj.item}: ${changes.map(c=>c.field).join(', ')}`);
+    shipments[i]=obj;
+  }else{
+    shipments.unshift(obj);
+    addChangelog(obj.id,obj.po,obj.item,'new',[{field:'_new',to:`${obj.po} — ${obj.item}`}]);
+    addLog('ADD_SHIP',`Tambah ${obj.po} — ${obj.item}`);
+  }
   save();closeModal();render();
 }
 function del(id){
   if(!guardAdmin('Hanya admin.'))return;
   if(!confirm('Hapus shipment ini?'))return;
+  const s=shipments.find(x=>x.id===id);
+  if(s){
+    addChangelog(id,s.po,s.item,'delete',[{field:'_delete',to:''}]);
+    addLog('DELETE_SHIP',`Hapus ${s.po} — ${s.item}`);
+  }
   delete lastCommentCache[id];
   shipments=shipments.filter(x=>x.id!==id);
   save();closeDetail();render();
@@ -2400,7 +2567,7 @@ function ltSearchItem(q){
 }
 function renderDashboard(){
   const today=new Date();today.setHours(0,0,0,0);
-  // Date filter — berdasarkan ETD (sailing), normalisasi ke YYYY-MM-DD
+  // Date filter — normalize all dates to YYYY-MM-DD for reliable comparison
   const dfrom=(document.getElementById('dashDateFrom')?.value||'').slice(0,10);
   const dto=(document.getElementById('dashDateTo')?.value||'').slice(0,10);
   const normD=v=>{if(!v)return '';const s=String(v).trim();const m=s.match(/^(\d{4})-(\d{2})-(\d{2})/);if(m)return m[1]+'-'+m[2]+'-'+m[3];const m2=s.match(/^(\d{1,2})[\/\-](\d{1,2})[\/\-](\d{2,4})/);if(m2){const y=m2[3].length===2?'20'+m2[3]:m2[3];return y+'-'+m2[2].padStart(2,'0')+'-'+m2[1].padStart(2,'0');}return s.slice(0,10);};
@@ -2416,10 +2583,12 @@ function renderDashboard(){
   const total=src.length,aktif=src.filter(s=>!['Cleared','Delivered'].includes(s.status)).length;
   const sailed=src.filter(s=>['Stuffing','Sailed','Arrived'].includes(s.status)).length;
   const late=src.filter(s=>getAlertType(s)==='late').length;
-  const done=src.filter(s=>['Delivered','Cleared','Arrived'].includes(s.status));
+  // On-Time: hanya PO yang BENAR-BENAR selesai (punya Tgl Datang aktual) + punya referensi estimasi
+  const done=src.filter(s=>s.deliveredDate&&(s.gudang||s.eta));
   const onTimeDone=done.filter(s=>{
-    const ref=s.gudang||s.eta;if(!ref)return true;const refD=new Date(ref);
-    if(s.deliveredDate)return new Date(s.deliveredDate)<=refD;return today<=refD;
+    const ref=s.gudang||s.eta;
+    const refD=normD(ref); const delD=normD(s.deliveredDate);
+    return delD&&refD&&delD<=refD;
   });
   const ontime=done.length?Math.round((onTimeDone.length/done.length)*100):null;
   const monthMap={};for(let i=11;i>=0;i--){const d=new Date();d.setDate(1);d.setMonth(d.getMonth()-i);monthMap[d.toISOString().slice(0,7)]=0;}
@@ -2526,8 +2695,7 @@ function renderDashboard(){
             ${avgD>0?`<span style="color:var(--red);">+${avgD}h late</span>`:''}
           </div>
         </div>`;}).join('')}
-    </div>`:`<div style="font-size:13px;color:var(--muted);padding:8px 0;">Belum ada data forwarder.</div></div>`}
-    <div class="chart-card"><div class="chart-title">💰 Pipeline Value</div>
+    </div>`:`<div style="font-size:13px;color:var(--muted);padding:8px 0;">Belum ada data forwarder.</div></div>`}    <div class="chart-card"><div class="chart-title">💰 Pipeline Value</div>
       <div style="display:flex;gap:12px;margin-bottom:16px;">
         <div style="flex:1;padding:12px 14px;background:var(--surface2);border-radius:8px;text-align:center;">
           <div style="font-size:10px;color:var(--muted);text-transform:uppercase;letter-spacing:.05em;">Total Nilai</div>
@@ -2613,8 +2781,8 @@ function renderDashboard(){
 // ── Audit Log ──
 async function loadLogs(){
   const data=await api('GET','/api/logs?limit=100');if(!data)return;
-  const icons={ADD_USER:'👤',UPDATE_USER:'✏️',DELETE_USER:'🗑️',CHANGE_PWD:'🔑',BULK_SAVE:'💾',UPDATE_SHIP:'✏️',DELETE_SHIP:'🗑️',DELETE_ALL:'⚠️',ADD_SHIP:'➕',SINGLE_EDIT:'✏️',BULK_EDIT:'📝',SHEETS_PULL:'📥',AUTO_SYNC_PULL_FAIL:'❌',SHEETS_PUSH:'📤',AUTO_SYNC_PUSH:'📤',SHEETS_PUSH_QUEUE:'📤',SHEETS_PUSH_RESUBMIT:'🔁',SHEETS_PUSH_RESUBMIT_FAIL:'❌',SHEETS_IMPORT:'📥',SHEETS_RESET:'🔑',AUTO_SYNC_PUSH_FAIL:'❌'};
-  const colors={ADD_USER:'var(--green-dim)',UPDATE_USER:'var(--accent-dim)',DELETE_USER:'var(--red-dim)',CHANGE_PWD:'var(--yellow-dim)',BULK_SAVE:'var(--green-dim)',UPDATE_SHIP:'var(--accent-dim)',DELETE_SHIP:'var(--red-dim)',DELETE_ALL:'var(--red-dim)',ADD_SHIP:'var(--green-dim)',SINGLE_EDIT:'var(--accent-dim)',BULK_EDIT:'var(--purple-dim)',SHEETS_PULL:'var(--accent-dim)',SHEETS_PUSH:'var(--accent-dim)',SHEETS_IMPORT:'var(--accent-dim)'};
+  const icons={ADD_USER:'👤',UPDATE_USER:'✏️',DELETE_USER:'🗑️',CHANGE_PWD:'🔑',BULK_SAVE:'💾',UPDATE_SHIP:'✏️',DELETE_SHIP:'🗑️',DELETE_ALL:'⚠️',ADD_SHIP:'➕',SINGLE_EDIT:'✏️',BULK_EDIT:'📝',SHEETS_PULL:'📥',AUTO_SYNC_PULL_FAIL:'❌',SHEETS_PUSH:'📤',AUTO_SYNC_PUSH:'📤'};
+  const colors={ADD_USER:'var(--green-dim)',UPDATE_USER:'var(--accent-dim)',DELETE_USER:'var(--red-dim)',CHANGE_PWD:'var(--yellow-dim)',BULK_SAVE:'var(--green-dim)',UPDATE_SHIP:'var(--accent-dim)',DELETE_SHIP:'var(--red-dim)',DELETE_ALL:'var(--red-dim)',ADD_SHIP:'var(--green-dim)',SINGLE_EDIT:'var(--accent-dim)',BULK_EDIT:'var(--purple-dim)',SHEETS_PULL:'var(--accent-dim)',SHEETS_PUSH:'var(--accent-dim)'};
   const list=document.getElementById('logList');
   if(!data.length){list.innerHTML='<div class="empty" style="padding:30px;"><div class="empty-icon">📋</div><div>Belum ada aktivitas</div></div>';return;}
   list.innerHTML=data.map(l=>`
@@ -2768,10 +2936,11 @@ async function addUser(){
   const d=await api('POST','/api/users',{username:u,name:n||u,password:p,role:r});
   if(!d?.success){e.textContent=d?.error||'Gagal.';return;}
   ['nu_user','nu_name','nu_pass'].forEach(id=>document.getElementById(id).value='');
+  addLog('ADD_USER',`Tambah user @${u} (${r})`);
   loadUsers();showToast('info','User ditambahkan',`@${u} berhasil dibuat.`);
 }
-async function resetPass(u){const p=prompt(`Password baru untuk @${u}:`);if(!p)return;const d=await api('PUT',`/api/users/${u}`,{password:p});if(d?.success)showToast('info','Password direset',`@${u} berhasil.`);}
-async function delUser(u){if(!confirm(`Hapus @${u}?`))return;const d=await api('DELETE',`/api/users/${u}`);if(d?.success){loadUsers();showToast('info','User dihapus',`@${u} dihapus.`);}}
+async function resetPass(u){const p=prompt(`Password baru untuk @${u}:`);if(!p)return;const d=await api('PUT',`/api/users/${u}`,{password:p});if(d?.success){addLog('CHANGE_PWD',`Reset password @${u}`);showToast('info','Password direset',`@${u} berhasil.`);}}
+async function delUser(u){if(!confirm(`Hapus @${u}?`))return;const d=await api('DELETE',`/api/users/${u}`);if(d?.success){addLog('DELETE_USER',`Hapus user @${u}`);loadUsers();showToast('info','User dihapus',`@${u} dihapus.`);}}
 
 // ── Ganti Password ──
 function openChangePwd(){['cp_old','cp_new','cp_conf'].forEach(id=>document.getElementById(id).value='');document.getElementById('cpErr').textContent='';document.getElementById('changePwdOverlay').classList.add('open');}
