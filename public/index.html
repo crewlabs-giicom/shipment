@@ -388,10 +388,26 @@ tbody tr.overdue-row:hover td:nth-child(1),tbody tr.overdue-row:hover td:nth-chi
 .login-err{color:var(--red);font-size:12px;margin-top:8px;text-align:center;min-height:18px;}
 
 /* ── User role badge ── */
-.user-role{font-size:11px;padding:2px 8px;border-radius:20px;font-weight:600;}
-.user-role.admin{background:var(--accent-dim);color:var(--accent);}
-.user-role.viewer{background:#f1f5f9;color:var(--muted);}
+.user-role{font-size:11px;padding:2px 8px;border-radius:20px;font-weight:700;letter-spacing:.02em;}
+.user-role.admin{background:linear-gradient(135deg,#dbeafe,#eff6ff);color:#1d4ed8;border:1px solid #93c5fd;}
+.user-role.viewer{background:#f1f5f9;color:#475569;border:1px solid #cbd5e1;}
 body.viewer-mode .admin-only{display:none!important;}
+
+/* ── User list (Manajemen User) ── */
+.user-list-wrap{display:flex;flex-direction:column;gap:10px;margin-bottom:8px;}
+.user-card{display:flex;align-items:center;gap:14px;padding:14px 16px;background:var(--surface2);border:1.5px solid var(--border2);border-radius:var(--radius);transition:all .15s;box-shadow:0 1px 4px rgba(15,23,42,.05);}
+.user-card:hover{border-color:var(--accent);box-shadow:0 4px 14px rgba(37,99,235,.1);background:#fff;}
+.user-avatar{width:44px;height:44px;border-radius:50%;background:linear-gradient(135deg,#2563eb,#60a5fa);color:#fff;display:flex;align-items:center;justify-content:center;font-size:15px;font-weight:700;flex-shrink:0;box-shadow:0 3px 8px rgba(37,99,235,.3);}
+.user-card .user-info{flex:1;min-width:0;}
+.user-card .user-name{font-size:14px;font-weight:700;color:var(--text);display:flex;align-items:center;gap:8px;margin-bottom:3px;}
+.user-card .user-uname{font-size:12px;color:var(--muted);font-family:'DM Mono',monospace;}
+.user-card-actions{display:flex;gap:6px;align-items:center;flex-shrink:0;}
+.user-self-tag{font-size:11px;color:var(--muted);background:var(--bg);border:1px solid var(--border2);padding:3px 10px;border-radius:20px;font-weight:600;}
+
+/* ── Add user section ── */
+.add-user-section{border-top:1.5px solid var(--border2);padding-top:18px;margin-top:4px;}
+.add-user-title{font-size:13px;font-weight:700;color:var(--text);margin-bottom:14px;display:flex;align-items:center;gap:6px;}
+.add-user-title::before{content:'';display:inline-block;width:3px;height:14px;background:var(--accent);border-radius:2px;}
 body.viewer-mode .actions{display:none!important;}
 
 /* ── Group view ── */
@@ -843,13 +859,13 @@ body.viewer-mode .actions{display:none!important;}
     <div class="page" id="page-users">
       <div class="master-section">
         <div class="master-title">👥 Manajemen User</div>
-        <div id="userList"></div>
-        <div style="border-top:1px solid var(--border2);padding-top:14px;margin-top:14px;">
-          <div style="font-size:13px;font-weight:500;margin-bottom:10px;">+ Tambah User Baru</div>
+        <div class="user-list-wrap" id="userList"></div>
+        <div class="add-user-section">
+          <div class="add-user-title">Tambah User Baru</div>
           <div class="grid2"><div class="field"><label>Username</label><input type="text" id="nu_user" placeholder="username"></div><div class="field"><label>Nama</label><input type="text" id="nu_name" placeholder="Nama lengkap"></div></div>
           <div class="grid2"><div class="field"><label>Password</label><input type="password" id="nu_pass" placeholder="password"></div><div class="field"><label>Role</label><select id="nu_role"><option value="admin">Admin</option><option value="viewer">Viewer</option></select></div></div>
           <div id="uErr" style="color:var(--red);font-size:12px;min-height:16px;margin-bottom:8px;"></div>
-          <button class="btn btn-primary" onclick="addUser()">Tambah User</button>
+          <button class="btn btn-primary" onclick="addUser()">+ Tambah User</button>
         </div>
       </div>
     </div>
@@ -2770,7 +2786,22 @@ function copyText(inputId) {
 // ── User Management ──
 async function loadUsers(){
   const data=await api('GET','/api/users');if(!data)return;
-  document.getElementById('userList').innerHTML=data.map(u=>`<div class="user-row"><div class="user-avatar">${u.name.substring(0,2).toUpperCase()}</div><div class="user-info"><div class="user-name">${u.name} <span class="user-role ${u.role}">${u.role}</span></div><div class="user-uname">@${u.username}</div></div><button class="btn btn-sm" onclick="resetPass('${u.username}')">Reset Pass</button>${u.username!==currentUser?.username?`<button class="btn btn-sm btn-danger" onclick="delUser('${u.username}')">Hapus</button>`:'<span style="font-size:11px;color:var(--muted);">Anda</span>'}</div>`).join('');
+  document.getElementById('userList').innerHTML=data.map(u=>{
+    const initials=u.name.substring(0,2).toUpperCase();
+    const isSelf=u.username===currentUser?.username;
+    const roleLabel=u.role==='admin'?'Admin':'Viewer';
+    return `<div class="user-card">
+      <div class="user-avatar">${initials}</div>
+      <div class="user-info">
+        <div class="user-name">${u.name}<span class="user-role ${u.role}">${roleLabel}</span></div>
+        <div class="user-uname">@${u.username}</div>
+      </div>
+      <div class="user-card-actions">
+        <button class="btn btn-sm" onclick="resetPass('${u.username}')">Reset Pass</button>
+        ${isSelf?'<span class="user-self-tag">Anda</span>':`<button class="btn btn-sm btn-danger" onclick="delUser('${u.username}')">Hapus</button>`}
+      </div>
+    </div>`;
+  }).join('');
 }
 async function addUser(){
   const u=document.getElementById('nu_user').value.trim(),n=document.getElementById('nu_name').value.trim(),p=document.getElementById('nu_pass').value,r=document.getElementById('nu_role').value;
