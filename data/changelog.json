@@ -1,5 +1,1355 @@
 [
   {
+    "time": "2026-06-24T09:47:23.740Z",
+    "shipId": 1782294443919,
+    "po": "PPB/IAM/SUB/2026/008",
+    "item": "JPTBJU-PLKK16-BESI",
+    "source": "sync",
+    "user": "system",
+    "changes": [
+      {
+        "field": "_new",
+        "from": "",
+        "to": "Shipment baru dari sync"
+      }
+    ]
+  },
+  {
+    "time": "2026-06-24T09:47:23.735Z",
+    "shipId": 1782294443908,
+    "po": "PPB/GIM/SUB-07/2026/020",
+    "item": "NV-POUCH-SRTSTTLV",
+    "source": "sync",
+    "user": "system",
+    "changes": [
+      {
+        "field": "_new",
+        "from": "",
+        "to": "Shipment baru dari sync"
+      }
+    ]
+  },
+  {
+    "time": "2026-06-24T09:47:23.732Z",
+    "shipId": 1782294443904,
+    "po": "PPB/GIM/SUB-07/2026/020",
+    "item": "NV-POUCH-SRTPLS",
+    "source": "sync",
+    "user": "system",
+    "changes": [
+      {
+        "field": "_new",
+        "from": "",
+        "to": "Shipment baru dari sync"
+      }
+    ]
+  },
+  {
+    "time": "2026-06-24T09:47:23.728Z",
+    "shipId": 1782294443899,
+    "po": "PPB/GIM/SUB-07/2026/020",
+    "item": "NV-POUCH-SRTOV",
+    "source": "sync",
+    "user": "system",
+    "changes": [
+      {
+        "field": "_new",
+        "from": "",
+        "to": "Shipment baru dari sync"
+      }
+    ]
+  },
+  {
+    "time": "2026-06-24T09:47:23.725Z",
+    "shipId": 1782294443895,
+    "po": "PPB/GIM/SUB-07/2026/020",
+    "item": "NV-POUCH-SRTKT",
+    "source": "sync",
+    "user": "system",
+    "changes": [
+      {
+        "field": "_new",
+        "from": "",
+        "to": "Shipment baru dari sync"
+      }
+    ]
+  },
+  {
+    "time": "2026-06-24T09:47:23.721Z",
+    "shipId": 1782294443887,
+    "po": "PPB/GIM/SUB-07/2026/014",
+    "item": "PART-NV-HR-ARIES2",
+    "source": "sync",
+    "user": "system",
+    "changes": [
+      {
+        "field": "_new",
+        "from": "",
+        "to": "Shipment baru dari sync"
+      }
+    ]
+  },
+  {
+    "time": "2026-06-24T09:47:23.716Z",
+    "shipId": 1782294443883,
+    "po": "PPB/GIM/SUB-07/2026/014",
+    "item": "PART-NV-DRY-LUNA",
+    "source": "sync",
+    "user": "system",
+    "changes": [
+      {
+        "field": "_new",
+        "from": "",
+        "to": "Shipment baru dari sync"
+      }
+    ]
+  },
+  {
+    "time": "2026-06-24T09:47:23.713Z",
+    "shipId": 1782294443852,
+    "po": "PPB/COM/SUB-04/2026/007",
+    "item": "CUTER-SLSBLT",
+    "source": "sync",
+    "user": "system",
+    "changes": [
+      {
+        "field": "_new",
+        "from": "",
+        "to": "Shipment baru dari sync"
+      }
+    ]
+  },
+  {
+    "time": "2026-06-24T09:47:23.710Z",
+    "shipId": 1781763539309,
+    "po": "CTR/SSS/SUB-06/2026/017",
+    "item": "FARGE-BD-SET",
+    "source": "sync",
+    "user": "system",
+    "changes": [
+      {
+        "field": "eta",
+        "from": "2026-06-18",
+        "to": "2026-06-20"
+      }
+    ]
+  },
+  {
+    "time": "2026-06-24T09:47:23.707Z",
+    "shipId": 1781763539305,
+    "po": "CTR/SSS/SUB-06/2026/016",
+    "item": "PD-MEJA-IRON",
+    "source": "sync",
+    "user": "system",
+    "changes": [
+      {
+        "field": "eta",
+        "from": "2026-06-16",
+        "to": "2026-06-19"
+      }
+    ]
+  },
+  {
+    "time": "2026-06-24T09:47:23.702Z",
+    "shipId": 1781763539303,
+    "po": "CTR/SSS/SUB-06/2026/016",
+    "item": "PD-IRON-VULGA",
+    "source": "sync",
+    "user": "system",
+    "changes": [
+      {
+        "field": "eta",
+        "from": "2026-06-16",
+        "to": "2026-06-19"
+      }
+    ]
+  },
+  {
+    "time": "2026-06-24T09:47:23.699Z",
+    "shipId": 1781763539301,
+    "po": "CTR/SSS/SUB-06/2026/016",
+    "item": "FARGE-DNM",
+    "source": "sync",
+    "user": "system",
+    "changes": [
+      {
+        "field": "eta",
+        "from": "2026-06-16",
+        "to": "2026-06-19"
+      }
+    ]
+  },
+  {
+    "time": "2026-06-24T09:47:23.695Z",
+    "shipId": 1781763539299,
+    "po": "CTR/SSS/SUB-06/2026/013",
+    "item": "PD-DRYBJU-SPECTA",
+    "source": "sync",
+    "user": "system",
+    "changes": [
+      {
+        "field": "eta",
+        "from": "2026-06-17",
+        "to": "2026-06-24"
+      }
+    ]
+  },
+  {
+    "time": "2026-06-24T09:47:23.692Z",
+    "shipId": 1781763539285,
+    "po": "CTR/RRR/SUB-04/2026/014",
+    "item": "RE-PL-1020-50",
+    "source": "sync",
+    "user": "system",
+    "changes": [
+      {
+        "field": "eta",
+        "from": "2026-06-25",
+        "to": "2026-06-27"
+      }
+    ]
+  },
+  {
+    "time": "2026-06-24T09:47:23.688Z",
+    "shipId": 1782294443802,
+    "po": "CTR/IAM/SUB/2026/029",
+    "item": "JPT-SG3-PL322",
+    "source": "sync",
+    "user": "system",
+    "changes": [
+      {
+        "field": "_new",
+        "from": "",
+        "to": "Shipment baru dari sync"
+      }
+    ]
+  },
+  {
+    "time": "2026-06-24T09:47:23.684Z",
+    "shipId": 1782294443798,
+    "po": "CTR/IAM/SUB/2026/028",
+    "item": "PD-CUCI-ATRONW",
+    "source": "sync",
+    "user": "system",
+    "changes": [
+      {
+        "field": "_new",
+        "from": "",
+        "to": "Shipment baru dari sync"
+      }
+    ]
+  },
+  {
+    "time": "2026-06-24T09:47:23.681Z",
+    "shipId": 1782294443794,
+    "po": "CTR/IAM/SUB/2026/027",
+    "item": "CS-BEKAM-24",
+    "source": "sync",
+    "user": "system",
+    "changes": [
+      {
+        "field": "_new",
+        "from": "",
+        "to": "Shipment baru dari sync"
+      }
+    ]
+  },
+  {
+    "time": "2026-06-24T09:47:23.677Z",
+    "shipId": 1782294443789,
+    "po": "CTR/IAM/SUB/2026/027",
+    "item": "CS-BEKAM-12",
+    "source": "sync",
+    "user": "system",
+    "changes": [
+      {
+        "field": "_new",
+        "from": "",
+        "to": "Shipment baru dari sync"
+      }
+    ]
+  },
+  {
+    "time": "2026-06-24T09:47:23.673Z",
+    "shipId": 1781763539284,
+    "po": "CTR/IAM/SUB/2026/024",
+    "item": "CS-BEKAM-24",
+    "source": "sync",
+    "user": "system",
+    "changes": [
+      {
+        "field": "eta",
+        "from": "2026-06-23",
+        "to": "2026-06-25"
+      }
+    ]
+  },
+  {
+    "time": "2026-06-24T09:47:23.669Z",
+    "shipId": 1781763539281,
+    "po": "CTR/IAM/SUB/2026/024",
+    "item": "CS-BEKAM-12",
+    "source": "sync",
+    "user": "system",
+    "changes": [
+      {
+        "field": "qty",
+        "from": "8550",
+        "to": "8490"
+      },
+      {
+        "field": "value",
+        "from": "109098",
+        "to": "108332.4"
+      },
+      {
+        "field": "eta",
+        "from": "2026-06-23",
+        "to": "2026-06-25"
+      }
+    ]
+  },
+  {
+    "time": "2026-06-24T09:47:23.666Z",
+    "shipId": 1781763539259,
+    "po": "CTR/IAM/SUB/2026/022",
+    "item": "PL-2545-TRANS",
+    "source": "sync",
+    "user": "system",
+    "changes": [
+      {
+        "field": "stuffing",
+        "from": "",
+        "to": "2026-06-16"
+      },
+      {
+        "field": "etd",
+        "from": "",
+        "to": "2026-06-19"
+      },
+      {
+        "field": "eta",
+        "from": "",
+        "to": "2026-06-28"
+      }
+    ]
+  },
+  {
+    "time": "2026-06-24T09:47:23.662Z",
+    "shipId": 1781763539257,
+    "po": "CTR/IAM/SUB/2026/022",
+    "item": "PL-1640-TRANS",
+    "source": "sync",
+    "user": "system",
+    "changes": [
+      {
+        "field": "stuffing",
+        "from": "",
+        "to": "2026-06-16"
+      },
+      {
+        "field": "etd",
+        "from": "",
+        "to": "2026-06-19"
+      },
+      {
+        "field": "eta",
+        "from": "",
+        "to": "2026-06-28"
+      }
+    ]
+  },
+  {
+    "time": "2026-06-24T09:47:23.659Z",
+    "shipId": 1782294443751,
+    "po": "CTR/GIM/SUB-07/2029/029",
+    "item": "NV-HR-VIRGO2",
+    "source": "sync",
+    "user": "system",
+    "changes": [
+      {
+        "field": "_new",
+        "from": "",
+        "to": "Shipment baru dari sync"
+      }
+    ]
+  },
+  {
+    "time": "2026-06-24T09:47:23.654Z",
+    "shipId": 1782294443744,
+    "po": "CTR/GIM/SUB-07/2029/029",
+    "item": "NV-HR-SATURN-U",
+    "source": "sync",
+    "user": "system",
+    "changes": [
+      {
+        "field": "_new",
+        "from": "",
+        "to": "Shipment baru dari sync"
+      }
+    ]
+  },
+  {
+    "time": "2026-06-24T09:47:23.650Z",
+    "shipId": 1782294443740,
+    "po": "CTR/GIM/SUB-07/2029/029",
+    "item": "NV-HR-CANCER",
+    "source": "sync",
+    "user": "system",
+    "changes": [
+      {
+        "field": "_new",
+        "from": "",
+        "to": "Shipment baru dari sync"
+      }
+    ]
+  },
+  {
+    "time": "2026-06-24T09:47:23.646Z",
+    "shipId": 1781763539234,
+    "po": "CTR/GIM/SUB-07/2026/026",
+    "item": "NV-HR-SATURN-U",
+    "source": "sync",
+    "user": "system",
+    "changes": [
+      {
+        "field": "qty",
+        "from": "5000",
+        "to": "3600"
+      },
+      {
+        "field": "value",
+        "from": "141000",
+        "to": "101520"
+      },
+      {
+        "field": "supplier",
+        "from": "",
+        "to": "IAM"
+      }
+    ]
+  },
+  {
+    "time": "2026-06-24T09:47:23.642Z",
+    "shipId": 1781763539227,
+    "po": "CTR/GIM/SUB-07/2026/022",
+    "item": "NV-SKM-LOVE",
+    "source": "sync",
+    "user": "system",
+    "changes": [
+      {
+        "field": "stuffing",
+        "from": "",
+        "to": "2026-06-16"
+      },
+      {
+        "field": "etd",
+        "from": "",
+        "to": "2026-06-19"
+      },
+      {
+        "field": "eta",
+        "from": "",
+        "to": "2026-06-28"
+      }
+    ]
+  },
+  {
+    "time": "2026-06-24T09:47:23.638Z",
+    "shipId": 1781763539225,
+    "po": "CTR/GIM/SUB-07/2026/022",
+    "item": "NV-SKM-GRIGI",
+    "source": "sync",
+    "user": "system",
+    "changes": [
+      {
+        "field": "stuffing",
+        "from": "",
+        "to": "2026-06-16"
+      },
+      {
+        "field": "etd",
+        "from": "",
+        "to": "2026-06-19"
+      },
+      {
+        "field": "eta",
+        "from": "",
+        "to": "2026-06-28"
+      }
+    ]
+  },
+  {
+    "time": "2026-06-24T09:47:23.634Z",
+    "shipId": 1781763539222,
+    "po": "CTR/GIM/SUB-07/2026/022",
+    "item": "NV-SIR-BIGKTK",
+    "source": "sync",
+    "user": "system",
+    "changes": [
+      {
+        "field": "stuffing",
+        "from": "",
+        "to": "2026-06-16"
+      },
+      {
+        "field": "etd",
+        "from": "",
+        "to": "2026-06-19"
+      },
+      {
+        "field": "eta",
+        "from": "",
+        "to": "2026-06-28"
+      }
+    ]
+  },
+  {
+    "time": "2026-06-24T09:47:23.630Z",
+    "shipId": 1781763539220,
+    "po": "CTR/GIM/SUB-07/2026/022",
+    "item": "NV-ROLL-JPT",
+    "source": "sync",
+    "user": "system",
+    "changes": [
+      {
+        "field": "stuffing",
+        "from": "",
+        "to": "2026-06-16"
+      },
+      {
+        "field": "etd",
+        "from": "",
+        "to": "2026-06-19"
+      },
+      {
+        "field": "eta",
+        "from": "",
+        "to": "2026-06-28"
+      }
+    ]
+  },
+  {
+    "time": "2026-06-24T09:47:23.627Z",
+    "shipId": 1781763539218,
+    "po": "CTR/GIM/SUB-07/2026/022",
+    "item": "NV-ROLL-BIG",
+    "source": "sync",
+    "user": "system",
+    "changes": [
+      {
+        "field": "stuffing",
+        "from": "",
+        "to": "2026-06-16"
+      },
+      {
+        "field": "etd",
+        "from": "",
+        "to": "2026-06-19"
+      },
+      {
+        "field": "eta",
+        "from": "",
+        "to": "2026-06-28"
+      }
+    ]
+  },
+  {
+    "time": "2026-06-24T09:47:23.623Z",
+    "shipId": 1781763539216,
+    "po": "CTR/GIM/SUB-07/2026/022",
+    "item": "NV-POUCH-PUFFY",
+    "source": "sync",
+    "user": "system",
+    "changes": [
+      {
+        "field": "stuffing",
+        "from": "",
+        "to": "2026-06-16"
+      },
+      {
+        "field": "etd",
+        "from": "",
+        "to": "2026-06-19"
+      },
+      {
+        "field": "eta",
+        "from": "",
+        "to": "2026-06-28"
+      }
+    ]
+  },
+  {
+    "time": "2026-06-24T09:47:23.620Z",
+    "shipId": 1781763539213,
+    "po": "CTR/GIM/SUB-07/2026/022",
+    "item": "NV-POUCH-PLW",
+    "source": "sync",
+    "user": "system",
+    "changes": [
+      {
+        "field": "stuffing",
+        "from": "",
+        "to": "2026-06-16"
+      },
+      {
+        "field": "etd",
+        "from": "",
+        "to": "2026-06-19"
+      },
+      {
+        "field": "eta",
+        "from": "",
+        "to": "2026-06-28"
+      }
+    ]
+  },
+  {
+    "time": "2026-06-24T09:47:23.616Z",
+    "shipId": 1781763539210,
+    "po": "CTR/GIM/SUB-07/2026/022",
+    "item": "NV-JPT-LYRA",
+    "source": "sync",
+    "user": "system",
+    "changes": [
+      {
+        "field": "stuffing",
+        "from": "",
+        "to": "2026-06-16"
+      },
+      {
+        "field": "etd",
+        "from": "",
+        "to": "2026-06-19"
+      },
+      {
+        "field": "eta",
+        "from": "",
+        "to": "2026-06-28"
+      }
+    ]
+  },
+  {
+    "time": "2026-06-24T09:47:23.612Z",
+    "shipId": 1781763539208,
+    "po": "CTR/GIM/SUB-07/2026/022",
+    "item": "NV-HR-TAURUSV2",
+    "source": "sync",
+    "user": "system",
+    "changes": [
+      {
+        "field": "stuffing",
+        "from": "",
+        "to": "2026-06-16"
+      },
+      {
+        "field": "etd",
+        "from": "",
+        "to": "2026-06-19"
+      },
+      {
+        "field": "eta",
+        "from": "",
+        "to": "2026-06-28"
+      }
+    ]
+  },
+  {
+    "time": "2026-06-24T09:47:23.609Z",
+    "shipId": 1781763539206,
+    "po": "CTR/GIM/SUB-07/2026/022",
+    "item": "NV-HR-LIBRAV2",
+    "source": "sync",
+    "user": "system",
+    "changes": [
+      {
+        "field": "stuffing",
+        "from": "",
+        "to": "2026-06-16"
+      },
+      {
+        "field": "etd",
+        "from": "",
+        "to": "2026-06-19"
+      },
+      {
+        "field": "eta",
+        "from": "",
+        "to": "2026-06-28"
+      }
+    ]
+  },
+  {
+    "time": "2026-06-24T09:47:23.605Z",
+    "shipId": 1781763539204,
+    "po": "CTR/GIM/SUB-07/2026/015",
+    "item": "NV-HR-ARIES2",
+    "source": "sync",
+    "user": "system",
+    "changes": [
+      {
+        "field": "etd",
+        "from": "2026-06-12",
+        "to": "2026-06-21"
+      },
+      {
+        "field": "eta",
+        "from": "2026-06-19",
+        "to": "2026-06-30"
+      }
+    ]
+  },
+  {
+    "time": "2026-06-24T09:47:23.601Z",
+    "shipId": 1781763539201,
+    "po": "CTR/GIM/SUB-07/2026/015",
+    "item": "NV-DRY-LUNA",
+    "source": "sync",
+    "user": "system",
+    "changes": [
+      {
+        "field": "etd",
+        "from": "2026-06-12",
+        "to": "2026-06-21"
+      },
+      {
+        "field": "eta",
+        "from": "2026-06-19",
+        "to": "2026-06-30"
+      }
+    ]
+  },
+  {
+    "time": "2026-06-24T09:47:23.598Z",
+    "shipId": 1781763539199,
+    "po": "CTR/GIM/SUB-07/2026/014",
+    "item": "NV-SKM-LOVE",
+    "source": "sync",
+    "user": "system",
+    "changes": [
+      {
+        "field": "eta",
+        "from": "2026-06-25",
+        "to": "2026-06-27"
+      }
+    ]
+  },
+  {
+    "time": "2026-06-24T09:47:23.594Z",
+    "shipId": 1781763539197,
+    "po": "CTR/GIM/SUB-07/2026/014",
+    "item": "NV-SIR-MNLV",
+    "source": "sync",
+    "user": "system",
+    "changes": [
+      {
+        "field": "eta",
+        "from": "2026-06-25",
+        "to": "2026-06-27"
+      }
+    ]
+  },
+  {
+    "time": "2026-06-24T09:47:23.591Z",
+    "shipId": 1781763539195,
+    "po": "CTR/GIM/SUB-07/2026/014",
+    "item": "NV-SIR-BIGKTK",
+    "source": "sync",
+    "user": "system",
+    "changes": [
+      {
+        "field": "eta",
+        "from": "2026-06-25",
+        "to": "2026-06-27"
+      }
+    ]
+  },
+  {
+    "time": "2026-06-24T09:47:23.587Z",
+    "shipId": 1781763539191,
+    "po": "CTR/GIM/SUB-07/2026/014",
+    "item": "NV-JPT-HEATLS2",
+    "source": "sync",
+    "user": "system",
+    "changes": [
+      {
+        "field": "eta",
+        "from": "2026-06-25",
+        "to": "2026-06-27"
+      }
+    ]
+  },
+  {
+    "time": "2026-06-24T09:47:23.583Z",
+    "shipId": 1781763539189,
+    "po": "CTR/GIM/SUB-07/2026/014",
+    "item": "NV-HR-SCORPIO",
+    "source": "sync",
+    "user": "system",
+    "changes": [
+      {
+        "field": "eta",
+        "from": "2026-06-25",
+        "to": "2026-06-27"
+      }
+    ]
+  },
+  {
+    "time": "2026-06-24T09:47:23.579Z",
+    "shipId": 1781763539186,
+    "po": "CTR/GIM/SUB-07/2026/014",
+    "item": "NV-HR-ARIES2",
+    "source": "sync",
+    "user": "system",
+    "changes": [
+      {
+        "field": "eta",
+        "from": "2026-06-25",
+        "to": "2026-06-27"
+      }
+    ]
+  },
+  {
+    "time": "2026-06-24T09:47:23.575Z",
+    "shipId": 1781763539184,
+    "po": "CTR/GIM/SUB-07/2026/013",
+    "item": "NV-DRY-MINA",
+    "source": "sync",
+    "user": "system",
+    "changes": [
+      {
+        "field": "eta",
+        "from": "2026-06-17",
+        "to": "2026-06-24"
+      }
+    ]
+  },
+  {
+    "time": "2026-06-24T09:47:23.571Z",
+    "shipId": 1781763539181,
+    "po": "CTR/GIM/SUB-07/2026/012",
+    "item": "NV-HR-TAURUSV2",
+    "source": "sync",
+    "user": "system",
+    "changes": [
+      {
+        "field": "status",
+        "from": "Arrived",
+        "to": "Delivered"
+      },
+      {
+        "field": "deliveredDate",
+        "from": "",
+        "to": "2026-06-22"
+      }
+    ]
+  },
+  {
+    "time": "2026-06-24T09:47:23.553Z",
+    "shipId": 1781763539179,
+    "po": "CTR/GIM/SUB-07/2026/011",
+    "item": "NV-HR-SATURN",
+    "source": "sync",
+    "user": "system",
+    "changes": [
+      {
+        "field": "eta",
+        "from": "2026-06-17",
+        "to": "2026-06-24"
+      }
+    ]
+  },
+  {
+    "time": "2026-06-24T09:47:23.549Z",
+    "shipId": 1781763539099,
+    "po": "CTR/COM/SUB-04/2026/026",
+    "item": "PL-BUB1823-TC",
+    "source": "sync",
+    "user": "system",
+    "changes": [
+      {
+        "field": "supplier",
+        "from": "",
+        "to": "IAM"
+      }
+    ]
+  },
+  {
+    "time": "2026-06-24T09:47:23.546Z",
+    "shipId": 1782294443586,
+    "po": "CTR/COM/SUB-04/2026/026",
+    "item": "PL-BUB1823-MM",
+    "source": "sync",
+    "user": "system",
+    "changes": [
+      {
+        "field": "_new",
+        "from": "",
+        "to": "Shipment baru dari sync"
+      }
+    ]
+  },
+  {
+    "time": "2026-06-24T09:47:23.543Z",
+    "shipId": 1782294443582,
+    "po": "CTR/COM/SUB-04/2026/026",
+    "item": "PL-BUB1823-H",
+    "source": "sync",
+    "user": "system",
+    "changes": [
+      {
+        "field": "_new",
+        "from": "",
+        "to": "Shipment baru dari sync"
+      }
+    ]
+  },
+  {
+    "time": "2026-06-24T09:47:23.538Z",
+    "shipId": 1781763539096,
+    "po": "CTR/COM/SUB-04/2026/026",
+    "item": "PL-BUB1318-TC",
+    "source": "sync",
+    "user": "system",
+    "changes": [
+      {
+        "field": "qty",
+        "from": "85400",
+        "to": "91700"
+      },
+      {
+        "field": "value",
+        "from": "13664",
+        "to": "14672"
+      },
+      {
+        "field": "supplier",
+        "from": "",
+        "to": "IAM"
+      }
+    ]
+  },
+  {
+    "time": "2026-06-24T09:47:23.533Z",
+    "shipId": 1781763539094,
+    "po": "CTR/COM/SUB-04/2026/026",
+    "item": "PL-BUB1318-P",
+    "source": "sync",
+    "user": "system",
+    "changes": [
+      {
+        "field": "supplier",
+        "from": "",
+        "to": "IAM"
+      }
+    ]
+  },
+  {
+    "time": "2026-06-24T09:47:23.530Z",
+    "shipId": 1781763539092,
+    "po": "CTR/COM/SUB-04/2026/026",
+    "item": "PL-BUB1318-MM",
+    "source": "sync",
+    "user": "system",
+    "changes": [
+      {
+        "field": "qty",
+        "from": "69000",
+        "to": "125350"
+      },
+      {
+        "field": "value",
+        "from": "8280",
+        "to": "15042"
+      },
+      {
+        "field": "supplier",
+        "from": "",
+        "to": "IAM"
+      }
+    ]
+  },
+  {
+    "time": "2026-06-24T09:47:23.527Z",
+    "shipId": 1781763539085,
+    "po": "CTR/COM/SUB-04/2026/020",
+    "item": "PL-BUB1823-MM",
+    "source": "sync",
+    "user": "system",
+    "changes": [
+      {
+        "field": "qty",
+        "from": "132000",
+        "to": "111100"
+      },
+      {
+        "field": "value",
+        "from": "34320",
+        "to": "28886"
+      }
+    ]
+  },
+  {
+    "time": "2026-06-24T09:47:23.523Z",
+    "shipId": 1781763539079,
+    "po": "CTR/COM/SUB-04/2026/019",
+    "item": "PL-BUB1823-MM",
+    "source": "sync",
+    "user": "system",
+    "changes": [
+      {
+        "field": "etd",
+        "from": "2026-06-14",
+        "to": "2026-06-16"
+      }
+    ]
+  },
+  {
+    "time": "2026-06-24T09:47:23.520Z",
+    "shipId": 1781763539077,
+    "po": "CTR/COM/SUB-04/2026/019",
+    "item": "PL-BUB1823-H",
+    "source": "sync",
+    "user": "system",
+    "changes": [
+      {
+        "field": "etd",
+        "from": "2026-06-14",
+        "to": "2026-06-16"
+      }
+    ]
+  },
+  {
+    "time": "2026-06-24T09:47:23.516Z",
+    "shipId": 1781763539074,
+    "po": "CTR/COM/SUB-04/2026/019",
+    "item": "PL-BUB1318-MM",
+    "source": "sync",
+    "user": "system",
+    "changes": [
+      {
+        "field": "qty",
+        "from": "163300",
+        "to": "106950"
+      },
+      {
+        "field": "value",
+        "from": "19596",
+        "to": "12834"
+      },
+      {
+        "field": "etd",
+        "from": "2026-06-14",
+        "to": "2026-06-16"
+      }
+    ]
+  },
+  {
+    "time": "2026-06-24T09:47:23.513Z",
+    "shipId": 1781763539072,
+    "po": "CTR/COM/SUB-04/2026/019",
+    "item": "PL-BUB1318-H",
+    "source": "sync",
+    "user": "system",
+    "changes": [
+      {
+        "field": "etd",
+        "from": "2026-06-14",
+        "to": "2026-06-16"
+      }
+    ]
+  },
+  {
+    "time": "2026-06-24T09:47:23.510Z",
+    "shipId": 1781763539070,
+    "po": "CTR/COM/SUB-04/2026/016",
+    "item": "PL-BUB1318-TC",
+    "source": "sync",
+    "user": "system",
+    "changes": [
+      {
+        "field": "eta",
+        "from": "2026-06-16",
+        "to": "2026-06-19"
+      }
+    ]
+  },
+  {
+    "time": "2026-06-24T09:47:23.506Z",
+    "shipId": 1781763539068,
+    "po": "CTR/COM/SUB-04/2026/014",
+    "item": "PL-BUB1823-P",
+    "source": "sync",
+    "user": "system",
+    "changes": [
+      {
+        "field": "eta",
+        "from": "2026-06-25",
+        "to": "2026-06-27"
+      }
+    ]
+  },
+  {
+    "time": "2026-06-24T09:47:23.502Z",
+    "shipId": 1781763539066,
+    "po": "CTR/COM/SUB-04/2026/014",
+    "item": "PL-BUB1823-H",
+    "source": "sync",
+    "user": "system",
+    "changes": [
+      {
+        "field": "eta",
+        "from": "2026-06-25",
+        "to": "2026-06-27"
+      }
+    ]
+  },
+  {
+    "time": "2026-06-24T09:47:23.499Z",
+    "shipId": 1781763539064,
+    "po": "CTR/COM/SUB-04/2026/014",
+    "item": "PL-BUB1318-P",
+    "source": "sync",
+    "user": "system",
+    "changes": [
+      {
+        "field": "eta",
+        "from": "2026-06-25",
+        "to": "2026-06-27"
+      }
+    ]
+  },
+  {
+    "time": "2026-06-24T09:47:23.495Z",
+    "shipId": 1781763539062,
+    "po": "CTR/COM/SUB-04/2026/014",
+    "item": "PL-BUB1318-H",
+    "source": "sync",
+    "user": "system",
+    "changes": [
+      {
+        "field": "eta",
+        "from": "2026-06-25",
+        "to": "2026-06-27"
+      }
+    ]
+  },
+  {
+    "time": "2026-06-24T09:47:23.489Z",
+    "shipId": 1781763539059,
+    "po": "CTR/COM/SUB-04/2026/013",
+    "item": "PL-BUB2530-H",
+    "source": "sync",
+    "user": "system",
+    "changes": [
+      {
+        "field": "eta",
+        "from": "2026-06-17",
+        "to": "2026-06-24"
+      }
+    ]
+  },
+  {
+    "time": "2026-06-24T09:47:23.484Z",
+    "shipId": 1781763539057,
+    "po": "CTR/COM/SUB-04/2026/013",
+    "item": "PL-BUB1318-MM",
+    "source": "sync",
+    "user": "system",
+    "changes": [
+      {
+        "field": "eta",
+        "from": "2026-06-17",
+        "to": "2026-06-24"
+      }
+    ]
+  },
+  {
+    "time": "2026-06-24T09:47:23.481Z",
+    "shipId": 1781763539053,
+    "po": "CTR/COM/SUB-04/2026/012",
+    "item": "PL-BUB1823-MM",
+    "source": "sync",
+    "user": "system",
+    "changes": [
+      {
+        "field": "status",
+        "from": "Arrived",
+        "to": "Delivered"
+      },
+      {
+        "field": "deliveredDate",
+        "from": "",
+        "to": "2026-06-22"
+      }
+    ]
+  },
+  {
+    "time": "2026-06-24T09:47:23.478Z",
+    "shipId": 1782294443488,
+    "po": "CTR/BBB/SUB-01/2029/029",
+    "item": "HB-TTBAG-YUNA",
+    "source": "sync",
+    "user": "system",
+    "changes": [
+      {
+        "field": "_new",
+        "from": "",
+        "to": "Shipment baru dari sync"
+      }
+    ]
+  },
+  {
+    "time": "2026-06-24T09:47:23.475Z",
+    "shipId": 1782294443484,
+    "po": "CTR/BBB/SUB-01/2029/029",
+    "item": "HB-RB-POPPY",
+    "source": "sync",
+    "user": "system",
+    "changes": [
+      {
+        "field": "_new",
+        "from": "",
+        "to": "Shipment baru dari sync"
+      }
+    ]
+  },
+  {
+    "time": "2026-06-24T09:47:23.471Z",
+    "shipId": 1782294443478,
+    "po": "CTR/BBB/SUB-01/2029/029",
+    "item": "HB-RB-JOLLY",
+    "source": "sync",
+    "user": "system",
+    "changes": [
+      {
+        "field": "_new",
+        "from": "",
+        "to": "Shipment baru dari sync"
+      }
+    ]
+  },
+  {
+    "time": "2026-06-24T09:47:23.467Z",
+    "shipId": 1782294443474,
+    "po": "CTR/BBB/SUB-01/2029/029",
+    "item": "HB-RB-ASHLEY",
+    "source": "sync",
+    "user": "system",
+    "changes": [
+      {
+        "field": "_new",
+        "from": "",
+        "to": "Shipment baru dari sync"
+      }
+    ]
+  },
+  {
+    "time": "2026-06-24T09:47:23.463Z",
+    "shipId": 1782294443469,
+    "po": "CTR/BBB/SUB-01/2029/029",
+    "item": "HB-CLR-ASHLEY",
+    "source": "sync",
+    "user": "system",
+    "changes": [
+      {
+        "field": "_new",
+        "from": "",
+        "to": "Shipment baru dari sync"
+      }
+    ]
+  },
+  {
+    "time": "2026-06-24T09:47:23.460Z",
+    "shipId": 1782294443465,
+    "po": "CTR/BBB/SUB-01/2026/026",
+    "item": "HB-KA-HBO-120",
+    "source": "sync",
+    "user": "system",
+    "changes": [
+      {
+        "field": "_new",
+        "from": "",
+        "to": "Shipment baru dari sync"
+      }
+    ]
+  },
+  {
+    "time": "2026-06-24T09:47:23.456Z",
+    "shipId": 1781763539024,
+    "po": "CTR/BBB/SUB-01/2026/022",
+    "item": "HB-TTBAG-YUNA",
+    "source": "sync",
+    "user": "system",
+    "changes": [
+      {
+        "field": "stuffing",
+        "from": "",
+        "to": "2026-06-16"
+      },
+      {
+        "field": "etd",
+        "from": "",
+        "to": "2026-06-19"
+      },
+      {
+        "field": "eta",
+        "from": "",
+        "to": "2026-06-28"
+      }
+    ]
+  },
+  {
+    "time": "2026-06-24T09:47:23.452Z",
+    "shipId": 1781763539022,
+    "po": "CTR/BBB/SUB-01/2026/022",
+    "item": "HB-RB-SORIN",
+    "source": "sync",
+    "user": "system",
+    "changes": [
+      {
+        "field": "stuffing",
+        "from": "",
+        "to": "2026-06-16"
+      },
+      {
+        "field": "etd",
+        "from": "",
+        "to": "2026-06-19"
+      },
+      {
+        "field": "eta",
+        "from": "",
+        "to": "2026-06-28"
+      }
+    ]
+  },
+  {
+    "time": "2026-06-24T09:47:23.448Z",
+    "shipId": 1781763539020,
+    "po": "CTR/BBB/SUB-01/2026/022",
+    "item": "HB-CLR-CHERY",
+    "source": "sync",
+    "user": "system",
+    "changes": [
+      {
+        "field": "stuffing",
+        "from": "",
+        "to": "2026-06-16"
+      },
+      {
+        "field": "etd",
+        "from": "",
+        "to": "2026-06-19"
+      },
+      {
+        "field": "eta",
+        "from": "",
+        "to": "2026-06-28"
+      }
+    ]
+  },
+  {
     "time": "2026-06-18T07:43:04.709Z",
     "shipId": 1781763539564,
     "po": "SAMPLE",
