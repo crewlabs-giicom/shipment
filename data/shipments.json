@@ -628,9 +628,9 @@
     "tags": [
       "GROSIR"
     ],
-    "status": "Delivered",
+    "status": "Arrived",
     "supplier": "IAM",
-    "deliveredDate": "2026-06-29",
+    "deliveredDate": "",
     "tgl_production": "2026-04-15",
     "forwarder": "AD-APX",
     "notes": "",
@@ -656,9 +656,9 @@
     "tags": [
       "GROSIR"
     ],
-    "status": "Delivered",
+    "status": "Arrived",
     "supplier": "IAM",
-    "deliveredDate": "2026-06-29",
+    "deliveredDate": "",
     "tgl_production": "2026-04-15",
     "forwarder": "AD-APX",
     "notes": "",
@@ -1916,9 +1916,9 @@
     "tags": [
       "NVMEE"
     ],
-    "status": "Delivered",
+    "status": "Arrived",
     "supplier": "IAM",
-    "deliveredDate": "2026-06-29",
+    "deliveredDate": "",
     "tgl_production": "2026-01-08",
     "forwarder": "AD-APX",
     "notes": "",
@@ -1972,9 +1972,9 @@
     "tags": [
       "NVMEE"
     ],
-    "status": "Delivered",
+    "status": "Arrived",
     "supplier": "IAM",
-    "deliveredDate": "2026-06-29",
+    "deliveredDate": "",
     "tgl_production": "2026-01-08",
     "forwarder": "AD-APX",
     "notes": "",
@@ -3484,9 +3484,9 @@
     "tags": [
       "PANDAOMA"
     ],
-    "status": "Delivered",
+    "status": "Arrived",
     "supplier": "IAM",
-    "deliveredDate": "2026-06-29",
+    "deliveredDate": "",
     "tgl_production": "2026-03-03",
     "forwarder": "AD-APX",
     "notes": "",

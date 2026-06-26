@@ -1,10 +1,10 @@
 {
   "sheetsWebhookSecret": "8c752d73be56ce329278a1a6053c31ec94e2380ae7a1c930",
-  "sheetsLastSync": "2026-06-26T10:56:04.149Z",
-  "sheetsSyncCount": 2,
+  "sheetsLastSync": "2026-06-26T01:43:21.090Z",
+  "sheetsSyncCount": 1,
   "sheetsLastResult": {
-    "added": 0,
-    "updated": 250,
+    "added": 250,
+    "updated": 0,
     "total": 250
   },
   "sheetsAutoSync": true,
@@ -14,9 +14,9 @@
       "id": 1782437980385,
       "type": "SYNC_PUSH",
       "queuedAt": "2026-06-26T01:39:40.385Z",
-      "attempts": 4,
+      "attempts": 2,
       "lastError": "HTTP 405",
-      "lastAttempt": "2026-06-26T10:56:19.485Z"
+      "lastAttempt": "2026-06-26T01:43:29.539Z"
     }
   ],
   "sheetsWebAppUrl": "https://script.google.com/macros/s/AKfycbxzZ2E6adYEe43_uqiggtBu6f2JuXfbu-FzPrXXV-G6Rz--XfwZAdI9DBeXjTQnp53pGw/exec",

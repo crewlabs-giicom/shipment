@@ -1,37 +1,5 @@
 [
   {
-    "id": 1782471379489,
-    "user": "system",
-    "name": "Auto Sync",
-    "action": "AUTO_SYNC_PUSH_FAIL",
-    "detail": "HTTP 405",
-    "time": "2026-06-26T10:56:19.489Z"
-  },
-  {
-    "id": 1782471379487,
-    "user": "system",
-    "name": "Sheets Push Queue",
-    "action": "SHEETS_PUSH_QUEUE",
-    "detail": "Enqueue push ulang karena error: HTTP 405",
-    "time": "2026-06-26T10:56:19.487Z"
-  },
-  {
-    "id": 1782471372527,
-    "user": "system",
-    "name": "Sheets Push Queue",
-    "action": "SHEETS_PUSH_RESUBMIT_FAIL",
-    "detail": "Retry push gagal: HTTP 405",
-    "time": "2026-06-26T10:56:12.527Z"
-  },
-  {
-    "id": 1782471364152,
-    "user": "system",
-    "name": "Sheets Pull",
-    "action": "SHEETS_PULL",
-    "detail": "Tarik dari Sheets: +0 baru, ~250 update",
-    "time": "2026-06-26T10:56:04.152Z"
-  },
-  {
     "id": 1782438209542,
     "user": "system",
     "name": "Sheets Push Queue",
