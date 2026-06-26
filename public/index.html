@@ -95,7 +95,8 @@ button{font-family:'Plus Jakarta Sans',sans-serif;cursor:pointer;}
 .main{margin-left:var(--sidebar);flex:1;min-height:100vh;display:flex;flex-direction:column;}
 .main.mini{margin-left:var(--sidebar-mini);}
 .topbar{background:rgba(255,255,255,.82);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid var(--border2);padding:0 28px;height:56px;display:flex;align-items:center;gap:8px;position:sticky;top:0;z-index:50;box-shadow:0 2px 12px rgba(40,80,180,.06);}
-.notif-btn{position:relative;z-index:410;} 
+.notif-btn{position:relative;z-index:410;background:var(--surface2)!important;border:1.5px solid var(--border)!important;color:var(--text)!important;}
+.notif-btn:hover{background:var(--border)!important;border-color:#c7d6f5!important;}
 .topbar-title{font-size:18px;font-weight:700;flex:1;color:var(--text);font-family:var(--font-display);letter-spacing:-.3px;}
 .content{padding:24px 28px 48px;flex:1;}
 .page{display:none;}.page.active{display:block !important;visibility:visible !important;}
@@ -1352,7 +1353,6 @@ const GRADS=['linear-gradient(90deg,#1d4ed8,#60a5fa)','linear-gradient(90deg,#08
     localStorage.removeItem('gudang_rules');
     localStorage.removeItem('tag_rules');
     localStorage.setItem('sm_master_version', MASTER_VERSION);
-    console.log('Master data refreshed to version', MASTER_VERSION);
   }
 })();
 
@@ -1535,10 +1535,6 @@ function initUI(){
   const fSt=document.getElementById('filterStatus');fSt.innerHTML='<option value="">Status</option>'+statuses.map(s=>`<option>${s}</option>`).join('');
   // Tags filter
   const fTg=document.getElementById('filterTag');fTg.innerHTML='<option value="">Tags</option>'+masterTags.map(t=>`<option>${t}</option>`).join('');
-  // Populate forwarder filter
-  const fFwd=document.getElementById('filterForwarder');
-  if(fFwd){const fwds=[...new Set(shipments.map(s=>s.forwarder).filter(Boolean))].sort();
-    fFwd.innerHTML='<option value="">Semua Forwarder</option>'+fwds.map(f=>`<option>${f}</option>`).join('');}
   // Status di dynamic CSS
   injectStatusStyles();
 }
@@ -1840,18 +1836,16 @@ function si(k){if(sortKey!==k)return'<span class="sort-icon">⇅</span>';return 
 // ── Filter ──
 function getFiltered(){
   const q=document.getElementById('searchInput').value.toLowerCase();
-  const fs=document.getElementById('filterStatus').value,fa=document.getElementById('filterAlert')?.value||'';
+  const fs=document.getElementById('filterStatus').value;
   const ft=document.getElementById('filterTag').value;
-  const ff=document.getElementById('filterForwarder')?.value||'';
   return applySort(shipments.filter(s=>{
     const m=!q||[s.po,s.supplier,s.item,s.container,s.forwarder].some(x=>x&&x.toLowerCase().includes(q));
-    const st=!fs||s.status===fs,al=!fa||getAlertType(s)===fa,tg=!ft||(s.tags||[]).includes(ft);
-    const fw=!ff||s.forwarder===ff;
+    const st=!fs||s.status===fs,tg=!ft||(s.tags||[]).includes(ft);
     let sm=true;
     if(activeStatFilter==='aktif')sm=!['Cleared','Delivered'].includes(s.status);
     else if(activeStatFilter==='laut')sm=['Stuffing','Sailed','Arrived'].includes(s.status);
     else if(activeStatFilter==='late')sm=getAlertType(s)==='late';
-    return m&&st&&al&&tg&&fw&&sm;
+    return m&&st&&tg&&sm;
   }));
 }
 
@@ -1870,10 +1864,6 @@ function statusBadge(status){
 }
 function render(){
   if(groupViewOn){renderGroupView();}
-  // Update forwarder filter options
-  const fFwd=document.getElementById('filterForwarder');
-  if(fFwd){const cv=fFwd.value;const fwds=[...new Set(shipments.map(s=>s.forwarder).filter(Boolean))].sort();
-    fFwd.innerHTML='<option value="">Semua Forwarder</option>'+fwds.map(f=>`<option${f===cv?' selected':''}>${f}</option>`).join('');}
   renderStats();const list=getFiltered();renderTable(list);renderCards(list);
   // Quick Summary Bar
   const qs=document.getElementById('quickSummary');
@@ -1990,7 +1980,7 @@ function getSelIds(){return[...document.querySelectorAll('.row-check:checked')].
 function bulkAction(action){
   const checks=document.querySelectorAll('.row-check:checked');
   const ids=[...checks].map(c=>parseInt(c.dataset.id));
-  if(!ids.length){showToast('warning','Pilih dulu','Centang shipment yang ingin diproses.');return;}
+  if(!ids.length){showToast('warn','Pilih dulu','Centang shipment yang ingin diproses.');return;}
   if(action==='delete'){
     if(!confirm('Hapus '+ids.length+' shipment?'))return;
     shipments=shipments.filter(s=>!ids.includes(s.id));save();render();
@@ -2055,7 +2045,7 @@ async function applyBulkEdit(){
   const uprod=document.getElementById('be_uprod')?.checked;
   const ustuf=document.getElementById('be_ustuf')?.checked;
   const udel=document.getElementById('be_udel')?.checked;
-  if(!usp&&!uf&&!us&&!ue&&!ua&&!ud&&!un&&!uc&&!uctr&&!uprod&&!ustuf&&!udel){showToast('warning','Belum ada field','Aktifkan minimal satu field.');return;}
+  if(!usp&&!uf&&!us&&!ue&&!ua&&!ud&&!un&&!uc&&!uctr&&!uprod&&!ustuf&&!udel){showToast('warn','Belum ada field','Aktifkan minimal satu field.');return;}
   shipments=shipments.map(s=>{
     if(!ids.includes(s.id))return s;const u={...s};
     if(usp)u.supplier=document.getElementById('be_supplier').value.trim();
@@ -2137,7 +2127,7 @@ function saveShipment(){
   const po=document.getElementById('f_po').value.trim(),supplier=document.getElementById('f_supplier').value.trim();
   const eta=document.getElementById('f_eta').value,item=document.getElementById('f_item').value.trim();
   const forwarder=document.getElementById('f_forwarder').value.trim();
-  if(!po||!item){showToast('warning','Data kurang','Harap isi No. PO dan Item.');return;}
+  if(!po||!item){showToast('warn','Data kurang','Harap isi No. PO dan Item.');return;}
   // forwarder optional
   const container=document.getElementById('f_container').value.trim(),etd=document.getElementById('f_etd').value;
   const obj={id:editId||Date.now(),po,supplier,item,qty:document.getElementById('f_qty').value.trim(),
@@ -2348,7 +2338,7 @@ function addGudangRule(){
   const field=document.getElementById('gr_field').value;
   const keyword=document.getElementById('gr_keyword').value.trim().toUpperCase();
   const days=parseInt(document.getElementById('gr_days').value)||7;
-  if(!keyword){showToast('warning','Kosong','Harap isi kata kunci.');return;}
+  if(!keyword){showToast('warn','Kosong','Harap isi kata kunci.');return;}
   gudangRules.unshift({field,keyword,days});
   saveMaster();renderMaster();
   document.getElementById('gr_keyword').value='';
@@ -2395,8 +2385,8 @@ function deleteForwarderRule(i){if(!confirm("Hapus aturan ini?"))return;forwarde
 function addForwarderRule(){
   const keyword=document.getElementById('fr_keyword').value.trim().toUpperCase();
   const name=document.getElementById('fr_name').value.trim();
-  if(!keyword||!name){showToast('warning','Data kurang','Kata kunci dan nama forwarder wajib diisi.');return;}
-  if(forwarderRules.find(r=>r.keyword===keyword)){showToast('warning','Duplikat','Kata kunci sudah ada.');return;}
+  if(!keyword||!name){showToast('warn','Data kurang','Kata kunci dan nama forwarder wajib diisi.');return;}
+  if(forwarderRules.find(r=>r.keyword===keyword)){showToast('warn','Duplikat','Kata kunci sudah ada.');return;}
   forwarderRules.push({keyword,forwarder:name});
   saveMaster();renderMaster();
   document.getElementById('fr_keyword').value='';document.getElementById('fr_name').value='';
@@ -2411,7 +2401,7 @@ function delForwarderRule(i){
 function addStatus(){
   const name=document.getElementById('ms_name').value.trim(),color=document.getElementById('ms_color').value;
   if(!name)return;
-  if(masterStatuses.find(s=>s.name.toLowerCase()===name.toLowerCase())){showToast('warning','Duplikat','Status sudah ada.');return;}
+  if(masterStatuses.find(s=>s.name.toLowerCase()===name.toLowerCase())){showToast('warn','Duplikat','Status sudah ada.');return;}
   masterStatuses.push({name,color});saveMaster();initUI();renderMaster();
   document.getElementById('ms_name').value='';
   showToast('info','Status ditambahkan',`"${name}" berhasil ditambahkan.`);
@@ -2435,7 +2425,7 @@ function deleteStatus(i){
 // ── Tag CRUD ──
 function addTag(){
   const name=document.getElementById('mt_name').value.trim().toUpperCase();
-  if(!name)return;if(masterTags.includes(name)){showToast('warning','Duplikat','Tag sudah ada.');return;}
+  if(!name)return;if(masterTags.includes(name)){showToast('warn','Duplikat','Tag sudah ada.');return;}
   masterTags.push(name);saveMaster();initUI();renderMaster();
   document.getElementById('mt_name').value='';showToast('info','Tag ditambahkan',`"${name}" berhasil ditambahkan.`);
 }
@@ -2467,7 +2457,7 @@ function updateTagRuleKeyword(i,v){tagRules[i].keyword=v.trim().toUpperCase();sa
 function addTagRule(){
   const keyword=document.getElementById('tr_keyword').value.trim(),tag=document.getElementById('tr_tag').value;
   if(!keyword||!tag)return;
-  if(tagRules.find(r=>r.keyword===keyword&&r.tag===tag)){showToast('warning','Duplikat','Aturan sudah ada.');return;}
+  if(tagRules.find(r=>r.keyword===keyword&&r.tag===tag)){showToast('warn','Duplikat','Aturan sudah ada.');return;}
   tagRules.push({keyword,tag});saveMaster();renderMaster();
   document.getElementById('tr_keyword').value='';showToast('info','Aturan ditambahkan',`"${keyword}" → "${tag}"`);
 }
@@ -3418,7 +3408,7 @@ function filterBySupplier(supplier){
 
 // ── Export Excel ──
 function exportExcel(){
-  const list=getFiltered();if(!list.length){showToast('warning','Kosong','Tidak ada data untuk diekspor.');return;}
+  const list=getFiltered();if(!list.length){showToast('warn','Kosong','Tidak ada data untuk diekspor.');return;}
   const headers=['PO','Item','Qty','Nilai (RMB)','Supplier','Kontainer','Forwarder','Produksi','Stuffing','ETD','ETA','Est. Tiba','Tgl Datang','Status','Tags','INV','PL','DO','PIB','LS','Catatan'];
   const rows=list.map(s=>{const d=s.docs||{};return[
     s.po,s.item,s.qty,s.value||'',
@@ -3435,7 +3425,7 @@ function exportExcel(){
   ws['!cols']=[24,20,7,13,16,14,16,11,11,11,11,11,11,12,18,6,6,6,6,6,32].map(w=>({wch:w}));
   const wb=XLSX.utils.book_new();XLSX.utils.book_append_sheet(wb,ws,'Shipment');
   const now=new Date(),tgl=`${now.getFullYear()}${String(now.getMonth()+1).padStart(2,'0')}${String(now.getDate()).padStart(2,'0')}`;
-  XLSX.writeFile(wb,`Shipment_${tgl}.xlsx`);showToast('info','Export berhasil',`${list.length} shipment diexport (urutan v2).`);
+  XLSX.writeFile(wb,`Shipment_${tgl}.xlsx`);showToast('info','Export berhasil',`${list.length} shipment berhasil diexport.`);
 }
 
 // ── Sync ──
@@ -3466,7 +3456,7 @@ async function openCheckDup(){
   const r=await api('POST','/api/sheets/check-orphans');
   if(!r||r.error){status.innerHTML=`<div style="font-size:13px;color:var(--red);padding:10px;background:var(--red-dim);border-radius:var(--radius-sm);">⚠️ ${esc(r?.error||'Gagal cek')}</div>`;return;}
   _orphanList=r.orphans||[];
-  if(!_orphanList.length){status.innerHTML=`<div style="font-size:13px;color:var(--green);padding:10px;background:var(--green-dim);border-radius:var(--radius-sm);">✓ Tidak ada baris duplikat/yatim. Data app sesuai spreadsheet.</div>`;return;}
+  if(!_orphanList.length){status.innerHTML=`<div style="font-size:13px;color:var(--green);padding:10px;background:var(--green-dim);border-radius:var(--radius-sm);">✓ Tidak ada baris duplikat. Data app sesuai spreadsheet.</div>`;return;}
   status.innerHTML=`<div style="font-size:13px;color:var(--yellow);padding:10px;background:var(--yellow-dim);border-radius:var(--radius-sm);">⚠️ Ditemukan <strong>${_orphanList.length}</strong> baris kemungkinan double. Periksa di bawah.</div>`;
   renderOrphanList();
   footer.style.display='';
