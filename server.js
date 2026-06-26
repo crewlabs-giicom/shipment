@@ -1,5 +1,5 @@
 import express from 'express';
-import { readFileSync, writeFileSync, existsSync, mkdirSync, copyFileSync } from 'fs';
+import { readFileSync, writeFileSync, existsSync, mkdirSync, copyFileSync, renameSync } from 'fs';
 import { join, dirname } from 'path';
 import { fileURLToPath } from 'url';
 import { createHmac, randomBytes } from 'crypto';
@@ -55,9 +55,29 @@ if (!existsSync(USERS_FILE)) {
 // ─── Helpers ─────────────────────────────────────────────────────────────────
 function hashPwd(p) { return createHmac('sha256', SECRET).update(p).digest('hex'); }
 function readJ(f)   { try { return JSON.parse(readFileSync(f,'utf-8')); } catch { return f.includes('comment')?{}:[]; } }
-function writeJ(f,d){ writeFileSync(f, JSON.stringify(d,null,2), 'utf-8'); }
+
+// Atomic write: tulis ke file temp dulu, baru rename — supaya data tidak korup kalau gagal di tengah.
+// writeFileSync & renameSync bersifat blocking/synchronous, jadi penulisan antar-request sudah ter-serialisasi
+// oleh event loop Node (tidak ada penulisan benar-benar bersamaan ke file yang sama).
+function writeJ(f,d){
+  const str = JSON.stringify(d,null,2);
+  const tmp = f + '.tmp';
+  try {
+    writeFileSync(tmp, str, 'utf-8');
+    renameSync(tmp, f); // rename atomic di filesystem yang sama
+  } catch(e){
+    console.error('writeJ gagal (atomic):', f, e.message);
+    try { writeFileSync(f, str, 'utf-8'); } // fallback non-atomic
+    catch(e2){ console.error('writeJ fallback juga gagal:', f, e2.message); }
+  }
+}
 function readConfig(){ try { return JSON.parse(readFileSync(CONFIG_FILE,'utf-8')); } catch { return {}; } }
-function writeConfig(d){ writeFileSync(CONFIG_FILE, JSON.stringify(d,null,2), 'utf-8'); }
+function writeConfig(d){
+  const str = JSON.stringify(d,null,2);
+  const tmp = CONFIG_FILE + '.tmp';
+  try { writeFileSync(tmp, str, 'utf-8'); renameSync(tmp, CONFIG_FILE); }
+  catch(e){ console.error('writeConfig gagal:', e.message); try{ writeFileSync(CONFIG_FILE, str, 'utf-8'); }catch(e2){ console.error('writeConfig fallback gagal:', e2.message); } }
+}
 
 // ── Changelog: track perubahan field ──
 const TRACK_FIELDS = ['po','item','qty','value','container','supplier','forwarder','status',
@@ -291,11 +311,20 @@ function autoBackup() {
   const today = new Date().toISOString().split('T')[0];
   const bkDir = join(DATA_DIR,'backups');
   if (!existsSync(bkDir)) mkdirSync(bkDir);
-  const bkFile = join(bkDir,`shipments_${today}.json`);
-  if (!existsSync(bkFile)&&existsSync(SHIPS_FILE)) {
-    copyFileSync(SHIPS_FILE, bkFile);
-    console.log(`  📦 Backup: shipments_${today}.json`);
-  }
+  // Backup semua file data penting: shipments, config (master data), users, comments
+  const targets = [
+    { src: SHIPS_FILE,    name: 'shipments' },
+    { src: CONFIG_FILE,   name: 'config' },
+    { src: USERS_FILE,    name: 'users' },
+    { src: COMMENTS_FILE, name: 'comments' },
+  ];
+  targets.forEach(({src, name}) => {
+    const bkFile = join(bkDir, `${name}_${today}.json`);
+    if (!existsSync(bkFile) && existsSync(src)) {
+      try { copyFileSync(src, bkFile); console.log(`  📦 Backup: ${name}_${today}.json`); }
+      catch(e){ console.error(`  Backup ${name} gagal:`, e.message); }
+    }
+  });
 }
 
 // ─── Middleware ───────────────────────────────────────────────────────────────
@@ -484,6 +513,79 @@ app.post('/api/sheets/pull', admin, async (req,res) => {
     console.error('[SHEETS PULL ERROR]', err.message);
     res.status(500).json({ error: err.message });
   }
+});
+
+// Pull data dari sheet TANPA merge/simpan (read-only) — untuk deteksi duplikat
+async function pullSheetsReadOnly(){
+  const cfg = getConfig();
+  const url = cfg.sheetsWebAppUrl;
+  if (!url) throw new Error('Web App URL belum disimpan. Isi dulu di halaman Integrasi Sheets.');
+  const pullUrl = url + (url.includes('?') ? '&' : '?') + 'action=pull';
+  const response = await fetch(pullUrl);
+  if (!response.ok) throw new Error(`HTTP ${response.status}: ${response.statusText}`);
+  const data = await response.json();
+  if (!data.success) throw new Error(data.error || 'Apps Script mengembalikan error');
+  if (!Array.isArray(data.shipments)) throw new Error('Format data tidak valid');
+  return data.shipments;
+}
+
+// POST /api/sheets/check-orphans — deteksi baris app yg PO-nya ada di sheet tapi container+item-nya hilang
+app.post('/api/sheets/check-orphans', admin, async (req,res) => {
+  try {
+    const incoming = await pullSheetsReadOnly();
+    const existing = readJ(SHIPS_FILE);
+
+    const norm = (v) => String(v||'').trim().toLowerCase();
+    // Kumpulan PO yang ada di sheet, dan kombinasi PO||container||item di sheet
+    const sheetPOs = new Set();
+    const sheetKeys = new Set();
+    // Map item -> daftar container di sheet (untuk info "pindah ke mana")
+    const itemContainers = {}; // key: po||item -> Set(container)
+    incoming.forEach(s => {
+      const po = s.po || s.container;
+      if (!po) return;
+      sheetPOs.add(norm(po));
+      sheetKeys.add(`${norm(po)}||${norm(s.container)}||${norm(s.item)}`);
+      const ik = `${norm(po)}||${norm(s.item)}`;
+      (itemContainers[ik] = itemContainers[ik] || new Set()).add(s.container||'');
+    });
+
+    // Baris yatim: PO ada di sheet, tapi kombinasi container+item TIDAK ada di sheet,
+    // dan belum ditandai "biarkan" (keepOrphan)
+    const orphans = [];
+    existing.forEach(s => {
+      if (s.keepOrphan) return; // sudah dikonfirmasi sah
+      const po = norm(s.po);
+      if (!sheetPOs.has(po)) return; // PO murni manual / tidak ada di sheet -> abaikan
+      const key = `${po}||${norm(s.container)}||${norm(s.item)}`;
+      if (sheetKeys.has(key)) return; // masih ada di sheet -> bukan yatim
+      // Yatim: cek apakah item ini kini ada di container lain (indikasi pindah)
+      const ik = `${po}||${norm(s.item)}`;
+      const nowIn = itemContainers[ik] ? Array.from(itemContainers[ik]).filter(c=>norm(c)!==norm(s.container)) : [];
+      orphans.push({
+        id: s.id, po: s.po, container: s.container, item: s.item,
+        qty: s.qty, status: s.status,
+        movedTo: nowIn,            // container lain yg kini punya item ini (kalau ada)
+        hasNotes: !!(s.notes && s.notes.trim()),
+        hasDocs: !!(s.docs && Object.values(s.docs).some(Boolean)),
+      });
+    });
+
+    res.json({ success:true, orphans, sheetCount: incoming.length, appCount: existing.length });
+  } catch(err) {
+    console.error('[CHECK ORPHANS ERROR]', err.message);
+    res.status(500).json({ error: err.message });
+  }
+});
+
+// POST /api/shipments/:id/keep — tandai baris sebagai "biarkan" (bukan yatim, jangan muncul lagi)
+app.post('/api/shipments/:id/keep', admin, (req,res) => {
+  const ships = readJ(SHIPS_FILE);
+  const idx = ships.findIndex(s => String(s.id) === String(req.params.id));
+  if (idx < 0) return res.status(404).json({ error: 'Shipment tidak ditemukan' });
+  ships[idx].keepOrphan = true;
+  writeJ(SHIPS_FILE, ships);
+  res.json({ success:true });
 });
 
 // POST /api/sheets/webhook — terima data dari Apps Script
