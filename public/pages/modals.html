@@ -1,0 +1,158 @@
+<div class="modal-overlay" id="modalOverlay">
+  <div class="modal">
+    <div class="modal-header"><div class="modal-title" id="modalTitle">Tambah Shipment</div><button class="modal-close" onclick="closeModal()">×</button></div>
+    <div class="modal-body">
+      <div class="field"><label>PO *</label><input type="text" id="f_po" placeholder="PO-2024-001" oninput="updateGF()"></div>
+      <div class="field"><label>Item *</label><input type="text" id="f_item" placeholder="Nama barang"></div>
+      <div class="grid2">
+        <div class="field"><label>Qty</label><input type="text" id="f_qty" placeholder="1000 pcs"></div>
+        <div class="field"><label>Nilai (RMB)</label><input type="number" id="f_value" placeholder="35000"></div>
+      </div>
+      <div class="field"><label>Supplier</label><input type="text" id="f_supplier" placeholder="Nama perusahaan"></div>
+      <div class="field"><label>Kontainer</label><input type="text" id="f_container" placeholder="TCKU1234567" oninput="updateGF()"></div>
+      <div class="field"><label>Forwarder</label><input type="text" id="f_forwarder" placeholder="Nama forwarder/EMKL"></div>
+      <div class="field"><label>Produksi</label><input type="date" id="f_tgl_production"></div>
+      <div class="grid2">
+        <div class="field"><label>Stuffing</label><input type="date" id="f_stuffing"></div>
+        <div class="field"><label>ETD</label><input type="date" id="f_etd" onchange="updateGF()"></div>
+      </div>
+      <div class="grid2">
+        <div class="field"><label>ETA</label><input type="date" id="f_eta" onchange="updateGF()"></div>
+        <div class="field"><label>Tgl Datang</label><input type="date" id="f_deliveredDate"></div>
+      </div>
+      <div class="field"><label>Status</label><select id="f_status"></select></div>
+      <div class="field"><label>Tags</label><div id="f_tags_wrap" style="display:flex;flex-wrap:wrap;gap:8px;margin-top:4px;"></div></div>
+      <div class="field"><label>Dokumen</label>
+        <div style="display:flex;flex-wrap:wrap;gap:10px;margin-top:4px;">
+          <label style="display:flex;align-items:center;gap:5px;font-size:13px;text-transform:none;letter-spacing:0;cursor:pointer;"><input type="checkbox" id="doc_inv"> INV</label>
+          <label style="display:flex;align-items:center;gap:5px;font-size:13px;text-transform:none;letter-spacing:0;cursor:pointer;"><input type="checkbox" id="doc_pl"> PL</label>
+          <label style="display:flex;align-items:center;gap:5px;font-size:13px;text-transform:none;letter-spacing:0;cursor:pointer;"><input type="checkbox" id="doc_do"> DO</label>
+          <label style="display:flex;align-items:center;gap:5px;font-size:13px;text-transform:none;letter-spacing:0;cursor:pointer;"><input type="checkbox" id="doc_pib"> PIB</label>
+          <label style="display:flex;align-items:center;gap:5px;font-size:13px;text-transform:none;letter-spacing:0;cursor:pointer;"><input type="checkbox" id="doc_ls"> LS</label>
+        </div>
+      </div>
+      <div class="field"><label>Catatan</label><textarea id="f_notes" placeholder="Catatan tambahan..."></textarea></div>
+    </div>
+    <div class="modal-footer"><button class="btn" onclick="closeModal()">Batal</button><button class="btn btn-primary" onclick="saveShipment()">Simpan</button></div>
+  </div>
+</div>
+
+<div class="modal-overlay" id="bulkEditOverlay">
+  <div class="modal" style="max-width:500px;">
+    <div class="modal-header"><div class="modal-title">✏️ Edit Massal <span id="beCount" style="font-size:12px;color:var(--muted);font-weight:400;"></span></div><button class="modal-close" onclick="closeBulkEdit()">×</button></div>
+    <div class="modal-body">
+      <p style="font-size:12px;color:var(--muted);">Hanya field yang diaktifkan yang akan diubah.</p>
+      <div class="field"><label style="display:flex;align-items:center;gap:8px;"><input type="checkbox" id="be_usp" onchange="tBE('supplier')"> Ubah Supplier</label><input type="text" id="be_supplier" disabled placeholder="Nama supplier baru..." style="opacity:.4;margin-top:6px;"></div>
+      <div class="field"><label style="display:flex;align-items:center;gap:8px;"><input type="checkbox" id="be_uctr" onchange="tBE('container')"> Ubah Kontainer</label><input type="text" id="be_container" disabled placeholder="TCKU1234567" style="opacity:.4;margin-top:6px;"></div>
+      <div class="field"><label style="display:flex;align-items:center;gap:8px;"><input type="checkbox" id="be_uf" onchange="tBE('forwarder')"> Ubah Forwarder</label><input type="text" id="be_forwarder" disabled placeholder="Nama forwarder baru..." style="opacity:.4;margin-top:6px;"></div>
+      <div class="field"><label style="display:flex;align-items:center;gap:8px;"><input type="checkbox" id="be_uprod" onchange="tBE('tgl_production')"> Ubah Tgl Produksi</label><input type="date" id="be_tgl_production" disabled style="opacity:.4;margin-top:6px;"></div>
+      <div class="field"><label style="display:flex;align-items:center;gap:8px;"><input type="checkbox" id="be_ustuf" onchange="tBE('stuffing')"> Ubah Stuffing</label><input type="date" id="be_stuffing" disabled style="opacity:.4;margin-top:6px;"></div>
+      <div class="field"><label style="display:flex;align-items:center;gap:8px;"><input type="checkbox" id="be_ue" onchange="tBE('etd')"> Ubah ETD</label><input type="date" id="be_etd" disabled style="opacity:.4;margin-top:6px;"></div>
+      <div class="field"><label style="display:flex;align-items:center;gap:8px;"><input type="checkbox" id="be_ua" onchange="tBE('eta')"> Ubah ETA</label><input type="date" id="be_eta" disabled style="opacity:.4;margin-top:6px;"></div>
+      <div class="field"><label style="display:flex;align-items:center;gap:8px;"><input type="checkbox" id="be_udel" onchange="tBE('deliveredDate')"> Ubah Tgl Datang</label><input type="date" id="be_deliveredDate" disabled style="opacity:.4;margin-top:6px;"></div>
+      <div class="field"><label style="display:flex;align-items:center;gap:8px;"><input type="checkbox" id="be_us" onchange="tBE('status')"> Ubah Status</label><select id="be_status" disabled style="opacity:.4;margin-top:6px;"></select></div>
+      <div class="field"><label style="display:flex;align-items:center;gap:8px;"><input type="checkbox" id="be_ud" onchange="tBE('docs')"> Ubah Dokumen</label>
+        <div id="be_docs_wrap" style="display:flex;flex-wrap:wrap;gap:10px;margin-top:8px;opacity:.4;pointer-events:none;">
+          <label style="display:flex;align-items:center;gap:5px;font-size:13px;text-transform:none;letter-spacing:0;cursor:pointer;"><input type="checkbox" id="be_inv"> INV</label>
+          <label style="display:flex;align-items:center;gap:5px;font-size:13px;text-transform:none;letter-spacing:0;cursor:pointer;"><input type="checkbox" id="be_pl"> PL</label>
+          <label style="display:flex;align-items:center;gap:5px;font-size:13px;text-transform:none;letter-spacing:0;cursor:pointer;"><input type="checkbox" id="be_do"> DO</label>
+          <label style="display:flex;align-items:center;gap:5px;font-size:13px;text-transform:none;letter-spacing:0;cursor:pointer;"><input type="checkbox" id="be_pib"> PIB</label>
+          <label style="display:flex;align-items:center;gap:5px;font-size:13px;text-transform:none;letter-spacing:0;cursor:pointer;"><input type="checkbox" id="be_ls"> LS</label>
+        </div>
+      </div>
+      <div class="field"><label style="display:flex;align-items:center;gap:8px;"><input type="checkbox" id="be_un" onchange="tBE('notes')"> Ubah Catatan</label><textarea id="be_notes" disabled placeholder="Catatan baru..." style="opacity:.4;margin-top:6px;resize:vertical;min-height:56px;"></textarea></div>
+      <div class="field"><label style="display:flex;align-items:center;gap:8px;"><input type="checkbox" id="be_uc" onchange="tBE('comment')"> Tambah Komentar Massal</label><textarea id="be_comment" disabled placeholder="Komentar yang akan ditambahkan ke semua shipment yang dipilih..." style="opacity:.4;margin-top:6px;resize:vertical;min-height:56px;"></textarea></div>
+    </div>
+    <div class="modal-footer"><button class="btn" onclick="closeBulkEdit()">Batal</button><button class="btn btn-primary" onclick="applyBulkEdit()">Terapkan</button></div>
+  </div>
+</div>
+
+<div class="modal-overlay" id="pasteOverlay">
+  <div class="modal" style="max-width:680px;">
+    <div class="modal-header"><div class="modal-title">📋 Import dari Excel</div><button class="modal-close" onclick="closePaste()">×</button></div>
+    <div class="modal-body" style="gap:0;padding:0;">
+      <div class="step-tabs"><div class="step-tab active" id="tab1" onclick="showTab(1)">1. Paste</div><div class="step-tab" id="tab2" onclick="showTab(2)">2. Kolom</div><div class="step-tab" id="tab3" onclick="showTab(3)">3. Hasil</div></div>
+      <div class="step-panel active" id="panel1" style="padding:0 20px 18px;">
+        <p style="font-size:13px;color:var(--muted);margin-bottom:8px;">Buka excel → pilih data + header → Ctrl+C → paste di bawah</p>
+        <textarea class="paste-area" id="pasteInput" placeholder="Paste data Excel di sini..." oninput="detectCols()"></textarea>
+        <div id="detectInfo" style="margin-top:6px;font-size:12px;color:var(--muted);"></div>
+        <div style="margin-top:10px;text-align:right;"><button class="btn btn-primary" id="nextBtn1" disabled onclick="showTab(2)">Lanjut →</button></div>
+      </div>
+      <div class="step-panel" id="panel2" style="padding:0 20px 18px;">
+        <div class="col-map" id="colMapGrid"></div>
+        <div class="preview-wrap"><table class="preview-table" id="previewTable"></table></div>
+        <div style="display:flex;justify-content:space-between;margin-top:10px;"><button class="btn" onclick="showTab(1)">← Kembali</button><button class="btn btn-primary" onclick="runImport()">Import →</button></div>
+      </div>
+      <div class="step-panel" id="panel3" style="padding:0 20px 18px;">
+        <div id="importResult"></div>
+        <div style="margin-top:12px;text-align:right;"><button class="btn btn-primary" onclick="closePaste()">Selesai ✓</button></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal-overlay" id="syncOverlay">
+  <div class="modal" style="max-width:440px;">
+    <div class="modal-header"><div class="modal-title">📤 Sync ke Google Sheets</div><button class="modal-close" onclick="closeSyncModal()">×</button></div>
+    <div class="modal-body">
+      <div class="field"><label>Web App URL</label><input type="text" id="sync_url" style="font-size:12px;font-family:'Plus Jakarta Sans',sans-serif;"></div>
+      <div style="font-size:12px;color:var(--muted);">Data: <strong id="syncCount" style="color:var(--text);">0</strong> shipment</div>
+      <div id="syncStatus" style="display:none;margin-top:8px;"></div>
+    </div>
+    <div class="modal-footer"><button class="btn" onclick="closeSyncModal()">Batal</button><button class="btn btn-primary" onclick="doSync()" id="doSyncBtn">Sync Sekarang</button></div>
+  </div>
+</div>
+
+<div class="modal-overlay" id="checkDupOverlay">
+  <div class="modal" style="max-width:720px;">
+    <div class="modal-header"><div class="modal-title">🔍 Cek Duplikat</div><button class="modal-close" onclick="closeCheckDup()">×</button></div>
+    <div class="modal-body">
+      <div style="font-size:12px;color:var(--muted);margin-bottom:10px;line-height:1.5;">
+        Baris yang <strong style="color:var(--text);">PO-nya masih ada di spreadsheet</strong>, tapi kombinasi container + item-nya sudah tidak ada lagi — kemungkinan item dipindah ke container lain (double). Periksa lalu hapus, atau biarkan jika memang pengiriman terpisah yang sah.
+      </div>
+      <div id="checkDupStatus" style="margin-bottom:10px;"></div>
+      <div id="checkDupList"></div>
+    </div>
+    <div class="modal-footer" id="checkDupFooter" style="display:none;">
+      <button class="btn" onclick="closeCheckDup()">Tutup</button>
+      <button class="btn" onclick="keepAllOrphans()" id="keepAllBtn">✓ Biarkan Semua</button>
+      <button class="btn btn-danger" onclick="deleteAllOrphans()" id="delAllBtn">🗑 Hapus Semua</button>
+    </div>
+  </div>
+</div>
+
+<div class="modal-overlay" id="changePwdOverlay">
+  <div class="modal" style="max-width:360px;">
+    <div class="modal-header"><div class="modal-title">🔑 Ganti Password</div><button class="modal-close" onclick="document.getElementById('changePwdOverlay').classList.remove('open')">×</button></div>
+    <div class="modal-body">
+      <div class="field"><label>Password Lama</label><input type="password" id="cp_old"></div>
+      <div class="field"><label>Password Baru</label><input type="password" id="cp_new"></div>
+      <div class="field"><label>Konfirmasi</label><input type="password" id="cp_conf"></div>
+      <div id="cpErr" style="color:var(--red);font-size:12px;min-height:16px;"></div>
+    </div>
+    <div class="modal-footer"><button class="btn" onclick="document.getElementById('changePwdOverlay').classList.remove('open')">Batal</button><button class="btn btn-primary" onclick="doChangePwd()">Simpan</button></div>
+  </div>
+</div>
+
+<div class="detail-overlay" id="detailOverlay">
+  <div class="detail-backdrop" onclick="closeDetail()"></div>
+  <div class="detail-panel"><button class="detail-close" onclick="closeDetail()">×</button><div id="detailContent"></div></div>
+</div>
+
+<div class="notif-panel" id="notifPanel">
+  <div class="notif-panel-header" style="display:flex;align-items:center;justify-content:space-between;padding:8px 12px;border-bottom:1px solid var(--border2);">
+    <div style="display:flex;align-items:center;gap:8px;"><span style="font-size:16px;">🔔</span><div style="font-size:14px;font-weight:600;">Notifikasi <span id="notifCount"></span></div></div>
+    <div style="display:flex;gap:6px;align-items:center;">
+      <button class="btn btn-sm" id="btnMarkAll">Semua dibaca</button>
+      <button class="btn btn-sm btn-danger" id="btnClear">Hapus semua</button>
+    </div>
+  </div>
+  <div class="notif-list" id="notifList"></div>
+  <div class="notif-footer" style="display:flex;justify-content:space-between;padding:8px 12px;border-top:1px solid var(--border2);">
+    <div id="notifHint" style="font-size:12px;color:var(--muted);">&nbsp;</div>
+    <div style="display:flex;gap:8px;align-items:center;">
+      <button class="btn btn-sm" id="btnToggleSmart">Sembunyikan ringkasan</button>
+      <button class="btn btn-sm" id="btnEnableNotif">🔔 Aktifkan</button>
+    </div>
+  </div>
+</div>

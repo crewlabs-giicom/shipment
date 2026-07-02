@@ -1,0 +1,18 @@
+      <div class="master-section" style="margin-bottom:0;">
+        <div style="display:flex;gap:8px;align-items:center;margin-bottom:12px;flex-wrap:wrap;">
+          <div class="chart-title" style="margin:0;flex-shrink:0;">📋 Log Aktivitas</div>
+          <input type="text" id="logSearch" placeholder="Cari PO, item, aksi..." style="flex:1;min-width:180px;padding:8px 12px;border:1.5px solid var(--border);border-radius:var(--radius-sm);font-size:13px;background:var(--bg);color:var(--text);" oninput="loadUnifiedLog()">
+          <select id="logSourceFilter" onchange="loadUnifiedLog()" style="padding:8px;border:1.5px solid var(--border);border-radius:var(--radius-sm);font-size:12px;background:var(--bg);color:var(--text);">
+            <option value="">Semua</option>
+            <option value="edit">✏️ Edit Manual</option>
+            <option value="sync">🔄 Sync Sheets</option>
+            <option value="new">➕ Baru</option>
+            <option value="delete">🗑️ Hapus</option>
+            <option value="auto_status">⚡ Auto Status</option>
+            <option value="user">👤 User Mgmt</option>
+          </select>
+          <button class="btn btn-sm" onclick="loadUnifiedLog()" title="Refresh log">🔄</button>
+        </div>
+        <div id="unifiedLogList" style="max-height:72vh;overflow-y:auto;"><div class="empty" style="padding:40px 20px;"><div class="empty-icon">📋</div><div>Belum ada aktivitas</div><div class="empty-sub">Perubahan data akan tercatat di sini.</div></div></div>
+        <div style="display:flex;justify-content:center;gap:8px;margin-top:12px;" id="logPager"></div>
+      </div>

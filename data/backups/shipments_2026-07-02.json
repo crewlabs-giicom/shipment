@@ -118,8 +118,8 @@
     "item": "HB-CLR-CHERY",
     "qty": "1428",
     "value": "44796.36",
-    "etd": "2026-06-30",
-    "eta": "2026-07-03",
+    "etd": "2026-06-19",
+    "eta": "2026-06-28",
     "stuffing": "2026-06-16",
     "tags": [
       "HONEY BOO"
@@ -137,7 +137,7 @@
       "pib": false,
       "ls": false
     },
-    "gudang": "2026-07-10"
+    "gudang": "2026-07-05"
   },
   {
     "id": 1782537438120,
@@ -146,8 +146,8 @@
     "item": "HB-RB-SORIN",
     "qty": "1500",
     "value": "47430",
-    "etd": "2026-06-30",
-    "eta": "2026-07-03",
+    "etd": "2026-06-19",
+    "eta": "2026-06-28",
     "stuffing": "2026-06-16",
     "tags": [
       "HONEY BOO"
@@ -165,7 +165,7 @@
       "pib": false,
       "ls": false
     },
-    "gudang": "2026-07-10"
+    "gudang": "2026-07-05"
   },
   {
     "id": 1782537438130,
@@ -174,8 +174,8 @@
     "item": "HB-TTBAG-YUNA",
     "qty": "750",
     "value": "23625",
-    "etd": "2026-06-30",
-    "eta": "2026-07-03",
+    "etd": "2026-06-19",
+    "eta": "2026-06-28",
     "stuffing": "2026-06-16",
     "tags": [
       "HONEY BOO"
@@ -193,7 +193,7 @@
       "pib": false,
       "ls": false
     },
-    "gudang": "2026-07-10"
+    "gudang": "2026-07-05"
   },
   {
     "id": 1782537438140,
@@ -202,13 +202,13 @@
     "item": "HB-KA-HBO-120",
     "qty": "10080",
     "value": "52416",
-    "etd": "2026-07-03",
-    "eta": "2026-07-09",
-    "stuffing": "2026-06-29",
+    "etd": "",
+    "eta": "",
+    "stuffing": "",
     "tags": [
       "HONEY BOO"
     ],
-    "status": "Stuffing",
+    "status": "Production",
     "supplier": "IAM",
     "deliveredDate": "",
     "tgl_production": "2026-05-18",
@@ -221,7 +221,7 @@
       "pib": false,
       "ls": false
     },
-    "gudang": "2026-07-16"
+    "gudang": ""
   },
   {
     "id": 1782537438149,
@@ -679,14 +679,14 @@
     "qty": "112700",
     "value": "13524",
     "etd": "2026-05-25",
-    "eta": "2026-06-28",
+    "eta": "2026-06-27",
     "stuffing": "2026-05-21",
     "tags": [
       "GROSIR"
     ],
-    "status": "Delivered",
+    "status": "Sailed",
     "supplier": "IAM",
-    "deliveredDate": "2026-07-02",
+    "deliveredDate": "",
     "tgl_production": "2026-04-15",
     "forwarder": "AD-APX",
     "notes": "",
@@ -697,7 +697,7 @@
       "pib": false,
       "ls": false
     },
-    "gudang": "2026-07-05"
+    "gudang": "2026-07-04"
   },
   {
     "id": 1782537438330,
@@ -707,14 +707,14 @@
     "qty": "58000",
     "value": "8120.000000000001",
     "etd": "2026-05-25",
-    "eta": "2026-06-28",
+    "eta": "2026-06-27",
     "stuffing": "2026-05-21",
     "tags": [
       "GROSIR"
     ],
-    "status": "Delivered",
+    "status": "Sailed",
     "supplier": "IAM",
-    "deliveredDate": "2026-07-02",
+    "deliveredDate": "",
     "tgl_production": "2026-04-15",
     "forwarder": "AD-APX",
     "notes": "",
@@ -725,7 +725,7 @@
       "pib": false,
       "ls": false
     },
-    "gudang": "2026-07-05"
+    "gudang": "2026-07-04"
   },
   {
     "id": 1782537438340,
@@ -735,14 +735,14 @@
     "qty": "41800",
     "value": "10868",
     "etd": "2026-05-25",
-    "eta": "2026-06-28",
+    "eta": "2026-06-27",
     "stuffing": "2026-05-21",
     "tags": [
       "GROSIR"
     ],
-    "status": "Delivered",
+    "status": "Sailed",
     "supplier": "IAM",
-    "deliveredDate": "2026-07-02",
+    "deliveredDate": "",
     "tgl_production": "2026-04-15",
     "forwarder": "AD-APX",
     "notes": "",
@@ -753,7 +753,7 @@
       "pib": false,
       "ls": false
     },
-    "gudang": "2026-07-05"
+    "gudang": "2026-07-04"
   },
   {
     "id": 1782537438351,
@@ -763,14 +763,14 @@
     "qty": "29400",
     "value": "6762",
     "etd": "2026-05-25",
-    "eta": "2026-06-28",
+    "eta": "2026-06-27",
     "stuffing": "2026-05-21",
     "tags": [
       "GROSIR"
     ],
-    "status": "Delivered",
+    "status": "Sailed",
     "supplier": "IAM",
-    "deliveredDate": "2026-07-02",
+    "deliveredDate": "",
     "tgl_production": "2026-04-15",
     "forwarder": "AD-APX",
     "notes": "",
@@ -781,7 +781,7 @@
       "pib": false,
       "ls": false
     },
-    "gudang": "2026-07-05"
+    "gudang": "2026-07-04"
   },
   {
     "id": 1782537438360,
@@ -796,9 +796,9 @@
     "tags": [
       "GROSIR"
     ],
-    "status": "Delivered",
+    "status": "Arrived",
     "supplier": "AJM",
-    "deliveredDate": "2026-06-20",
+    "deliveredDate": "",
     "tgl_production": "2026-04-21",
     "forwarder": "BY-APX",
     "notes": "",
@@ -824,9 +824,9 @@
     "tags": [
       "GROSIR"
     ],
-    "status": "Delivered",
+    "status": "Arrived",
     "supplier": "IAM",
-    "deliveredDate": "2026-06-29",
+    "deliveredDate": "",
     "tgl_production": "2026-04-21",
     "forwarder": "MENTARI",
     "notes": "",
@@ -852,9 +852,9 @@
     "tags": [
       "GROSIR"
     ],
-    "status": "Delivered",
+    "status": "Arrived",
     "supplier": "IAM",
-    "deliveredDate": "2026-06-29",
+    "deliveredDate": "",
     "tgl_production": "2026-04-21",
     "forwarder": "MENTARI",
     "notes": "",
@@ -880,9 +880,9 @@
     "tags": [
       "GROSIR"
     ],
-    "status": "Delivered",
+    "status": "Arrived",
     "supplier": "IAM",
-    "deliveredDate": "2026-06-29",
+    "deliveredDate": "",
     "tgl_production": "2026-04-21",
     "forwarder": "MENTARI",
     "notes": "",
@@ -908,9 +908,9 @@
     "tags": [
       "GROSIR"
     ],
-    "status": "Delivered",
+    "status": "Arrived",
     "supplier": "IAM",
-    "deliveredDate": "2026-06-29",
+    "deliveredDate": "",
     "tgl_production": "2026-04-21",
     "forwarder": "MENTARI",
     "notes": "",
@@ -931,7 +931,7 @@
     "qty": "51750",
     "value": "6210",
     "etd": "2026-06-21",
-    "eta": "2026-07-04",
+    "eta": "2026-07-03",
     "stuffing": "2026-06-18",
     "tags": [
       "GROSIR"
@@ -949,7 +949,7 @@
       "pib": false,
       "ls": false
     },
-    "gudang": "2026-07-11"
+    "gudang": "2026-07-10"
   },
   {
     "id": 1782537438421,
@@ -959,7 +959,7 @@
     "qty": "64350",
     "value": "16731",
     "etd": "2026-06-21",
-    "eta": "2026-07-04",
+    "eta": "2026-07-03",
     "stuffing": "2026-06-18",
     "tags": [
       "GROSIR"
@@ -977,7 +977,7 @@
       "pib": false,
       "ls": false
     },
-    "gudang": "2026-07-11"
+    "gudang": "2026-07-10"
   },
   {
     "id": 1782537438433,
@@ -987,7 +987,7 @@
     "qty": "111100",
     "value": "28886",
     "etd": "2026-06-21",
-    "eta": "2026-07-04",
+    "eta": "2026-07-03",
     "stuffing": "2026-06-18",
     "tags": [
       "GROSIR"
@@ -1005,7 +1005,7 @@
       "pib": false,
       "ls": false
     },
-    "gudang": "2026-07-11"
+    "gudang": "2026-07-10"
   },
   {
     "id": 1782537438444,
@@ -1015,7 +1015,7 @@
     "qty": "12600",
     "value": "5796",
     "etd": "2026-06-21",
-    "eta": "2026-07-04",
+    "eta": "2026-07-03",
     "stuffing": "2026-06-18",
     "tags": [
       "GROSIR"
@@ -1033,7 +1033,7 @@
       "pib": false,
       "ls": false
     },
-    "gudang": "2026-07-11"
+    "gudang": "2026-07-10"
   },
   {
     "id": 1782537438454,
@@ -1043,7 +1043,7 @@
     "qty": "2450",
     "value": "1127",
     "etd": "2026-06-21",
-    "eta": "2026-07-04",
+    "eta": "2026-07-03",
     "stuffing": "2026-06-18",
     "tags": [
       "GROSIR"
@@ -1061,22 +1061,22 @@
       "pib": false,
       "ls": false
     },
-    "gudang": "2026-07-11"
+    "gudang": "2026-07-10"
   },
   {
     "id": 1782537438465,
     "po": "CTR/COM/SUB-04/2026/026",
     "container": "CTR/026",
     "item": "PL-BUB1318-MM",
-    "qty": "123050",
-    "value": "14766",
-    "etd": "2026-07-03",
-    "eta": "2026-07-09",
-    "stuffing": "2026-06-29",
+    "qty": "125350",
+    "value": "15042",
+    "etd": "",
+    "eta": "",
+    "stuffing": "",
     "tags": [
       "GROSIR"
     ],
-    "status": "Stuffing",
+    "status": "Production",
     "supplier": "IAM",
     "deliveredDate": "",
     "tgl_production": "2026-05-05",
@@ -1089,7 +1089,7 @@
       "pib": false,
       "ls": false
     },
-    "gudang": "2026-07-16"
+    "gudang": ""
   },
   {
     "id": 1782537438476,
@@ -1098,13 +1098,13 @@
     "item": "PL-BUB1318-P",
     "qty": "33000",
     "value": "4620",
-    "etd": "2026-07-03",
-    "eta": "2026-07-09",
-    "stuffing": "2026-06-29",
+    "etd": "",
+    "eta": "",
+    "stuffing": "",
     "tags": [
       "GROSIR"
     ],
-    "status": "Stuffing",
+    "status": "Production",
     "supplier": "IAM",
     "deliveredDate": "",
     "tgl_production": "2026-05-05",
@@ -1117,7 +1117,7 @@
       "pib": false,
       "ls": false
     },
-    "gudang": "2026-07-16"
+    "gudang": ""
   },
   {
     "id": 1782537438486,
@@ -1126,13 +1126,13 @@
     "item": "PL-BUB1318-TC",
     "qty": "91700",
     "value": "14672",
-    "etd": "2026-07-03",
-    "eta": "2026-07-09",
-    "stuffing": "2026-06-29",
+    "etd": "",
+    "eta": "",
+    "stuffing": "",
     "tags": [
       "GROSIR"
     ],
-    "status": "Stuffing",
+    "status": "Production",
     "supplier": "IAM",
     "deliveredDate": "",
     "tgl_production": "2026-05-05",
@@ -1145,22 +1145,22 @@
       "pib": false,
       "ls": false
     },
-    "gudang": "2026-07-16"
+    "gudang": ""
   },
   {
     "id": 1782537438499,
     "po": "CTR/COM/SUB-04/2026/026",
     "container": "CTR/026",
     "item": "PL-BUB1823-H",
-    "qty": "11550",
-    "value": "3580.5",
-    "etd": "2026-07-03",
-    "eta": "2026-07-09",
-    "stuffing": "2026-06-29",
+    "qty": "14300",
+    "value": "4433",
+    "etd": "",
+    "eta": "",
+    "stuffing": "",
     "tags": [
       "GROSIR"
     ],
-    "status": "Stuffing",
+    "status": "Production",
     "supplier": "IAM",
     "deliveredDate": "",
     "tgl_production": "2026-05-05",
@@ -1173,22 +1173,22 @@
       "pib": false,
       "ls": false
     },
-    "gudang": "2026-07-16"
+    "gudang": ""
   },
   {
     "id": 1782537438511,
     "po": "CTR/COM/SUB-04/2026/026",
     "container": "CTR/026",
     "item": "PL-BUB1823-MM",
-    "qty": "36300",
-    "value": "11253",
-    "etd": "2026-07-03",
-    "eta": "2026-07-09",
-    "stuffing": "2026-06-29",
+    "qty": "25300",
+    "value": "7843",
+    "etd": "",
+    "eta": "",
+    "stuffing": "",
     "tags": [
       "GROSIR"
     ],
-    "status": "Stuffing",
+    "status": "Production",
     "supplier": "IAM",
     "deliveredDate": "",
     "tgl_production": "2026-05-05",
@@ -1201,7 +1201,7 @@
       "pib": false,
       "ls": false
     },
-    "gudang": "2026-07-16"
+    "gudang": ""
   },
   {
     "id": 1782537438523,
@@ -1210,13 +1210,13 @@
     "item": "PL-BUB1823-TC",
     "qty": "24400",
     "value": "6100",
-    "etd": "2026-07-03",
-    "eta": "2026-07-09",
-    "stuffing": "2026-06-29",
+    "etd": "",
+    "eta": "",
+    "stuffing": "",
     "tags": [
       "GROSIR"
     ],
-    "status": "Stuffing",
+    "status": "Production",
     "supplier": "IAM",
     "deliveredDate": "",
     "tgl_production": "2026-05-05",
@@ -1229,7 +1229,7 @@
       "pib": false,
       "ls": false
     },
-    "gudang": "2026-07-16"
+    "gudang": ""
   },
   {
     "id": 1782537438535,
@@ -1995,14 +1995,14 @@
     "qty": "1000",
     "value": "38680",
     "etd": "2026-05-25",
-    "eta": "2026-06-28",
+    "eta": "2026-06-27",
     "stuffing": "2026-05-21",
     "tags": [
       "NVMEE"
     ],
-    "status": "Delivered",
+    "status": "Sailed",
     "supplier": "IAM",
-    "deliveredDate": "2026-07-02",
+    "deliveredDate": "",
     "tgl_production": "2026-04-13",
     "forwarder": "AD-APX",
     "notes": "",
@@ -2013,7 +2013,7 @@
       "pib": false,
       "ls": false
     },
-    "gudang": "2026-07-05"
+    "gudang": "2026-07-04"
   },
   {
     "id": 1782537438846,
@@ -2023,14 +2023,14 @@
     "qty": "2000",
     "value": "56400",
     "etd": "2026-05-25",
-    "eta": "2026-06-28",
+    "eta": "2026-06-27",
     "stuffing": "2026-05-21",
     "tags": [
       "NVMEE"
     ],
-    "status": "Delivered",
+    "status": "Sailed",
     "supplier": "IAM",
-    "deliveredDate": "2026-07-02",
+    "deliveredDate": "",
     "tgl_production": "2026-04-13",
     "forwarder": "AD-APX",
     "notes": "",
@@ -2041,7 +2041,7 @@
       "pib": false,
       "ls": false
     },
-    "gudang": "2026-07-05"
+    "gudang": "2026-07-04"
   },
   {
     "id": 1782537438857,
@@ -2051,14 +2051,14 @@
     "qty": "2576",
     "value": "12287.519999999999",
     "etd": "2026-05-25",
-    "eta": "2026-06-28",
+    "eta": "2026-06-27",
     "stuffing": "2026-05-21",
     "tags": [
       "NVMEE"
     ],
-    "status": "Delivered",
+    "status": "Sailed",
     "supplier": "IAM",
-    "deliveredDate": "2026-07-02",
+    "deliveredDate": "",
     "tgl_production": "2026-04-13",
     "forwarder": "AD-APX",
     "notes": "",
@@ -2069,7 +2069,7 @@
       "pib": false,
       "ls": false
     },
-    "gudang": "2026-07-05"
+    "gudang": "2026-07-04"
   },
   {
     "id": 1782537438869,
@@ -2079,14 +2079,14 @@
     "qty": "1440",
     "value": "5184",
     "etd": "2026-05-25",
-    "eta": "2026-06-28",
+    "eta": "2026-06-27",
     "stuffing": "2026-05-21",
     "tags": [
       "NVMEE"
     ],
-    "status": "Delivered",
+    "status": "Sailed",
     "supplier": "IAM",
-    "deliveredDate": "2026-07-02",
+    "deliveredDate": "",
     "tgl_production": "2026-04-13",
     "forwarder": "AD-APX",
     "notes": "",
@@ -2097,7 +2097,7 @@
       "pib": false,
       "ls": false
     },
-    "gudang": "2026-07-05"
+    "gudang": "2026-07-04"
   },
   {
     "id": 1782537438878,
@@ -2107,14 +2107,14 @@
     "qty": "1400",
     "value": "1959.9999999999998",
     "etd": "2026-05-25",
-    "eta": "2026-06-28",
+    "eta": "2026-06-27",
     "stuffing": "2026-05-21",
     "tags": [
       "NVMEE"
     ],
-    "status": "Delivered",
+    "status": "Sailed",
     "supplier": "IAM",
-    "deliveredDate": "2026-07-02",
+    "deliveredDate": "",
     "tgl_production": "2026-04-13",
     "forwarder": "AD-APX",
     "notes": "",
@@ -2125,7 +2125,7 @@
       "pib": false,
       "ls": false
     },
-    "gudang": "2026-07-05"
+    "gudang": "2026-07-04"
   },
   {
     "id": 1782537438888,
@@ -2135,16 +2135,100 @@
     "qty": "600",
     "value": "3180",
     "etd": "2026-05-25",
-    "eta": "2026-06-28",
+    "eta": "2026-06-27",
     "stuffing": "2026-05-21",
     "tags": [
       "NVMEE"
     ],
-    "status": "Delivered",
+    "status": "Sailed",
     "supplier": "IAM",
-    "deliveredDate": "2026-07-02",
+    "deliveredDate": "",
     "tgl_production": "2026-04-13",
     "forwarder": "AD-APX",
+    "notes": "",
+    "docs": {
+      "invoice": false,
+      "pl": false,
+      "do": false,
+      "pib": false,
+      "ls": false
+    },
+    "gudang": "2026-07-04"
+  },
+  {
+    "id": 1782537438900,
+    "po": "CTR/GIM/SUB-07/2026/015",
+    "container": "CTR/015",
+    "item": "NV-DRY-LUNA",
+    "qty": "10460",
+    "value": "543920",
+    "etd": "2026-06-21",
+    "eta": "2026-06-30",
+    "stuffing": "2026-06-10",
+    "tags": [
+      "NVMEE"
+    ],
+    "status": "Sailed",
+    "supplier": "IAM",
+    "deliveredDate": "",
+    "tgl_production": "2026-04-13",
+    "forwarder": "MENTARI",
+    "notes": "",
+    "docs": {
+      "invoice": false,
+      "pl": false,
+      "do": false,
+      "pib": false,
+      "ls": false
+    },
+    "gudang": "2026-07-07"
+  },
+  {
+    "id": 1782537438910,
+    "po": "CTR/GIM/SUB-07/2026/015",
+    "container": "CTR/015",
+    "item": "NV-HR-ARIES2",
+    "qty": "3000",
+    "value": "116040",
+    "etd": "2026-06-21",
+    "eta": "2026-06-30",
+    "stuffing": "2026-06-10",
+    "tags": [
+      "NVMEE"
+    ],
+    "status": "Sailed",
+    "supplier": "IAM",
+    "deliveredDate": "",
+    "tgl_production": "2026-04-13",
+    "forwarder": "MENTARI",
+    "notes": "",
+    "docs": {
+      "invoice": false,
+      "pl": false,
+      "do": false,
+      "pib": false,
+      "ls": false
+    },
+    "gudang": "2026-07-07"
+  },
+  {
+    "id": 1782537438920,
+    "po": "CTR/GIM/SUB-07/2026/022",
+    "container": "CTR/022",
+    "item": "NV-HR-LIBRAV2",
+    "qty": "5250",
+    "value": "207900",
+    "etd": "2026-06-19",
+    "eta": "2026-06-28",
+    "stuffing": "2026-06-16",
+    "tags": [
+      "NVMEE"
+    ],
+    "status": "Sailed",
+    "supplier": "IAM",
+    "deliveredDate": "",
+    "tgl_production": "2026-05-18",
+    "forwarder": "BY-APX",
     "notes": "",
     "docs": {
       "invoice": false,
@@ -2156,98 +2240,14 @@
     "gudang": "2026-07-05"
   },
   {
-    "id": 1782537438900,
-    "po": "CTR/GIM/SUB-07/2026/015",
-    "container": "CTR/015",
-    "item": "NV-DRY-LUNA",
-    "qty": "10460",
-    "value": "543920",
-    "etd": "2026-06-21",
-    "eta": "2026-07-03",
-    "stuffing": "2026-06-10",
-    "tags": [
-      "NVMEE"
-    ],
-    "status": "Sailed",
-    "supplier": "IAM",
-    "deliveredDate": "",
-    "tgl_production": "2026-04-13",
-    "forwarder": "MENTARI",
-    "notes": "",
-    "docs": {
-      "invoice": false,
-      "pl": false,
-      "do": false,
-      "pib": false,
-      "ls": false
-    },
-    "gudang": "2026-07-10"
-  },
-  {
-    "id": 1782537438910,
-    "po": "CTR/GIM/SUB-07/2026/015",
-    "container": "CTR/015",
-    "item": "NV-HR-ARIES2",
-    "qty": "3000",
-    "value": "116040",
-    "etd": "2026-06-21",
-    "eta": "2026-07-03",
-    "stuffing": "2026-06-10",
-    "tags": [
-      "NVMEE"
-    ],
-    "status": "Sailed",
-    "supplier": "IAM",
-    "deliveredDate": "",
-    "tgl_production": "2026-04-13",
-    "forwarder": "MENTARI",
-    "notes": "",
-    "docs": {
-      "invoice": false,
-      "pl": false,
-      "do": false,
-      "pib": false,
-      "ls": false
-    },
-    "gudang": "2026-07-10"
-  },
-  {
-    "id": 1782537438920,
-    "po": "CTR/GIM/SUB-07/2026/022",
-    "container": "CTR/022",
-    "item": "NV-HR-LIBRAV2",
-    "qty": "5250",
-    "value": "207900",
-    "etd": "2026-06-30",
-    "eta": "2026-07-03",
-    "stuffing": "2026-06-16",
-    "tags": [
-      "NVMEE"
-    ],
-    "status": "Sailed",
-    "supplier": "IAM",
-    "deliveredDate": "",
-    "tgl_production": "2026-05-18",
-    "forwarder": "BY-APX",
-    "notes": "",
-    "docs": {
-      "invoice": false,
-      "pl": false,
-      "do": false,
-      "pib": false,
-      "ls": false
-    },
-    "gudang": "2026-07-10"
-  },
-  {
     "id": 1782537438933,
     "po": "CTR/GIM/SUB-07/2026/022",
     "container": "CTR/022",
     "item": "NV-HR-TAURUSV2",
     "qty": "3510",
     "value": "154440",
-    "etd": "2026-06-30",
-    "eta": "2026-07-03",
+    "etd": "2026-06-19",
+    "eta": "2026-06-28",
     "stuffing": "2026-06-16",
     "tags": [
       "NVMEE"
@@ -2265,7 +2265,7 @@
       "pib": false,
       "ls": false
     },
-    "gudang": "2026-07-10"
+    "gudang": "2026-07-05"
   },
   {
     "id": 1782537438944,
@@ -2274,8 +2274,8 @@
     "item": "NV-JPT-LYRA",
     "qty": "1000",
     "value": "2000",
-    "etd": "2026-06-30",
-    "eta": "2026-07-03",
+    "etd": "2026-06-19",
+    "eta": "2026-06-28",
     "stuffing": "2026-06-16",
     "tags": [
       "NVMEE"
@@ -2293,7 +2293,7 @@
       "pib": false,
       "ls": false
     },
-    "gudang": "2026-07-10"
+    "gudang": "2026-07-05"
   },
   {
     "id": 1782537438955,
@@ -2302,8 +2302,8 @@
     "item": "NV-POUCH-PLW",
     "qty": "1500",
     "value": "8700",
-    "etd": "2026-06-30",
-    "eta": "2026-07-03",
+    "etd": "2026-06-19",
+    "eta": "2026-06-28",
     "stuffing": "2026-06-16",
     "tags": [
       "NVMEE"
@@ -2321,7 +2321,7 @@
       "pib": false,
       "ls": false
     },
-    "gudang": "2026-07-10"
+    "gudang": "2026-07-05"
   },
   {
     "id": 1782537438966,
@@ -2330,8 +2330,8 @@
     "item": "NV-POUCH-PUFFY",
     "qty": "1000",
     "value": "7600",
-    "etd": "2026-06-30",
-    "eta": "2026-07-03",
+    "etd": "2026-06-19",
+    "eta": "2026-06-28",
     "stuffing": "2026-06-16",
     "tags": [
       "NVMEE"
@@ -2349,7 +2349,7 @@
       "pib": false,
       "ls": false
     },
-    "gudang": "2026-07-10"
+    "gudang": "2026-07-05"
   },
   {
     "id": 1782537438977,
@@ -2358,8 +2358,8 @@
     "item": "NV-ROLL-BIG",
     "qty": "5200",
     "value": "13624",
-    "etd": "2026-06-30",
-    "eta": "2026-07-03",
+    "etd": "2026-06-19",
+    "eta": "2026-06-28",
     "stuffing": "2026-06-16",
     "tags": [
       "NVMEE"
@@ -2377,7 +2377,7 @@
       "pib": false,
       "ls": false
     },
-    "gudang": "2026-07-10"
+    "gudang": "2026-07-05"
   },
   {
     "id": 1782537438985,
@@ -2386,8 +2386,8 @@
     "item": "NV-ROLL-JPT",
     "qty": "1000",
     "value": "550",
-    "etd": "2026-06-30",
-    "eta": "2026-07-03",
+    "etd": "2026-06-19",
+    "eta": "2026-06-28",
     "stuffing": "2026-06-16",
     "tags": [
       "NVMEE"
@@ -2405,7 +2405,7 @@
       "pib": false,
       "ls": false
     },
-    "gudang": "2026-07-10"
+    "gudang": "2026-07-05"
   },
   {
     "id": 1782537438994,
@@ -2414,8 +2414,8 @@
     "item": "NV-SIR-BIGKTK",
     "qty": "1020",
     "value": "4508.4",
-    "etd": "2026-06-30",
-    "eta": "2026-07-03",
+    "etd": "2026-06-19",
+    "eta": "2026-06-28",
     "stuffing": "2026-06-16",
     "tags": [
       "NVMEE"
@@ -2433,7 +2433,7 @@
       "pib": false,
       "ls": false
     },
-    "gudang": "2026-07-10"
+    "gudang": "2026-07-05"
   },
   {
     "id": 1782537439005,
@@ -2442,8 +2442,8 @@
     "item": "NV-SKM-GRIGI",
     "qty": "2250",
     "value": "6480",
-    "etd": "2026-06-30",
-    "eta": "2026-07-03",
+    "etd": "2026-06-19",
+    "eta": "2026-06-28",
     "stuffing": "2026-06-16",
     "tags": [
       "NVMEE"
@@ -2461,7 +2461,7 @@
       "pib": false,
       "ls": false
     },
-    "gudang": "2026-07-10"
+    "gudang": "2026-07-05"
   },
   {
     "id": 1782537439014,
@@ -2470,8 +2470,8 @@
     "item": "NV-SKM-LOVE",
     "qty": "840",
     "value": "5191.2",
-    "etd": "2026-06-30",
-    "eta": "2026-07-03",
+    "etd": "2026-06-19",
+    "eta": "2026-06-28",
     "stuffing": "2026-06-16",
     "tags": [
       "NVMEE"
@@ -2489,7 +2489,7 @@
       "pib": false,
       "ls": false
     },
-    "gudang": "2026-07-10"
+    "gudang": "2026-07-05"
   },
   {
     "id": 1782537439024,
@@ -2526,13 +2526,13 @@
     "item": "NV-HR-SATURN-U",
     "qty": "3000",
     "value": "84600",
-    "etd": "2026-07-03",
-    "eta": "2026-07-09",
-    "stuffing": "2026-06-29",
+    "etd": "",
+    "eta": "",
+    "stuffing": "",
     "tags": [
       "NVMEE"
     ],
-    "status": "Stuffing",
+    "status": "Production",
     "supplier": "IAM",
     "deliveredDate": "",
     "tgl_production": "2026-05-18",
@@ -2545,7 +2545,7 @@
       "pib": false,
       "ls": false
     },
-    "gudang": "2026-07-16"
+    "gudang": ""
   },
   {
     "id": 1782537439044,
@@ -2834,8 +2834,8 @@
     "item": "PL-1640-TRANS",
     "qty": "30000",
     "value": "1800",
-    "etd": "2026-06-30",
-    "eta": "2026-07-03",
+    "etd": "2026-06-19",
+    "eta": "2026-06-28",
     "stuffing": "2026-06-16",
     "tags": [
       "RONAN"
@@ -2853,7 +2853,7 @@
       "pib": false,
       "ls": false
     },
-    "gudang": "2026-07-10"
+    "gudang": "2026-07-05"
   },
   {
     "id": 1782537439157,
@@ -2862,8 +2862,8 @@
     "item": "PL-2545-TRANS",
     "qty": "60000",
     "value": "6000",
-    "etd": "2026-06-30",
-    "eta": "2026-07-03",
+    "etd": "2026-06-19",
+    "eta": "2026-06-28",
     "stuffing": "2026-06-16",
     "tags": [
       "RONAN"
@@ -2881,7 +2881,7 @@
       "pib": false,
       "ls": false
     },
-    "gudang": "2026-07-10"
+    "gudang": "2026-07-05"
   },
   {
     "id": 1782537439167,
@@ -3143,14 +3143,14 @@
     "qty": "8490",
     "value": "108332.4",
     "etd": "2026-06-13",
-    "eta": "2026-06-28",
+    "eta": "2026-06-25",
     "stuffing": "2026-06-10",
     "tags": [
       "RONAN"
     ],
-    "status": "Delivered",
+    "status": "Arrived",
     "supplier": "IAM",
-    "deliveredDate": "2026-07-02",
+    "deliveredDate": "",
     "tgl_production": "2026-06-01",
     "forwarder": "BY-APX",
     "notes": "",
@@ -3161,7 +3161,7 @@
       "pib": false,
       "ls": false
     },
-    "gudang": "2026-07-05"
+    "gudang": "2026-07-02"
   },
   {
     "id": 1782537439271,
@@ -3171,14 +3171,14 @@
     "qty": "5600",
     "value": "135520",
     "etd": "2026-06-13",
-    "eta": "2026-06-28",
+    "eta": "2026-06-25",
     "stuffing": "2026-06-10",
     "tags": [
       "RONAN"
     ],
-    "status": "Delivered",
+    "status": "Arrived",
     "supplier": "IAM",
-    "deliveredDate": "2026-07-02",
+    "deliveredDate": "",
     "tgl_production": "2026-06-01",
     "forwarder": "BY-APX",
     "notes": "",
@@ -3189,7 +3189,7 @@
       "pib": false,
       "ls": false
     },
-    "gudang": "2026-07-05"
+    "gudang": "2026-07-02"
   },
   {
     "id": 1782537439283,
@@ -3199,7 +3199,7 @@
     "qty": "8460",
     "value": "107949.59999999999",
     "etd": "2026-06-23",
-    "eta": "2026-07-04",
+    "eta": "2026-07-02",
     "stuffing": "2026-06-18",
     "tags": [
       "RONAN"
@@ -3217,7 +3217,7 @@
       "pib": false,
       "ls": false
     },
-    "gudang": "2026-07-11"
+    "gudang": "2026-07-09"
   },
   {
     "id": 1782537439295,
@@ -3227,7 +3227,7 @@
     "qty": "5600",
     "value": "135520",
     "etd": "2026-06-23",
-    "eta": "2026-07-04",
+    "eta": "2026-07-02",
     "stuffing": "2026-06-18",
     "tags": [
       "RONAN"
@@ -3245,7 +3245,7 @@
       "pib": false,
       "ls": false
     },
-    "gudang": "2026-07-11"
+    "gudang": "2026-07-09"
   },
   {
     "id": 1782537439307,
@@ -3254,13 +3254,13 @@
     "item": "PD-CUCI-ATRONW",
     "qty": "4500",
     "value": "343575",
-    "etd": "2026-06-27",
-    "eta": "2026-07-08",
-    "stuffing": "2026-06-23",
+    "etd": "",
+    "eta": "",
+    "stuffing": "",
     "tags": [
       "RONAN"
     ],
-    "status": "Sailed",
+    "status": "Production",
     "supplier": "AJM",
     "deliveredDate": "",
     "tgl_production": "2026-05-28",
@@ -3273,7 +3273,7 @@
       "pib": false,
       "ls": false
     },
-    "gudang": "2026-07-15"
+    "gudang": ""
   },
   {
     "id": 1782537439319,
@@ -3311,14 +3311,14 @@
     "qty": "63701",
     "value": "111476.75",
     "etd": "2026-05-25",
-    "eta": "2026-06-28",
+    "eta": "2026-06-27",
     "stuffing": "2026-05-21",
     "tags": [
       "REEBIT"
     ],
-    "status": "Delivered",
+    "status": "Sailed",
     "supplier": "IAM",
-    "deliveredDate": "2026-07-02",
+    "deliveredDate": "",
     "tgl_production": "2026-04-02",
     "forwarder": "AD-APX",
     "notes": "",
@@ -3329,7 +3329,7 @@
       "pib": false,
       "ls": false
     },
-    "gudang": "2026-07-05"
+    "gudang": "2026-07-04"
   },
   {
     "id": 1782537439345,
@@ -3512,9 +3512,9 @@
     "tags": [
       "PANDAOMA"
     ],
-    "status": "Delivered",
+    "status": "Arrived",
     "supplier": "AJM",
-    "deliveredDate": "2026-06-20",
+    "deliveredDate": "",
     "tgl_production": "2026-04-28",
     "forwarder": "BY-APX",
     "notes": "",
@@ -3540,9 +3540,9 @@
     "tags": [
       "PANDAOMA"
     ],
-    "status": "Delivered",
+    "status": "Arrived",
     "supplier": "AJM",
-    "deliveredDate": "2026-06-20",
+    "deliveredDate": "",
     "tgl_production": "2026-04-28",
     "forwarder": "BY-APX",
     "notes": "",
@@ -3568,9 +3568,9 @@
     "tags": [
       "PANDAOMA"
     ],
-    "status": "Delivered",
+    "status": "Arrived",
     "supplier": "AJM",
-    "deliveredDate": "2026-06-20",
+    "deliveredDate": "",
     "tgl_production": "2026-04-28",
     "forwarder": "BY-APX",
     "notes": "",
@@ -3624,9 +3624,9 @@
     "tags": [
       "PANDAOMA"
     ],
-    "status": "Delivered",
+    "status": "Arrived",
     "supplier": "AJM",
-    "deliveredDate": "2026-06-23",
+    "deliveredDate": "",
     "tgl_production": "2026-04-28",
     "forwarder": "BY-APX",
     "notes": "",
@@ -3708,9 +3708,9 @@
     "tags": [
       "PANDAOMA"
     ],
-    "status": "Delivered",
+    "status": "Sailed",
     "supplier": "IAM",
-    "deliveredDate": "2026-07-02",
+    "deliveredDate": "",
     "tgl_production": "2026-05-05",
     "forwarder": "AD-APX",
     "notes": "",
@@ -3736,9 +3736,9 @@
     "tags": [
       "PANDAOMA"
     ],
-    "status": "Delivered",
+    "status": "Sailed",
     "supplier": "IAM",
-    "deliveredDate": "2026-07-02",
+    "deliveredDate": "",
     "tgl_production": "2026-05-05",
     "forwarder": "AD-APX",
     "notes": "",
@@ -3764,9 +3764,9 @@
     "tags": [
       "PANDAOMA"
     ],
-    "status": "Delivered",
+    "status": "Sailed",
     "supplier": "IAM",
-    "deliveredDate": "2026-07-02",
+    "deliveredDate": "",
     "tgl_production": "2026-05-05",
     "forwarder": "AD-APX",
     "notes": "",
@@ -4296,7 +4296,7 @@
     "tags": [
       "GROSIR"
     ],
-    "status": "Sailed",
+    "status": "Stuffing",
     "supplier": "CHINA",
     "deliveredDate": "",
     "tgl_production": "2026-06-09",
@@ -4324,7 +4324,7 @@
     "tags": [
       "GROSIR"
     ],
-    "status": "Sailed",
+    "status": "Stuffing",
     "supplier": "CHINA",
     "deliveredDate": "",
     "tgl_production": "2026-06-09",
@@ -4352,7 +4352,7 @@
     "tags": [
       "GROSIR"
     ],
-    "status": "Sailed",
+    "status": "Stuffing",
     "supplier": "CHINA",
     "deliveredDate": "",
     "tgl_production": "2026-06-09",
@@ -4380,7 +4380,7 @@
     "tags": [
       "GROSIR"
     ],
-    "status": "Sailed",
+    "status": "Stuffing",
     "supplier": "CHINA",
     "deliveredDate": "",
     "tgl_production": "2026-06-09",
@@ -4408,7 +4408,7 @@
     "tags": [
       "GROSIR"
     ],
-    "status": "Sailed",
+    "status": "Stuffing",
     "supplier": "CHINA",
     "deliveredDate": "",
     "tgl_production": "2026-06-09",
@@ -4436,7 +4436,7 @@
     "tags": [
       "GROSIR"
     ],
-    "status": "Sailed",
+    "status": "Stuffing",
     "supplier": "CHINA",
     "deliveredDate": "",
     "tgl_production": "2026-06-09",
@@ -4464,7 +4464,7 @@
     "tags": [
       "GROSIR"
     ],
-    "status": "Arrived",
+    "status": "Sailed",
     "supplier": "CHINA",
     "deliveredDate": "",
     "tgl_production": "2026-06-09",
@@ -5388,7 +5388,7 @@
     "tags": [
       "NVMEE"
     ],
-    "status": "Arrived",
+    "status": "Sailed",
     "supplier": "CHINA",
     "deliveredDate": "",
     "tgl_production": "2026-05-07",
@@ -5416,7 +5416,7 @@
     "tags": [
       "NVMEE"
     ],
-    "status": "Arrived",
+    "status": "Sailed",
     "supplier": "CHINA",
     "deliveredDate": "",
     "tgl_production": "2026-05-07",
@@ -5444,9 +5444,9 @@
     "tags": [
       "NVMEE"
     ],
-    "status": "Delivered",
+    "status": "Arrived",
     "supplier": "AUFI",
-    "deliveredDate": "2026-07-01",
+    "deliveredDate": "",
     "tgl_production": "2026-06-12",
     "forwarder": "HARVEST-AIR",
     "notes": "",
@@ -5472,9 +5472,9 @@
     "tags": [
       "NVMEE"
     ],
-    "status": "Delivered",
+    "status": "Arrived",
     "supplier": "AUFI",
-    "deliveredDate": "2026-07-01",
+    "deliveredDate": "",
     "tgl_production": "2026-06-12",
     "forwarder": "HARVEST-AIR",
     "notes": "",
@@ -5500,7 +5500,7 @@
     "tags": [
       "NVMEE"
     ],
-    "status": "Arrived",
+    "status": "Sailed",
     "supplier": "AUFI",
     "deliveredDate": "",
     "tgl_production": "2026-06-22",
@@ -5528,7 +5528,7 @@
     "tags": [
       "NVMEE"
     ],
-    "status": "Arrived",
+    "status": "Sailed",
     "supplier": "AUFI",
     "deliveredDate": "",
     "tgl_production": "2026-06-22",
@@ -5556,7 +5556,7 @@
     "tags": [
       "NVMEE"
     ],
-    "status": "Arrived",
+    "status": "Sailed",
     "supplier": "AUFI",
     "deliveredDate": "",
     "tgl_production": "2026-06-22",
@@ -5584,7 +5584,7 @@
     "tags": [
       "NVMEE"
     ],
-    "status": "Arrived",
+    "status": "Sailed",
     "supplier": "AUFI",
     "deliveredDate": "",
     "tgl_production": "2026-06-22",
@@ -6998,173 +6998,5 @@
       "ls": false
     },
     "gudang": "2026-06-02"
-  },
-  {
-    "id": 1782983046184,
-    "po": "PPB/GIM/SUB-07/2026/018",
-    "container": "AIR/0619",
-    "item": "NV-POUCH-SRTKT",
-    "qty": "500",
-    "value": "",
-    "etd": "2026-06-19",
-    "eta": "2026-06-24",
-    "stuffing": "",
-    "tags": [
-      "NVMEE"
-    ],
-    "status": "Arrived",
-    "supplier": "AUFI",
-    "deliveredDate": "",
-    "tgl_production": "2026-06-12",
-    "forwarder": "AIR",
-    "notes": "",
-    "docs": {
-      "invoice": false,
-      "pl": false,
-      "do": false,
-      "pib": false,
-      "ls": false
-    },
-    "gudang": "2026-06-27"
-  },
-  {
-    "id": 1782983046192,
-    "po": "PPB/GIM/SUB-07/2026/018",
-    "container": "AIR/0619",
-    "item": "NV-POUCH-SRTOV",
-    "qty": "250",
-    "value": "",
-    "etd": "2026-06-19",
-    "eta": "2026-06-24",
-    "stuffing": "",
-    "tags": [
-      "NVMEE"
-    ],
-    "status": "Arrived",
-    "supplier": "AUFI",
-    "deliveredDate": "",
-    "tgl_production": "2026-06-12",
-    "forwarder": "AIR",
-    "notes": "",
-    "docs": {
-      "invoice": false,
-      "pl": false,
-      "do": false,
-      "pib": false,
-      "ls": false
-    },
-    "gudang": "2026-06-27"
-  },
-  {
-    "id": 1782983046198,
-    "po": "PPB/GIM/SUB-07/2026/018",
-    "container": "AIR/0619",
-    "item": "NV-POUCH-SRTPLS",
-    "qty": "250",
-    "value": "",
-    "etd": "2026-06-19",
-    "eta": "2026-06-24",
-    "stuffing": "",
-    "tags": [
-      "NVMEE"
-    ],
-    "status": "Arrived",
-    "supplier": "AUFI",
-    "deliveredDate": "",
-    "tgl_production": "2026-06-12",
-    "forwarder": "AIR",
-    "notes": "",
-    "docs": {
-      "invoice": false,
-      "pl": false,
-      "do": false,
-      "pib": false,
-      "ls": false
-    },
-    "gudang": "2026-06-27"
-  },
-  {
-    "id": 1782983046219,
-    "po": "PPB/GIM/SUB-07/2026/019",
-    "container": "AIR/0619",
-    "item": "NV-POUCH-SRTSTTLV",
-    "qty": "10",
-    "value": "",
-    "etd": "2026-06-19",
-    "eta": "2026-06-24",
-    "stuffing": "",
-    "tags": [
-      "NVMEE"
-    ],
-    "status": "Arrived",
-    "supplier": "AUFI",
-    "deliveredDate": "",
-    "tgl_production": "2026-06-12",
-    "forwarder": "AIR",
-    "notes": "",
-    "docs": {
-      "invoice": false,
-      "pl": false,
-      "do": false,
-      "pib": false,
-      "ls": false
-    },
-    "gudang": "2026-06-27"
-  },
-  {
-    "id": 1782983046269,
-    "po": "SAMPLE",
-    "container": "AIR/0617",
-    "item": "HEAT PAD",
-    "qty": "",
-    "value": "",
-    "etd": "2026-06-17",
-    "eta": "2026-06-22",
-    "stuffing": "",
-    "tags": [
-      "REEBIT"
-    ],
-    "status": "Delivered",
-    "supplier": "CHINA",
-    "deliveredDate": "2026-06-22",
-    "tgl_production": "",
-    "forwarder": "AIR",
-    "notes": "",
-    "docs": {
-      "invoice": false,
-      "pl": false,
-      "do": false,
-      "pib": false,
-      "ls": false
-    },
-    "gudang": "2026-06-25"
-  },
-  {
-    "id": 1782983046275,
-    "po": "SAMPLE",
-    "container": "AIR/0617",
-    "item": "TAS",
-    "qty": "",
-    "value": "",
-    "etd": "2026-06-17",
-    "eta": "2026-06-22",
-    "stuffing": "",
-    "tags": [
-      "NVMEE"
-    ],
-    "status": "Delivered",
-    "supplier": "CHINA",
-    "deliveredDate": "2026-06-22",
-    "tgl_production": "",
-    "forwarder": "AIR",
-    "notes": "",
-    "docs": {
-      "invoice": false,
-      "pl": false,
-      "do": false,
-      "pib": false,
-      "ls": false
-    },
-    "gudang": "2026-06-25"
   }
 ]

@@ -142,13 +142,14 @@ async function sendAllShipmentsToSheets(){
     body: payload,
     redirect: 'manual',
   });
-  if ([301,302,307].includes(resp.status)) {
+  if ([301,302,303,307,308].includes(resp.status)) {
     const redirectUrl = resp.headers.get('location');
     if (redirectUrl) {
+      // Apps Script membalas 302 ke script.googleusercontent.com yang HANYA menerima GET.
+      // Payload sudah diproses doPost saat POST awal; redirect cukup di-GET untuk ambil hasilnya.
+      // (Re-POST ke URL redirect inilah yang menyebabkan error HTTP 405.)
       resp = await fetch(redirectUrl, {
-        method: 'POST',
-        headers: { 'Content-Type': 'text/plain' },
-        body: payload,
+        method: 'GET',
         redirect: 'follow',
       });
     }

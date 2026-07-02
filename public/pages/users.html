@@ -1,0 +1,11 @@
+      <div class="master-section">
+        <div class="master-title">👥 Manajemen User</div>
+        <div id="userList"></div>
+        <div style="border-top:1px solid var(--border2);padding-top:18px;margin-top:18px;">
+          <div style="font-size:14px;font-weight:700;margin-bottom:14px;display:flex;align-items:center;gap:8px;"><span style="width:4px;height:16px;background:linear-gradient(180deg,#1d4ed8,#3b82f6);border-radius:3px;display:inline-block;"></span>Tambah User Baru</div>
+          <div class="grid2"><div class="field"><label>Username</label><input type="text" id="nu_user" placeholder="username"></div><div class="field"><label>Nama</label><input type="text" id="nu_name" placeholder="Nama lengkap"></div></div>
+          <div class="grid2"><div class="field"><label>Password</label><input type="password" id="nu_pass" placeholder="password"></div><div class="field"><label>Role</label><select id="nu_role"><option value="admin">Admin</option><option value="viewer">Viewer</option></select></div></div>
+          <div id="uErr" style="color:var(--red);font-size:12px;min-height:16px;margin-bottom:8px;"></div>
+          <button class="btn btn-primary" onclick="addUser()">Tambah User</button>
+        </div>
+      </div>

@@ -1,0 +1,117 @@
+
+      <!-- Status -->
+      <div class="master-section">
+        <div class="master-title">📗 Status Integrasi Google Sheets</div>
+        <div id="sheetsStatusBox" style="margin-bottom:14px;"></div>
+        <button class="btn" onclick="loadSheetsStatus()">🔄 Refresh Status</button>
+      </div>
+
+      <!-- Konfigurasi URL -->
+      <div class="master-section">
+        <div class="master-title">🔗 Konfigurasi URL</div>
+
+        <div class="field" style="margin-bottom:14px;">
+          <label>📥 Web App URL — Sumber Data (2026-Rekap Kontainer)</label>
+          <div style="font-size:11px;color:var(--muted);margin-bottom:5px;">URL Apps Script dari spreadsheet sumber yang berisi data shipment.</div>
+          <div style="display:flex;gap:8px;">
+            <input type="text" id="sheetsWebAppUrl" placeholder="https://script.google.com/macros/s/xxx/exec" style="font-family:'Plus Jakarta Sans',sans-serif;font-size:12px;flex:1;">
+            <button class="btn" onclick="saveSheetsUrl()">💾 Simpan</button>
+          </div>
+        </div>
+
+        <div class="field" style="margin-bottom:14px;">
+          <label>📤 Web App URL — Tujuan Sync (Shipment Monitor Sheets)</label>
+          <div style="font-size:11px;color:var(--muted);margin-bottom:5px;">URL Apps Script dari spreadsheet Shipment Monitor yang menerima data. <a href="#" onclick="event.preventDefault();showToast('info','Tips','Buat Apps Script terpisah di spreadsheet Shipment Monitor dengan fungsi doPost yang menerima data.')">Cara setup ↗</a></div>
+          <div style="display:flex;gap:8px;">
+            <input type="text" id="sheetsPushUrl" placeholder="https://script.google.com/macros/s/yyy/exec (opsional)" style="font-family:'Plus Jakarta Sans',sans-serif;font-size:12px;flex:1;">
+            <button class="btn" onclick="savePushUrl()">💾 Simpan</button>
+          </div>
+        </div>
+
+        <div style="background:var(--accent-dim);border:1px solid var(--accent);border-radius:var(--radius-sm);padding:10px 14px;font-size:12px;">
+          <strong>Tombol 🔄 Sync Sheets di topbar</strong> melakukan 2 hal sekaligus:<br>
+          1. Tarik data terbaru dari URL sumber (Rekap Kontainer)<br>
+          2. Push data ke URL tujuan (Shipment Monitor Sheets) — jika URL tujuan sudah diisi
+        </div>
+      </div>
+
+      <!-- Aksi manual -->
+      <div class="master-section">
+        <div class="master-title">⚡ Aksi Manual</div>
+        <div style="display:flex;gap:10px;flex-wrap:wrap;margin-bottom:10px;">
+          <button class="btn btn-primary" style="padding:10px 20px;" onclick="quickSync()">🔄 Sync Sekarang (Pull + Push)</button>
+          <button class="btn" onclick="pullOnly()">⬇ Tarik Data Saja</button>
+          <button class="btn" onclick="pushOnly()">📤 Push ke Sheets Saja</button>
+          <button class="btn" onclick="testSheetsConnection()">🔌 Test Koneksi</button>
+        </div>
+        <div id="pullStatusMsg" style="font-size:13px;min-height:20px;"></div>
+      </div>
+
+      <!-- Panduan -->
+      <div class="master-section">
+        <div class="master-title">📋 Panduan Pasang Apps Script (Sumber Data)</div>
+
+        <div style="display:flex;gap:12px;margin-bottom:14px;">
+          <div style="width:26px;height:26px;border-radius:50%;background:var(--accent);color:#fff;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:600;flex-shrink:0;">1</div>
+          <div><div style="font-size:13px;font-weight:500;margin-bottom:3px;">Buka 2026-Rekap Kontainer → Extensions → Apps Script</div>
+          <div style="font-size:12px;color:var(--muted);">Hapus semua kode lama. Paste isi file <code style="background:var(--surface2);padding:1px 6px;border-radius:3px;font-family:'Plus Jakarta Sans',sans-serif;">apps-script-sheets-sync.gs</code> (ada di folder aplikasi). Save.</div></div>
+        </div>
+
+        <div style="display:flex;gap:12px;margin-bottom:14px;">
+          <div style="width:26px;height:26px;border-radius:50%;background:var(--accent);color:#fff;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:600;flex-shrink:0;">2</div>
+          <div><div style="font-size:13px;font-weight:500;margin-bottom:3px;">Deploy → New deployment → Web App</div>
+          <div style="font-size:12px;color:var(--muted);line-height:1.8;">Execute as: <strong>Me</strong> · Who has access: <strong>Anyone</strong> · Deploy → salin URL</div></div>
+        </div>
+
+        <div style="display:flex;gap:12px;margin-bottom:14px;">
+          <div style="width:26px;height:26px;border-radius:50%;background:var(--accent);color:#fff;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:600;flex-shrink:0;">3</div>
+          <div><div style="font-size:13px;font-weight:500;margin-bottom:3px;">Paste URL ke kolom "Sumber Data" di atas → Simpan</div></div>
+        </div>
+
+        <div style="display:flex;gap:12px;">
+          <div style="width:26px;height:26px;border-radius:50%;background:var(--green);color:#fff;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:600;flex-shrink:0;">✓</div>
+          <div><div style="font-size:13px;font-weight:500;">Klik 🔌 Test Koneksi untuk verifikasi, lalu 🔄 Sync Sekarang</div></div>
+        </div>
+      </div>
+
+      <!-- Catatan -->
+      <div class="master-section">
+        <div class="master-title">💡 Cara Kerja Integrasi Sheets</div>
+        <div style="font-size:13px;color:var(--text);line-height:2;">
+          <div style="margin-bottom:12px;">
+            <div style="font-weight:600;color:var(--accent);margin-bottom:4px;">📋 Header yang dibaca dari Rekap Kontainer:</div>
+            <code style="background:var(--surface2);padding:4px 8px;border-radius:6px;font-size:11px;line-height:2.2;display:block;">
+              NO KONTAINER &nbsp;·&nbsp; TANGGAL PESAN &nbsp;·&nbsp; TANGGAL STUFFING &nbsp;·&nbsp; ESTIMASI TANGGAL BERANGKAT &nbsp;·&nbsp; ESTIMASI SAMPAI PORT &nbsp;·&nbsp; TAGS &nbsp;·&nbsp; SKU &nbsp;·&nbsp; QTY &nbsp;·&nbsp; AMOUNT &nbsp;·&nbsp; PPB &nbsp;·&nbsp; SUPPLIER &nbsp;·&nbsp; VENDOR &nbsp;·&nbsp; TANGGAL DATANG &nbsp;·&nbsp; PBM
+            </code>
+          </div>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px 24px;">
+            <div>
+              <div style="font-weight:600;color:var(--accent);margin-bottom:4px;">📊 Penentuan Status Otomatis:</div>
+              <div>• Kolom <strong>TANGGAL DATANG</strong> atau <strong>PBM</strong> terisi → <strong>Delivered</strong></div>
+              <div>• Ada <strong>SKU + QTY + TANGGAL PESAN</strong> (dengan/tanpa kontainer) → <strong>Production</strong></div>
+              <div>• Ada <strong>TANGGAL STUFFING</strong> → <strong>Stuffing</strong> atau lebih tinggi</div>
+              <div>• Status <strong>Delivered / Cleared</strong> yang sudah diset manual <em>tidak akan ditimpa</em></div>
+            </div>
+            <div>
+              <div style="font-weight:600;color:var(--accent);margin-bottom:4px;">🔄 Cara Kerja Merge:</div>
+              <div>• <strong>PO + Kontainer + Item sama</strong> → 1 baris (qty & value dijumlah)</div>
+              <div>• <strong>PO tanpa kontainer</strong> → masuk sebagai Production (belum stuffing)</div>
+              <div>• Saat kontainer sudah ada di Rekap → otomatis ter-update</div>
+              <div>• Catatan & dokumen yang diisi manual <em>tidak akan ditimpa</em></div>
+            </div>
+            <div>
+              <div style="font-weight:600;color:var(--accent);margin-bottom:4px;">🚛 Forwarder & Supplier:</div>
+              <div>• Dibaca dari kolom <strong>SUPPLIER</strong> dan <strong>VENDOR</strong></div>
+              <div>• Forwarder kosong → diisi otomatis dari <strong>Aturan Forwarder</strong> di Master Data</div>
+              <div>• Berbasis kode Kontainer (contoh: AIR → AIR, AJKY → HARVEST-AIR)</div>
+            </div>
+            <div>
+              <div style="font-weight:600;color:var(--accent);margin-bottom:4px;">⚙️ Update Apps Script:</div>
+              <div>• Setelah update file <code style="font-size:11px;background:var(--surface2);padding:1px 5px;border-radius:4px;">apps-script-sheets-sync.gs</code></div>
+              <div>• Buka Apps Script → Deploy → <strong>Manage deployments</strong></div>
+              <div>• Edit → pilih versi baru → <strong>Deploy</strong></div>
+              <div>• URL tidak berubah — tidak perlu update di aplikasi</div>
+            </div>
+          </div>
+        </div>
+      </div>

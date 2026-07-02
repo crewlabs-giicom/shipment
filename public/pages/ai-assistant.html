@@ -1,0 +1,32 @@
+<!-- AI ASSISTANT POPUP -->
+<div id="aiWrap">
+  <button class="ai-fab" id="aiFab" onclick="aiToggle()" onmouseenter="aiHoverOpen()" onmouseleave="aiHoverClose()" title="AI Assistant">🤖</button>
+  <div class="ai-chat" id="aiChat" onmouseenter="aiHoverCancel()" onmouseleave="aiHoverClose()">
+    <div class="ai-chat-hdr">
+      <div class="ai-chat-icon">🤖</div>
+      <div style="flex:1;">
+        <div style="font-size:14px;font-weight:700;color:var(--text);">AI Assistant</div>
+        <div style="font-size:11px;color:var(--muted);" id="aiStatusTxt">Siap membantu</div>
+      </div>
+      <button class="ai-chat-close" onclick="aiToggle()" title="Tutup">✕</button>
+    </div>
+    <div id="aiSetupDiv" style="display:none;"></div>
+    <div id="aiChatDiv" style="display:none;flex-direction:column;flex:1;overflow:hidden;">
+      <div class="ai-msgs" id="aiMsgs"></div>
+      <div class="ai-chips" id="aiChips">
+        <button class="ai-chip" onclick="aiAsk(this.textContent)">📊 Rangkuman</button>
+        <button class="ai-chip" onclick="aiAsk(this.textContent)">⚠️ Yang terlambat</button>
+        <button class="ai-chip" onclick="aiAsk(this.textContent)">📦 Kontainer minggu depan</button>
+        <button class="ai-chip" onclick="aiAsk(this.textContent)">💰 Total RMB di laut</button>
+        <button class="ai-chip" onclick="aiAsk(this.textContent)">⏱ Rata-rata pengiriman</button>
+        <button class="ai-chip" onclick="aiAsk(this.textContent)">🚛 Forwarder tercepat</button>
+        <button class="ai-chip" onclick="aiAsk(this.textContent)">🏭 Supplier paling lambat</button>
+        <button class="ai-chip" onclick="aiAsk(this.textContent)">📦 PO tanpa kontainer</button>
+      </div>
+      <div class="ai-inp-row">
+        <textarea class="ai-inp" id="aiInp" rows="1" placeholder="Tanya tentang shipment..." onkeydown="if(event.key==='Enter'&&!event.shiftKey){event.preventDefault();aiSend();}" oninput="this.style.height='auto';this.style.height=Math.min(this.scrollHeight,90)+'px'"></textarea>
+        <button class="ai-send-btn" id="aiSendBtn" onclick="aiSend()" title="Kirim">➤</button>
+      </div>
+    </div>
+  </div>
+</div>

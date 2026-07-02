@@ -1,0 +1,43 @@
+      <div class="stats" id="statsBar"></div>
+      <div class="toolbar">
+        <input type="text" id="searchInput" placeholder="Cari PO, supplier, item, komentar..." oninput="onSearchInput(this.value)">
+        <div id="searchModeIndicator" style="display:none;font-size:11px;color:var(--accent);background:var(--accent-dim);padding:3px 10px;border-radius:20px;white-space:nowrap;cursor:pointer;" onclick="clearCommentSearch()" title="Klik untuk kembali ke cari shipment">💬 Mode komentar ✕</div>
+        <select id="filterStatus" onchange="render()"><option value="">Status</option></select>
+        <select id="filterTag" onchange="render()"><option value="">Tags</option></select>
+        <button class="btn" id="grpToggle" onclick="toggleGroupView()" title="Kelompokkan per kontainer">📦 Group</button>
+        <div class="view-toggle">
+          <button class="view-btn active" id="vTable" onclick="setView('table')" title="Tabel">☰</button>
+          <button class="view-btn" id="vCard" onclick="setView('card')" title="Kartu">⊞</button>
+        </div>
+        <button class="btn admin-only" onclick="exportExcel()">⬇ Excel</button>
+      </div>
+      <!-- Hasil cari komentar inline -->
+      <div id="commentSearchPanel" style="display:none;background:var(--surface);border:1px solid var(--border2);border-radius:var(--radius);margin-bottom:10px;overflow:hidden;">
+        <div style="display:flex;justify-content:space-between;align-items:center;padding:10px 14px;border-bottom:1px solid var(--border2);background:var(--surface2);">
+          <span style="font-size:13px;font-weight:500;">💬 Hasil pencarian komentar: <span id="commentSearchStatus" style="color:var(--muted);font-weight:400;"></span></span>
+          <button class="btn btn-sm" onclick="clearCommentSearch()">✕ Tutup</button>
+        </div>
+        <div id="commentSearchResults" style="max-height:320px;overflow-y:auto;"></div>
+      </div>
+
+      <div class="bulk-bar" id="bulkBar">
+        <span id="bulkCount" style="font-size:13px;color:var(--accent);font-weight:500;"></span>
+        <button class="btn btn-sm btn-primary admin-only" onclick="openBulkEdit()">✏️ Edit Massal</button>
+        <button class="btn btn-sm btn-danger admin-only" onclick="deleteSelected()">🗑️ Hapus</button>
+        <button class="btn btn-sm" onclick="clearSel()">✕ Batal</button>
+        <div style="flex:1;"></div>
+        <button class="btn btn-sm btn-danger admin-only" onclick="deleteAll()">🗑️ Hapus SEMUA</button>
+      </div>
+      <!-- Quick Summary Bar -->
+      <div id="quickSummary" style="display:none;padding:8px 14px;background:var(--surface);border:1px solid var(--border2);border-radius:var(--radius-sm);margin-bottom:10px;font-size:12px;color:var(--muted);display:flex;gap:16px;flex-wrap:wrap;align-items:center;"></div>
+      <div id="viewTableEl">
+        <div class="table-outer"><div class="table-wrap" id="tableWrap">
+          <table><thead><tr id="tableHead"></tr></thead><tbody id="tableBody"></tbody></table>
+          <div id="emptyState" class="empty" style="display:none;"><div class="empty-icon">🚢</div><div>Belum ada shipment</div><div class="empty-sub">Klik tombol ＋ di kanan atas untuk menambah, atau Sync Sheets untuk tarik data.</div></div>
+        </div></div>
+      </div>
+      <div id="viewCardEl" style="display:none;">
+        <div class="card-grid" id="cardGrid"></div>
+        <div id="emptyCard" class="empty" style="display:none;"><div class="empty-icon">📦</div><div>Belum ada shipment</div><div class="empty-sub">Klik tombol ＋ di kanan atas untuk menambah, atau Sync Sheets untuk tarik data.</div></div>
+      </div>
+      <div id="viewGroupEl" style="display:none;padding:4px 0;"></div>

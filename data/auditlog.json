@@ -1,2730 +1,4002 @@
 [
   {
-    "id": 1782438209542,
+    "id": 1782985907610,
     "user": "system",
-    "name": "Sheets Push Queue",
-    "action": "SHEETS_PUSH_QUEUE",
-    "detail": "Enqueue push ulang karena error: HTTP 405",
-    "time": "2026-06-26T01:43:29.542Z"
+    "name": "Sheets Push",
+    "action": "SHEETS_PUSH",
+    "detail": "Push 256 shipment ke Sheets: 0 added, 256 updated",
+    "time": "2026-07-02T09:51:47.610Z"
   },
   {
-    "id": 1782438203534,
+    "id": 1782985804393,
+    "user": "system",
+    "name": "Auto Sync",
+    "action": "AUTO_SYNC_PUSH",
+    "detail": "Auto push sukses: 256 shipment",
+    "time": "2026-07-02T09:50:04.393Z"
+  },
+  {
+    "id": 1782985798749,
+    "user": "system",
+    "name": "Sheets Pull",
+    "action": "SHEETS_PULL",
+    "detail": "Tarik dari Sheets: +0 baru, ~256 update",
+    "time": "2026-07-02T09:49:58.749Z"
+  },
+  {
+    "id": 1782985557515,
+    "user": "system",
+    "name": "Auto Sync",
+    "action": "AUTO_SYNC_PUSH",
+    "detail": "Auto push sukses: 256 shipment",
+    "time": "2026-07-02T09:45:57.515Z"
+  },
+  {
+    "id": 1782985552241,
+    "user": "system",
+    "name": "Sheets Pull",
+    "action": "SHEETS_PULL",
+    "detail": "Tarik dari Sheets: +0 baru, ~256 update",
+    "time": "2026-07-02T09:45:52.241Z"
+  },
+  {
+    "id": 1782985433558,
+    "user": "system",
+    "name": "Auto Sync",
+    "action": "AUTO_SYNC_PUSH",
+    "detail": "Auto push sukses: 256 shipment",
+    "time": "2026-07-02T09:43:53.558Z"
+  },
+  {
+    "id": 1782985428033,
+    "user": "system",
+    "name": "Sheets Pull",
+    "action": "SHEETS_PULL",
+    "detail": "Tarik dari Sheets: +0 baru, ~256 update",
+    "time": "2026-07-02T09:43:48.033Z"
+  },
+  {
+    "id": 1782984823081,
+    "user": "system",
+    "name": "Auto Sync",
+    "action": "AUTO_SYNC_PUSH",
+    "detail": "Auto push sukses: 256 shipment",
+    "time": "2026-07-02T09:33:43.081Z"
+  },
+  {
+    "id": 1782984817623,
+    "user": "system",
+    "name": "Sheets Pull",
+    "action": "SHEETS_PULL",
+    "detail": "Tarik dari Sheets: +0 baru, ~256 update",
+    "time": "2026-07-02T09:33:37.623Z"
+  },
+  {
+    "id": 1782984804922,
     "user": "admin",
     "name": "Administrator",
     "action": "BULK_EDIT",
-    "detail": "Edit massal 86 shipment",
-    "time": "2026-06-26T01:43:23.534Z"
+    "detail": "Edit massal 26 shipment",
+    "time": "2026-07-02T09:33:24.922Z"
   },
   {
-    "id": 1782438203531,
+    "id": 1782984804917,
     "user": "admin",
     "name": "Administrator",
     "action": "UPDATE_SHIP",
-    "detail": "Update PPB/SSS/SUB-06/2026/013/PART-PD-CUCI-FARGE: status",
-    "time": "2026-06-26T01:43:23.531Z"
+    "detail": "Update PPB/GIM/SUB-07/2026/019/NV-POUCH-SRTSTTLV: status",
+    "time": "2026-07-02T09:33:24.917Z"
   },
   {
-    "id": 1782438203522,
+    "id": 1782984804900,
     "user": "admin",
     "name": "Administrator",
     "action": "UPDATE_SHIP",
-    "detail": "Update PPB/SSS/SUB-06/2026/009/PART-PD-CUCI-FARGE: status",
-    "time": "2026-06-26T01:43:23.522Z"
+    "detail": "Update PPB/GIM/SUB-07/2026/018/NV-POUCH-SRTPLS: status",
+    "time": "2026-07-02T09:33:24.900Z"
   },
   {
-    "id": 1782438203514,
+    "id": 1782984804878,
     "user": "admin",
     "name": "Administrator",
     "action": "UPDATE_SHIP",
-    "detail": "Update PPB/SSS/SUB-06/2026/007/PART-PD-IRON-VULGA: status",
-    "time": "2026-06-26T01:43:23.514Z"
+    "detail": "Update PPB/GIM/SUB-07/2026/018/NV-POUCH-SRTOV: status",
+    "time": "2026-07-02T09:33:24.878Z"
   },
   {
-    "id": 1782438203508,
+    "id": 1782984804861,
     "user": "admin",
     "name": "Administrator",
     "action": "UPDATE_SHIP",
-    "detail": "Update PPB/RRR/SUB-04/2026/003/RE-COVCL-3846: status",
-    "time": "2026-06-26T01:43:23.508Z"
+    "detail": "Update PPB/GIM/SUB-07/2026/018/NV-POUCH-SRTKT: status",
+    "time": "2026-07-02T09:33:24.861Z"
   },
   {
-    "id": 1782438203499,
-    "user": "admin",
-    "name": "Administrator",
-    "action": "UPDATE_SHIP",
-    "detail": "Update PPB/RRR/SUB-04/2026/003/RE-COVCL-3846: status",
-    "time": "2026-06-26T01:43:23.499Z"
-  },
-  {
-    "id": 1782438203491,
-    "user": "admin",
-    "name": "Administrator",
-    "action": "UPDATE_SHIP",
-    "detail": "Update PPB/IAM/SUB/2026/006/JPTBJU-PLKK16-BESI: status",
-    "time": "2026-06-26T01:43:23.491Z"
-  },
-  {
-    "id": 1782438203480,
-    "user": "admin",
-    "name": "Administrator",
-    "action": "UPDATE_SHIP",
-    "detail": "Update PPB/IAM/SUB/2026/006/JPT-SG3-PEGAS: status",
-    "time": "2026-06-26T01:43:23.480Z"
-  },
-  {
-    "id": 1782438203472,
-    "user": "admin",
-    "name": "Administrator",
-    "action": "UPDATE_SHIP",
-    "detail": "Update PPB/IAM/SUB/2026/005/JPTBJU-PLKK16-BESI: status",
-    "time": "2026-06-26T01:43:23.472Z"
-  },
-  {
-    "id": 1782438203464,
+    "id": 1782984804842,
     "user": "admin",
     "name": "Administrator",
     "action": "UPDATE_SHIP",
     "detail": "Update PPB/GIM/SUB-07/2026/020/NV-POUCH-SRTSTTLV: status",
-    "time": "2026-06-26T01:43:23.464Z"
+    "time": "2026-07-02T09:33:24.842Z"
   },
   {
-    "id": 1782438203458,
+    "id": 1782984804824,
     "user": "admin",
     "name": "Administrator",
     "action": "UPDATE_SHIP",
     "detail": "Update PPB/GIM/SUB-07/2026/020/NV-POUCH-SRTPLS: status",
-    "time": "2026-06-26T01:43:23.458Z"
+    "time": "2026-07-02T09:33:24.824Z"
   },
   {
-    "id": 1782438203451,
+    "id": 1782984804805,
     "user": "admin",
     "name": "Administrator",
     "action": "UPDATE_SHIP",
     "detail": "Update PPB/GIM/SUB-07/2026/020/NV-POUCH-SRTOV: status",
-    "time": "2026-06-26T01:43:23.451Z"
+    "time": "2026-07-02T09:33:24.805Z"
   },
   {
-    "id": 1782438203445,
+    "id": 1782984804787,
     "user": "admin",
     "name": "Administrator",
     "action": "UPDATE_SHIP",
     "detail": "Update PPB/GIM/SUB-07/2026/020/NV-POUCH-SRTKT: status",
-    "time": "2026-06-26T01:43:23.445Z"
+    "time": "2026-07-02T09:33:24.787Z"
   },
   {
-    "id": 1782438203439,
-    "user": "admin",
-    "name": "Administrator",
-    "action": "UPDATE_SHIP",
-    "detail": "Update PPB/GIM/SUB-07/2026/018/BOX-NV-JPT-MUTIARA: status",
-    "time": "2026-06-26T01:43:23.439Z"
-  },
-  {
-    "id": 1782438203431,
-    "user": "admin",
-    "name": "Administrator",
-    "action": "UPDATE_SHIP",
-    "detail": "Update PPB/GIM/SUB-07/2026/018/NV-JPT-MUTIARA: status",
-    "time": "2026-06-26T01:43:23.431Z"
-  },
-  {
-    "id": 1782438203426,
+    "id": 1782984804768,
     "user": "admin",
     "name": "Administrator",
     "action": "UPDATE_SHIP",
     "detail": "Update PPB/GIM/SUB-07/2026/014/PART-NV-HR-ARIES2: status",
-    "time": "2026-06-26T01:43:23.426Z"
+    "time": "2026-07-02T09:33:24.768Z"
   },
   {
-    "id": 1782438203419,
+    "id": 1782984804749,
     "user": "admin",
     "name": "Administrator",
     "action": "UPDATE_SHIP",
     "detail": "Update PPB/GIM/SUB-07/2026/014/PART-NV-DRY-LUNA: status",
-    "time": "2026-06-26T01:43:23.419Z"
+    "time": "2026-07-02T09:33:24.749Z"
   },
   {
-    "id": 1782438203412,
-    "user": "admin",
-    "name": "Administrator",
-    "action": "UPDATE_SHIP",
-    "detail": "Update PPB/GIM/SUB-07/2026/014/PART-NV-HR-SCORPIO: status",
-    "time": "2026-06-26T01:43:23.412Z"
-  },
-  {
-    "id": 1782438203406,
-    "user": "admin",
-    "name": "Administrator",
-    "action": "UPDATE_SHIP",
-    "detail": "Update PPB/GIM/SUB-07/2026/007/PART-NV-HR-SCORPIO: status",
-    "time": "2026-06-26T01:43:23.406Z"
-  },
-  {
-    "id": 1782438203399,
-    "user": "admin",
-    "name": "Administrator",
-    "action": "UPDATE_SHIP",
-    "detail": "Update PPB/GIM/SUB-07/2026/007/PART-NV-HR-SAGI: status",
-    "time": "2026-06-26T01:43:23.399Z"
-  },
-  {
-    "id": 1782438203394,
-    "user": "admin",
-    "name": "Administrator",
-    "action": "UPDATE_SHIP",
-    "detail": "Update PPB/GIM/SUB-07/2026/007/PART-NV-HR-LIBRA: status",
-    "time": "2026-06-26T01:43:23.394Z"
-  },
-  {
-    "id": 1782438203389,
-    "user": "admin",
-    "name": "Administrator",
-    "action": "UPDATE_SHIP",
-    "detail": "Update PPB/GIM/SUB-07/2026/007/PART-NV-HR-CAPRI: status",
-    "time": "2026-06-26T01:43:23.389Z"
-  },
-  {
-    "id": 1782438203381,
+    "id": 1782984804729,
     "user": "admin",
     "name": "Administrator",
     "action": "UPDATE_SHIP",
     "detail": "Update PPB/COM/SUB-04/2026/007/CUTER-SLSBLT: status",
-    "time": "2026-06-26T01:43:23.381Z"
+    "time": "2026-07-02T09:33:24.729Z"
   },
   {
-    "id": 1782438203375,
+    "id": 1782984804711,
     "user": "admin",
     "name": "Administrator",
     "action": "UPDATE_SHIP",
     "detail": "Update PPB/COM/SUB-04/2026/006/PL-2842-MGT: status",
-    "time": "2026-06-26T01:43:23.375Z"
+    "time": "2026-07-02T09:33:24.711Z"
   },
   {
-    "id": 1782438203365,
+    "id": 1782984804691,
     "user": "admin",
     "name": "Administrator",
     "action": "UPDATE_SHIP",
     "detail": "Update PPB/COM/SUB-04/2026/006/PL-2535-P: status",
-    "time": "2026-06-26T01:43:23.365Z"
+    "time": "2026-07-02T09:33:24.691Z"
   },
   {
-    "id": 1782438203358,
+    "id": 1782984804670,
     "user": "admin",
     "name": "Administrator",
     "action": "UPDATE_SHIP",
     "detail": "Update PPB/COM/SUB-04/2026/006/PL-2535-MGT: status",
-    "time": "2026-06-26T01:43:23.358Z"
+    "time": "2026-07-02T09:33:24.670Z"
   },
   {
-    "id": 1782438203351,
+    "id": 1782984804650,
     "user": "admin",
     "name": "Administrator",
     "action": "UPDATE_SHIP",
     "detail": "Update PPB/COM/SUB-04/2026/006/PL-2030-MGT: status",
-    "time": "2026-06-26T01:43:23.351Z"
+    "time": "2026-07-02T09:33:24.650Z"
   },
   {
-    "id": 1782438203345,
+    "id": 1782984804633,
     "user": "admin",
     "name": "Administrator",
     "action": "UPDATE_SHIP",
     "detail": "Update PPB/COM/SUB-04/2026/006/2842P: status",
-    "time": "2026-06-26T01:43:23.345Z"
+    "time": "2026-07-02T09:33:24.633Z"
   },
   {
-    "id": 1782438203340,
+    "id": 1782984804613,
     "user": "admin",
     "name": "Administrator",
     "action": "UPDATE_SHIP",
     "detail": "Update PPB/COM/SUB-04/2026/006/2030P: status",
-    "time": "2026-06-26T01:43:23.340Z"
+    "time": "2026-07-02T09:33:24.613Z"
   },
   {
-    "id": 1782438203333,
+    "id": 1782984804594,
+    "user": "admin",
+    "name": "Administrator",
+    "action": "UPDATE_SHIP",
+    "detail": "Update CTR/IAM/SUB/2026/028/PD-CUCI-ATRONW: status",
+    "time": "2026-07-02T09:33:24.594Z"
+  },
+  {
+    "id": 1782984804548,
+    "user": "admin",
+    "name": "Administrator",
+    "action": "UPDATE_SHIP",
+    "detail": "Update CTR/GIM/SUB-07/2026/026/NV-HR-SATURN-U: status",
+    "time": "2026-07-02T09:33:24.548Z"
+  },
+  {
+    "id": 1782984804527,
+    "user": "admin",
+    "name": "Administrator",
+    "action": "UPDATE_SHIP",
+    "detail": "Update CTR/COM/SUB-04/2026/026/PL-BUB1823-TC: status",
+    "time": "2026-07-02T09:33:24.527Z"
+  },
+  {
+    "id": 1782984804494,
+    "user": "admin",
+    "name": "Administrator",
+    "action": "UPDATE_SHIP",
+    "detail": "Update CTR/COM/SUB-04/2026/026/PL-BUB1823-MM: status",
+    "time": "2026-07-02T09:33:24.494Z"
+  },
+  {
+    "id": 1782984804473,
+    "user": "admin",
+    "name": "Administrator",
+    "action": "UPDATE_SHIP",
+    "detail": "Update CTR/COM/SUB-04/2026/026/PL-BUB1823-H: status",
+    "time": "2026-07-02T09:33:24.473Z"
+  },
+  {
+    "id": 1782984804450,
+    "user": "admin",
+    "name": "Administrator",
+    "action": "UPDATE_SHIP",
+    "detail": "Update CTR/COM/SUB-04/2026/026/PL-BUB1318-TC: status",
+    "time": "2026-07-02T09:33:24.450Z"
+  },
+  {
+    "id": 1782984804429,
+    "user": "admin",
+    "name": "Administrator",
+    "action": "UPDATE_SHIP",
+    "detail": "Update CTR/COM/SUB-04/2026/026/PL-BUB1318-P: status",
+    "time": "2026-07-02T09:33:24.429Z"
+  },
+  {
+    "id": 1782984804412,
+    "user": "admin",
+    "name": "Administrator",
+    "action": "UPDATE_SHIP",
+    "detail": "Update CTR/COM/SUB-04/2026/026/PL-BUB1318-MM: status",
+    "time": "2026-07-02T09:33:24.412Z"
+  },
+  {
+    "id": 1782984804390,
+    "user": "admin",
+    "name": "Administrator",
+    "action": "UPDATE_SHIP",
+    "detail": "Update CTR/BBB/SUB-01/2026/026/HB-KA-HBO-120: status",
+    "time": "2026-07-02T09:33:24.390Z"
+  },
+  {
+    "id": 1782984804335,
+    "user": "admin",
+    "name": "Administrator",
+    "action": "BULK_EDIT",
+    "detail": "Edit massal 52 shipment",
+    "time": "2026-07-02T09:33:24.335Z"
+  },
+  {
+    "id": 1782984804328,
+    "user": "admin",
+    "name": "Administrator",
+    "action": "UPDATE_SHIP",
+    "detail": "Update SAMPLE/TAS: forwarder, gudang",
+    "time": "2026-07-02T09:33:24.328Z"
+  },
+  {
+    "id": 1782984804307,
+    "user": "admin",
+    "name": "Administrator",
+    "action": "UPDATE_SHIP",
+    "detail": "Update SAMPLE/HEAT PAD: forwarder, gudang",
+    "time": "2026-07-02T09:33:24.307Z"
+  },
+  {
+    "id": 1782984804286,
+    "user": "admin",
+    "name": "Administrator",
+    "action": "UPDATE_SHIP",
+    "detail": "Update PPB/GIM/SUB-07/2026/019/NV-POUCH-SRTSTTLV: forwarder, gudang",
+    "time": "2026-07-02T09:33:24.286Z"
+  },
+  {
+    "id": 1782984804260,
+    "user": "admin",
+    "name": "Administrator",
+    "action": "UPDATE_SHIP",
+    "detail": "Update PPB/GIM/SUB-07/2026/018/NV-POUCH-SRTPLS: forwarder, gudang",
+    "time": "2026-07-02T09:33:24.260Z"
+  },
+  {
+    "id": 1782984804240,
+    "user": "admin",
+    "name": "Administrator",
+    "action": "UPDATE_SHIP",
+    "detail": "Update PPB/GIM/SUB-07/2026/018/NV-POUCH-SRTOV: forwarder, gudang",
+    "time": "2026-07-02T09:33:24.240Z"
+  },
+  {
+    "id": 1782984804221,
+    "user": "admin",
+    "name": "Administrator",
+    "action": "UPDATE_SHIP",
+    "detail": "Update PPB/GIM/SUB-07/2026/018/NV-POUCH-SRTKT: forwarder, gudang",
+    "time": "2026-07-02T09:33:24.221Z"
+  },
+  {
+    "id": 1782984804197,
+    "user": "admin",
+    "name": "Administrator",
+    "action": "UPDATE_SHIP",
+    "detail": "Update CTR/RRR/SUB-04/2026/014/RE-PL-1020-50: gudang",
+    "time": "2026-07-02T09:33:24.197Z"
+  },
+  {
+    "id": 1782984804172,
+    "user": "admin",
+    "name": "Administrator",
+    "action": "UPDATE_SHIP",
+    "detail": "Update CTR/IAM/SUB/2026/028/PD-CUCI-ATRONW: gudang",
+    "time": "2026-07-02T09:33:24.172Z"
+  },
+  {
+    "id": 1782984804150,
+    "user": "admin",
+    "name": "Administrator",
+    "action": "UPDATE_SHIP",
+    "detail": "Update CTR/IAM/SUB/2026/027/CS-BEKAM-24: gudang",
+    "time": "2026-07-02T09:33:24.150Z"
+  },
+  {
+    "id": 1782984804126,
+    "user": "admin",
+    "name": "Administrator",
+    "action": "UPDATE_SHIP",
+    "detail": "Update CTR/IAM/SUB/2026/027/CS-BEKAM-12: gudang",
+    "time": "2026-07-02T09:33:24.126Z"
+  },
+  {
+    "id": 1782984804103,
+    "user": "admin",
+    "name": "Administrator",
+    "action": "UPDATE_SHIP",
+    "detail": "Update CTR/IAM/SUB/2026/024/CS-BEKAM-24: gudang",
+    "time": "2026-07-02T09:33:24.103Z"
+  },
+  {
+    "id": 1782984804081,
+    "user": "admin",
+    "name": "Administrator",
+    "action": "UPDATE_SHIP",
+    "detail": "Update CTR/IAM/SUB/2026/024/CS-BEKAM-12: gudang",
+    "time": "2026-07-02T09:33:24.081Z"
+  },
+  {
+    "id": 1782984804061,
+    "user": "admin",
+    "name": "Administrator",
+    "action": "UPDATE_SHIP",
+    "detail": "Update CTR/IAM/SUB/2026/022/PL-2545-TRANS: gudang",
+    "time": "2026-07-02T09:33:24.061Z"
+  },
+  {
+    "id": 1782984804039,
+    "user": "admin",
+    "name": "Administrator",
+    "action": "UPDATE_SHIP",
+    "detail": "Update CTR/IAM/SUB/2026/022/PL-1640-TRANS: gudang",
+    "time": "2026-07-02T09:33:24.039Z"
+  },
+  {
+    "id": 1782984804020,
+    "user": "admin",
+    "name": "Administrator",
+    "action": "UPDATE_SHIP",
+    "detail": "Update CTR/GIM/SUB-07/2026/026/NV-HR-SATURN-U: gudang",
+    "time": "2026-07-02T09:33:24.020Z"
+  },
+  {
+    "id": 1782984803998,
+    "user": "admin",
+    "name": "Administrator",
+    "action": "UPDATE_SHIP",
+    "detail": "Update CTR/GIM/SUB-07/2026/022/NV-SKM-LOVE: gudang",
+    "time": "2026-07-02T09:33:23.998Z"
+  },
+  {
+    "id": 1782984803978,
+    "user": "admin",
+    "name": "Administrator",
+    "action": "UPDATE_SHIP",
+    "detail": "Update CTR/GIM/SUB-07/2026/022/NV-SKM-GRIGI: gudang",
+    "time": "2026-07-02T09:33:23.978Z"
+  },
+  {
+    "id": 1782984803958,
+    "user": "admin",
+    "name": "Administrator",
+    "action": "UPDATE_SHIP",
+    "detail": "Update CTR/GIM/SUB-07/2026/022/NV-SIR-BIGKTK: gudang",
+    "time": "2026-07-02T09:33:23.958Z"
+  },
+  {
+    "id": 1782984803934,
+    "user": "admin",
+    "name": "Administrator",
+    "action": "UPDATE_SHIP",
+    "detail": "Update CTR/GIM/SUB-07/2026/022/NV-ROLL-JPT: gudang",
+    "time": "2026-07-02T09:33:23.934Z"
+  },
+  {
+    "id": 1782984803906,
+    "user": "admin",
+    "name": "Administrator",
+    "action": "UPDATE_SHIP",
+    "detail": "Update CTR/GIM/SUB-07/2026/022/NV-ROLL-BIG: gudang",
+    "time": "2026-07-02T09:33:23.906Z"
+  },
+  {
+    "id": 1782984803885,
+    "user": "admin",
+    "name": "Administrator",
+    "action": "UPDATE_SHIP",
+    "detail": "Update CTR/GIM/SUB-07/2026/022/NV-POUCH-PUFFY: gudang",
+    "time": "2026-07-02T09:33:23.885Z"
+  },
+  {
+    "id": 1782984803861,
+    "user": "admin",
+    "name": "Administrator",
+    "action": "UPDATE_SHIP",
+    "detail": "Update CTR/GIM/SUB-07/2026/022/NV-POUCH-PLW: gudang",
+    "time": "2026-07-02T09:33:23.861Z"
+  },
+  {
+    "id": 1782984803838,
+    "user": "admin",
+    "name": "Administrator",
+    "action": "UPDATE_SHIP",
+    "detail": "Update CTR/GIM/SUB-07/2026/022/NV-JPT-LYRA: gudang",
+    "time": "2026-07-02T09:33:23.838Z"
+  },
+  {
+    "id": 1782984803812,
+    "user": "admin",
+    "name": "Administrator",
+    "action": "UPDATE_SHIP",
+    "detail": "Update CTR/GIM/SUB-07/2026/022/NV-HR-TAURUSV2: gudang",
+    "time": "2026-07-02T09:33:23.812Z"
+  },
+  {
+    "id": 1782984803785,
+    "user": "admin",
+    "name": "Administrator",
+    "action": "UPDATE_SHIP",
+    "detail": "Update CTR/GIM/SUB-07/2026/022/NV-HR-LIBRAV2: gudang",
+    "time": "2026-07-02T09:33:23.785Z"
+  },
+  {
+    "id": 1782984803763,
+    "user": "admin",
+    "name": "Administrator",
+    "action": "UPDATE_SHIP",
+    "detail": "Update CTR/GIM/SUB-07/2026/015/NV-HR-ARIES2: gudang",
+    "time": "2026-07-02T09:33:23.763Z"
+  },
+  {
+    "id": 1782984803739,
+    "user": "admin",
+    "name": "Administrator",
+    "action": "UPDATE_SHIP",
+    "detail": "Update CTR/GIM/SUB-07/2026/015/NV-DRY-LUNA: gudang",
+    "time": "2026-07-02T09:33:23.739Z"
+  },
+  {
+    "id": 1782984803717,
+    "user": "admin",
+    "name": "Administrator",
+    "action": "UPDATE_SHIP",
+    "detail": "Update CTR/GIM/SUB-07/2026/014/NV-SKM-LOVE: gudang",
+    "time": "2026-07-02T09:33:23.717Z"
+  },
+  {
+    "id": 1782984803691,
+    "user": "admin",
+    "name": "Administrator",
+    "action": "UPDATE_SHIP",
+    "detail": "Update CTR/GIM/SUB-07/2026/014/NV-SIR-MNLV: gudang",
+    "time": "2026-07-02T09:33:23.691Z"
+  },
+  {
+    "id": 1782984803671,
+    "user": "admin",
+    "name": "Administrator",
+    "action": "UPDATE_SHIP",
+    "detail": "Update CTR/GIM/SUB-07/2026/014/NV-SIR-BIGKTK: gudang",
+    "time": "2026-07-02T09:33:23.671Z"
+  },
+  {
+    "id": 1782984803651,
+    "user": "admin",
+    "name": "Administrator",
+    "action": "UPDATE_SHIP",
+    "detail": "Update CTR/GIM/SUB-07/2026/014/NV-JPT-HEATLS2: gudang",
+    "time": "2026-07-02T09:33:23.651Z"
+  },
+  {
+    "id": 1782984803625,
+    "user": "admin",
+    "name": "Administrator",
+    "action": "UPDATE_SHIP",
+    "detail": "Update CTR/GIM/SUB-07/2026/014/NV-HR-SCORPIO: gudang",
+    "time": "2026-07-02T09:33:23.625Z"
+  },
+  {
+    "id": 1782984803604,
+    "user": "admin",
+    "name": "Administrator",
+    "action": "UPDATE_SHIP",
+    "detail": "Update CTR/GIM/SUB-07/2026/014/NV-HR-ARIES2: gudang",
+    "time": "2026-07-02T09:33:23.604Z"
+  },
+  {
+    "id": 1782984803580,
+    "user": "admin",
+    "name": "Administrator",
+    "action": "UPDATE_SHIP",
+    "detail": "Update CTR/COM/SUB-04/2026/026/PL-BUB1823-TC: gudang",
+    "time": "2026-07-02T09:33:23.580Z"
+  },
+  {
+    "id": 1782984803558,
+    "user": "admin",
+    "name": "Administrator",
+    "action": "UPDATE_SHIP",
+    "detail": "Update CTR/COM/SUB-04/2026/026/PL-BUB1823-MM: gudang",
+    "time": "2026-07-02T09:33:23.558Z"
+  },
+  {
+    "id": 1782984803534,
+    "user": "admin",
+    "name": "Administrator",
+    "action": "UPDATE_SHIP",
+    "detail": "Update CTR/COM/SUB-04/2026/026/PL-BUB1823-H: gudang",
+    "time": "2026-07-02T09:33:23.534Z"
+  },
+  {
+    "id": 1782984803513,
+    "user": "admin",
+    "name": "Administrator",
+    "action": "UPDATE_SHIP",
+    "detail": "Update CTR/COM/SUB-04/2026/026/PL-BUB1318-TC: gudang",
+    "time": "2026-07-02T09:33:23.513Z"
+  },
+  {
+    "id": 1782984803492,
+    "user": "admin",
+    "name": "Administrator",
+    "action": "UPDATE_SHIP",
+    "detail": "Update CTR/COM/SUB-04/2026/026/PL-BUB1318-P: gudang",
+    "time": "2026-07-02T09:33:23.492Z"
+  },
+  {
+    "id": 1782984803469,
+    "user": "admin",
+    "name": "Administrator",
+    "action": "UPDATE_SHIP",
+    "detail": "Update CTR/COM/SUB-04/2026/026/PL-BUB1318-MM: gudang",
+    "time": "2026-07-02T09:33:23.469Z"
+  },
+  {
+    "id": 1782984803444,
+    "user": "admin",
+    "name": "Administrator",
+    "action": "UPDATE_SHIP",
+    "detail": "Update CTR/COM/SUB-04/2026/020/PL-BUB2530-MM: gudang",
+    "time": "2026-07-02T09:33:23.444Z"
+  },
+  {
+    "id": 1782984803421,
+    "user": "admin",
+    "name": "Administrator",
+    "action": "UPDATE_SHIP",
+    "detail": "Update CTR/COM/SUB-04/2026/020/PL-BUB2530-H: gudang",
+    "time": "2026-07-02T09:33:23.421Z"
+  },
+  {
+    "id": 1782984803396,
+    "user": "admin",
+    "name": "Administrator",
+    "action": "UPDATE_SHIP",
+    "detail": "Update CTR/COM/SUB-04/2026/020/PL-BUB1823-MM: gudang",
+    "time": "2026-07-02T09:33:23.396Z"
+  },
+  {
+    "id": 1782984803376,
+    "user": "admin",
+    "name": "Administrator",
+    "action": "UPDATE_SHIP",
+    "detail": "Update CTR/COM/SUB-04/2026/020/PL-BUB1823-H: gudang",
+    "time": "2026-07-02T09:33:23.376Z"
+  },
+  {
+    "id": 1782984803351,
+    "user": "admin",
+    "name": "Administrator",
+    "action": "UPDATE_SHIP",
+    "detail": "Update CTR/COM/SUB-04/2026/020/PL-BUB1318-H: gudang",
+    "time": "2026-07-02T09:33:23.351Z"
+  },
+  {
+    "id": 1782984803332,
+    "user": "admin",
+    "name": "Administrator",
+    "action": "UPDATE_SHIP",
+    "detail": "Update CTR/COM/SUB-04/2026/014/PL-BUB1823-P: gudang",
+    "time": "2026-07-02T09:33:23.332Z"
+  },
+  {
+    "id": 1782984803310,
+    "user": "admin",
+    "name": "Administrator",
+    "action": "UPDATE_SHIP",
+    "detail": "Update CTR/COM/SUB-04/2026/014/PL-BUB1823-H: gudang",
+    "time": "2026-07-02T09:33:23.310Z"
+  },
+  {
+    "id": 1782984803295,
+    "user": "admin",
+    "name": "Administrator",
+    "action": "UPDATE_SHIP",
+    "detail": "Update CTR/COM/SUB-04/2026/014/PL-BUB1318-P: gudang",
+    "time": "2026-07-02T09:33:23.295Z"
+  },
+  {
+    "id": 1782984803270,
+    "user": "admin",
+    "name": "Administrator",
+    "action": "UPDATE_SHIP",
+    "detail": "Update CTR/COM/SUB-04/2026/014/PL-BUB1318-H: gudang",
+    "time": "2026-07-02T09:33:23.270Z"
+  },
+  {
+    "id": 1782984803244,
+    "user": "admin",
+    "name": "Administrator",
+    "action": "UPDATE_SHIP",
+    "detail": "Update CTR/BBB/SUB-01/2026/026/HB-KA-HBO-120: gudang",
+    "time": "2026-07-02T09:33:23.244Z"
+  },
+  {
+    "id": 1782984803222,
+    "user": "admin",
+    "name": "Administrator",
+    "action": "UPDATE_SHIP",
+    "detail": "Update CTR/BBB/SUB-01/2026/022/HB-TTBAG-YUNA: gudang",
+    "time": "2026-07-02T09:33:23.222Z"
+  },
+  {
+    "id": 1782984803196,
+    "user": "admin",
+    "name": "Administrator",
+    "action": "UPDATE_SHIP",
+    "detail": "Update CTR/BBB/SUB-01/2026/022/HB-RB-SORIN: gudang",
+    "time": "2026-07-02T09:33:23.196Z"
+  },
+  {
+    "id": 1782984803169,
+    "user": "admin",
+    "name": "Administrator",
+    "action": "UPDATE_SHIP",
+    "detail": "Update CTR/BBB/SUB-01/2026/022/HB-CLR-CHERY: gudang",
+    "time": "2026-07-02T09:33:23.169Z"
+  },
+  {
+    "id": 1782983050953,
+    "user": "system",
+    "name": "Sheets Push Queue",
+    "action": "SHEETS_PUSH_RESUBMIT",
+    "detail": "Retry push sukses: 256 shipment",
+    "time": "2026-07-02T09:04:10.953Z"
+  },
+  {
+    "id": 1782983046043,
+    "user": "system",
+    "name": "Sheets Pull",
+    "action": "SHEETS_PULL",
+    "detail": "Tarik dari Sheets: +6 baru, ~250 update",
+    "time": "2026-07-02T09:04:06.043Z"
+  },
+  {
+    "id": 1782537452302,
+    "user": "system",
+    "name": "Sheets Push Queue",
+    "action": "SHEETS_PUSH_QUEUE",
+    "detail": "Enqueue push ulang karena error: HTTP 405",
+    "time": "2026-06-27T05:17:32.302Z"
+  },
+  {
+    "id": 1782537446219,
+    "user": "admin",
+    "name": "Administrator",
+    "action": "BULK_EDIT",
+    "detail": "Edit massal 81 shipment",
+    "time": "2026-06-27T05:17:26.219Z"
+  },
+  {
+    "id": 1782537446213,
+    "user": "admin",
+    "name": "Administrator",
+    "action": "UPDATE_SHIP",
+    "detail": "Update PPB/SSS/SUB-06/2026/013/PART-PD-CUCI-FARGE: status",
+    "time": "2026-06-27T05:17:26.213Z"
+  },
+  {
+    "id": 1782537446195,
+    "user": "admin",
+    "name": "Administrator",
+    "action": "UPDATE_SHIP",
+    "detail": "Update PPB/SSS/SUB-06/2026/009/PART-PD-CUCI-FARGE: status",
+    "time": "2026-06-27T05:17:26.195Z"
+  },
+  {
+    "id": 1782537446178,
+    "user": "admin",
+    "name": "Administrator",
+    "action": "UPDATE_SHIP",
+    "detail": "Update PPB/SSS/SUB-06/2026/007/PART-PD-IRON-VULGA: status",
+    "time": "2026-06-27T05:17:26.178Z"
+  },
+  {
+    "id": 1782537446099,
+    "user": "admin",
+    "name": "Administrator",
+    "action": "UPDATE_SHIP",
+    "detail": "Update PPB/RRR/SUB-04/2026/003/RE-COVCL-3846: status",
+    "time": "2026-06-27T05:17:26.099Z"
+  },
+  {
+    "id": 1782537446081,
+    "user": "admin",
+    "name": "Administrator",
+    "action": "UPDATE_SHIP",
+    "detail": "Update PPB/RRR/SUB-04/2026/003/RE-COVCL-3846: status",
+    "time": "2026-06-27T05:17:26.081Z"
+  },
+  {
+    "id": 1782537446062,
+    "user": "admin",
+    "name": "Administrator",
+    "action": "UPDATE_SHIP",
+    "detail": "Update PPB/IAM/SUB/2026/006/JPTBJU-PLKK16-BESI: status",
+    "time": "2026-06-27T05:17:26.062Z"
+  },
+  {
+    "id": 1782537446040,
+    "user": "admin",
+    "name": "Administrator",
+    "action": "UPDATE_SHIP",
+    "detail": "Update PPB/IAM/SUB/2026/006/JPT-SG3-PEGAS: status",
+    "time": "2026-06-27T05:17:26.040Z"
+  },
+  {
+    "id": 1782537446017,
+    "user": "admin",
+    "name": "Administrator",
+    "action": "UPDATE_SHIP",
+    "detail": "Update PPB/IAM/SUB/2026/005/JPTBJU-PLKK16-BESI: status",
+    "time": "2026-06-27T05:17:26.017Z"
+  },
+  {
+    "id": 1782537445981,
+    "user": "admin",
+    "name": "Administrator",
+    "action": "UPDATE_SHIP",
+    "detail": "Update PPB/GIM/SUB-07/2026/020/NV-POUCH-SRTSTTLV: status",
+    "time": "2026-06-27T05:17:25.981Z"
+  },
+  {
+    "id": 1782537445962,
+    "user": "admin",
+    "name": "Administrator",
+    "action": "UPDATE_SHIP",
+    "detail": "Update PPB/GIM/SUB-07/2026/020/NV-POUCH-SRTPLS: status",
+    "time": "2026-06-27T05:17:25.962Z"
+  },
+  {
+    "id": 1782537445944,
+    "user": "admin",
+    "name": "Administrator",
+    "action": "UPDATE_SHIP",
+    "detail": "Update PPB/GIM/SUB-07/2026/020/NV-POUCH-SRTOV: status",
+    "time": "2026-06-27T05:17:25.944Z"
+  },
+  {
+    "id": 1782537445922,
+    "user": "admin",
+    "name": "Administrator",
+    "action": "UPDATE_SHIP",
+    "detail": "Update PPB/GIM/SUB-07/2026/020/NV-POUCH-SRTKT: status",
+    "time": "2026-06-27T05:17:25.922Z"
+  },
+  {
+    "id": 1782537445903,
+    "user": "admin",
+    "name": "Administrator",
+    "action": "UPDATE_SHIP",
+    "detail": "Update PPB/GIM/SUB-07/2026/018/BOX-NV-JPT-MUTIARA: status",
+    "time": "2026-06-27T05:17:25.903Z"
+  },
+  {
+    "id": 1782537445867,
+    "user": "admin",
+    "name": "Administrator",
+    "action": "UPDATE_SHIP",
+    "detail": "Update PPB/GIM/SUB-07/2026/018/NV-JPT-MUTIARA: status",
+    "time": "2026-06-27T05:17:25.867Z"
+  },
+  {
+    "id": 1782537445757,
+    "user": "admin",
+    "name": "Administrator",
+    "action": "UPDATE_SHIP",
+    "detail": "Update PPB/GIM/SUB-07/2026/014/PART-NV-HR-ARIES2: status",
+    "time": "2026-06-27T05:17:25.757Z"
+  },
+  {
+    "id": 1782537445733,
+    "user": "admin",
+    "name": "Administrator",
+    "action": "UPDATE_SHIP",
+    "detail": "Update PPB/GIM/SUB-07/2026/014/PART-NV-DRY-LUNA: status",
+    "time": "2026-06-27T05:17:25.733Z"
+  },
+  {
+    "id": 1782537445713,
+    "user": "admin",
+    "name": "Administrator",
+    "action": "UPDATE_SHIP",
+    "detail": "Update PPB/GIM/SUB-07/2026/014/PART-NV-HR-SCORPIO: status",
+    "time": "2026-06-27T05:17:25.713Z"
+  },
+  {
+    "id": 1782537445691,
+    "user": "admin",
+    "name": "Administrator",
+    "action": "UPDATE_SHIP",
+    "detail": "Update PPB/GIM/SUB-07/2026/007/PART-NV-HR-SCORPIO: status",
+    "time": "2026-06-27T05:17:25.691Z"
+  },
+  {
+    "id": 1782537445667,
+    "user": "admin",
+    "name": "Administrator",
+    "action": "UPDATE_SHIP",
+    "detail": "Update PPB/GIM/SUB-07/2026/007/PART-NV-HR-SAGI: status",
+    "time": "2026-06-27T05:17:25.667Z"
+  },
+  {
+    "id": 1782537445647,
+    "user": "admin",
+    "name": "Administrator",
+    "action": "UPDATE_SHIP",
+    "detail": "Update PPB/GIM/SUB-07/2026/007/PART-NV-HR-LIBRA: status",
+    "time": "2026-06-27T05:17:25.647Z"
+  },
+  {
+    "id": 1782537445620,
+    "user": "admin",
+    "name": "Administrator",
+    "action": "UPDATE_SHIP",
+    "detail": "Update PPB/GIM/SUB-07/2026/007/PART-NV-HR-CAPRI: status",
+    "time": "2026-06-27T05:17:25.620Z"
+  },
+  {
+    "id": 1782537445600,
+    "user": "admin",
+    "name": "Administrator",
+    "action": "UPDATE_SHIP",
+    "detail": "Update PPB/COM/SUB-04/2026/007/CUTER-SLSBLT: status",
+    "time": "2026-06-27T05:17:25.600Z"
+  },
+  {
+    "id": 1782537445573,
+    "user": "admin",
+    "name": "Administrator",
+    "action": "UPDATE_SHIP",
+    "detail": "Update PPB/COM/SUB-04/2026/006/PL-2842-MGT: status",
+    "time": "2026-06-27T05:17:25.573Z"
+  },
+  {
+    "id": 1782537445552,
+    "user": "admin",
+    "name": "Administrator",
+    "action": "UPDATE_SHIP",
+    "detail": "Update PPB/COM/SUB-04/2026/006/PL-2535-P: status",
+    "time": "2026-06-27T05:17:25.552Z"
+  },
+  {
+    "id": 1782537445528,
+    "user": "admin",
+    "name": "Administrator",
+    "action": "UPDATE_SHIP",
+    "detail": "Update PPB/COM/SUB-04/2026/006/PL-2535-MGT: status",
+    "time": "2026-06-27T05:17:25.528Z"
+  },
+  {
+    "id": 1782537445506,
+    "user": "admin",
+    "name": "Administrator",
+    "action": "UPDATE_SHIP",
+    "detail": "Update PPB/COM/SUB-04/2026/006/PL-2030-MGT: status",
+    "time": "2026-06-27T05:17:25.506Z"
+  },
+  {
+    "id": 1782537445484,
+    "user": "admin",
+    "name": "Administrator",
+    "action": "UPDATE_SHIP",
+    "detail": "Update PPB/COM/SUB-04/2026/006/2842P: status",
+    "time": "2026-06-27T05:17:25.484Z"
+  },
+  {
+    "id": 1782537445465,
+    "user": "admin",
+    "name": "Administrator",
+    "action": "UPDATE_SHIP",
+    "detail": "Update PPB/COM/SUB-04/2026/006/2030P: status",
+    "time": "2026-06-27T05:17:25.465Z"
+  },
+  {
+    "id": 1782537445447,
     "user": "admin",
     "name": "Administrator",
     "action": "UPDATE_SHIP",
     "detail": "Update PPB/BBB/SUB-01/2026/005/HB-ICE-TURLEN: status",
-    "time": "2026-06-26T01:43:23.333Z"
+    "time": "2026-06-27T05:17:25.447Z"
   },
   {
-    "id": 1782438203327,
+    "id": 1782537445428,
     "user": "admin",
     "name": "Administrator",
     "action": "UPDATE_SHIP",
     "detail": "Update PPB/BBB/SUB-01/2025/035/GKUN-WEBBING: status",
-    "time": "2026-06-26T01:43:23.327Z"
+    "time": "2026-06-27T05:17:25.428Z"
   },
   {
-    "id": 1782438203321,
+    "id": 1782537445411,
     "user": "admin",
     "name": "Administrator",
     "action": "UPDATE_SHIP",
     "detail": "Update CTR/SSS/SUB-06/2026/021/KRJ-GGSLG: status",
-    "time": "2026-06-26T01:43:23.321Z"
+    "time": "2026-06-27T05:17:25.411Z"
   },
   {
-    "id": 1782438203313,
+    "id": 1782537445395,
     "user": "admin",
     "name": "Administrator",
     "action": "UPDATE_SHIP",
     "detail": "Update CTR/SSS/SUB-06/2026/021/BOX-8SLT: status",
-    "time": "2026-06-26T01:43:23.313Z"
+    "time": "2026-06-27T05:17:25.395Z"
   },
   {
-    "id": 1782438203307,
+    "id": 1782537445378,
     "user": "admin",
     "name": "Administrator",
     "action": "UPDATE_SHIP",
     "detail": "Update CTR/SSS/SUB-06/2026/021/BOX-6SLT: status",
-    "time": "2026-06-26T01:43:23.307Z"
+    "time": "2026-06-27T05:17:25.378Z"
   },
   {
-    "id": 1782438203299,
+    "id": 1782537445361,
     "user": "admin",
     "name": "Administrator",
     "action": "UPDATE_SHIP",
     "detail": "Update CTR/SSS/SUB-06/2026/017/FARGE-BD-SET: status",
-    "time": "2026-06-26T01:43:23.299Z"
+    "time": "2026-06-27T05:17:25.361Z"
   },
   {
-    "id": 1782438203293,
+    "id": 1782537445335,
     "user": "admin",
     "name": "Administrator",
     "action": "UPDATE_SHIP",
     "detail": "Update CTR/SSS/SUB-06/2026/016/PART-PD-IRON-VULGA: status",
-    "time": "2026-06-26T01:43:23.293Z"
+    "time": "2026-06-27T05:17:25.335Z"
   },
   {
-    "id": 1782438203287,
+    "id": 1782537445314,
     "user": "admin",
     "name": "Administrator",
     "action": "UPDATE_SHIP",
     "detail": "Update CTR/SSS/SUB-06/2026/016/PD-MEJA-IRON: status",
-    "time": "2026-06-26T01:43:23.287Z"
+    "time": "2026-06-27T05:17:25.314Z"
   },
   {
-    "id": 1782438203280,
+    "id": 1782537445294,
     "user": "admin",
     "name": "Administrator",
     "action": "UPDATE_SHIP",
     "detail": "Update CTR/SSS/SUB-06/2026/016/PD-IRON-VULGA: status",
-    "time": "2026-06-26T01:43:23.280Z"
+    "time": "2026-06-27T05:17:25.294Z"
   },
   {
-    "id": 1782438203274,
+    "id": 1782537445269,
     "user": "admin",
     "name": "Administrator",
     "action": "UPDATE_SHIP",
     "detail": "Update CTR/SSS/SUB-06/2026/016/FARGE-DNM: status",
-    "time": "2026-06-26T01:43:23.274Z"
+    "time": "2026-06-27T05:17:25.269Z"
   },
   {
-    "id": 1782438203267,
-    "user": "admin",
-    "name": "Administrator",
-    "action": "UPDATE_SHIP",
-    "detail": "Update CTR/SSS/SUB-06/2026/013/PD-DRYBJU-SPECTA: status",
-    "time": "2026-06-26T01:43:23.267Z"
-  },
-  {
-    "id": 1782438203261,
+    "id": 1782537445248,
     "user": "admin",
     "name": "Administrator",
     "action": "UPDATE_SHIP",
     "detail": "Update CTR/RRR/SUB-04/2026/014/RE-PL-1020-50: status",
-    "time": "2026-06-26T01:43:23.261Z"
+    "time": "2026-06-27T05:17:25.248Z"
   },
   {
-    "id": 1782438203256,
+    "id": 1782537445217,
     "user": "admin",
     "name": "Administrator",
     "action": "UPDATE_SHIP",
     "detail": "Update CTR/IAM/SUB/2026/027/CS-BEKAM-24: status",
-    "time": "2026-06-26T01:43:23.256Z"
+    "time": "2026-06-27T05:17:25.217Z"
   },
   {
-    "id": 1782438203249,
+    "id": 1782537445195,
     "user": "admin",
     "name": "Administrator",
     "action": "UPDATE_SHIP",
     "detail": "Update CTR/IAM/SUB/2026/027/CS-BEKAM-12: status",
-    "time": "2026-06-26T01:43:23.249Z"
+    "time": "2026-06-27T05:17:25.195Z"
   },
   {
-    "id": 1782438203244,
+    "id": 1782537445168,
     "user": "admin",
     "name": "Administrator",
     "action": "UPDATE_SHIP",
     "detail": "Update CTR/IAM/SUB/2026/024/CS-BEKAM-24: status",
-    "time": "2026-06-26T01:43:23.244Z"
+    "time": "2026-06-27T05:17:25.168Z"
   },
   {
-    "id": 1782438203236,
+    "id": 1782537445148,
     "user": "admin",
     "name": "Administrator",
     "action": "UPDATE_SHIP",
     "detail": "Update CTR/IAM/SUB/2026/024/CS-BEKAM-12: status",
-    "time": "2026-06-26T01:43:23.236Z"
+    "time": "2026-06-27T05:17:25.148Z"
   },
   {
-    "id": 1782438203228,
+    "id": 1782537445124,
     "user": "admin",
     "name": "Administrator",
     "action": "UPDATE_SHIP",
     "detail": "Update CTR/IAM/SUB/2026/022/PL-2545-TRANS: status",
-    "time": "2026-06-26T01:43:23.228Z"
+    "time": "2026-06-27T05:17:25.124Z"
   },
   {
-    "id": 1782438203221,
+    "id": 1782537445107,
     "user": "admin",
     "name": "Administrator",
     "action": "UPDATE_SHIP",
     "detail": "Update CTR/IAM/SUB/2026/022/PL-1640-TRANS: status",
-    "time": "2026-06-26T01:43:23.221Z"
+    "time": "2026-06-27T05:17:25.107Z"
   },
   {
-    "id": 1782438203212,
+    "id": 1782537445091,
     "user": "admin",
     "name": "Administrator",
     "action": "UPDATE_SHIP",
     "detail": "Update CTR/IAM/SUB/2026/010/PART-PD-CUCI-ATRONW: status",
-    "time": "2026-06-26T01:43:23.212Z"
+    "time": "2026-06-27T05:17:25.091Z"
   },
   {
-    "id": 1782438203204,
+    "id": 1782537445069,
     "user": "admin",
     "name": "Administrator",
     "action": "UPDATE_SHIP",
     "detail": "Update CTR/GIM/SUB-07/2026/022/NV-SKM-LOVE: status",
-    "time": "2026-06-26T01:43:23.204Z"
+    "time": "2026-06-27T05:17:25.069Z"
   },
   {
-    "id": 1782438203195,
+    "id": 1782537445047,
     "user": "admin",
     "name": "Administrator",
     "action": "UPDATE_SHIP",
     "detail": "Update CTR/GIM/SUB-07/2026/022/NV-SKM-GRIGI: status",
-    "time": "2026-06-26T01:43:23.195Z"
+    "time": "2026-06-27T05:17:25.047Z"
   },
   {
-    "id": 1782438203181,
+    "id": 1782537445030,
     "user": "admin",
     "name": "Administrator",
     "action": "UPDATE_SHIP",
     "detail": "Update CTR/GIM/SUB-07/2026/022/NV-SIR-BIGKTK: status",
-    "time": "2026-06-26T01:43:23.181Z"
+    "time": "2026-06-27T05:17:25.030Z"
   },
   {
-    "id": 1782438203171,
+    "id": 1782537445013,
     "user": "admin",
     "name": "Administrator",
     "action": "UPDATE_SHIP",
     "detail": "Update CTR/GIM/SUB-07/2026/022/NV-ROLL-JPT: status",
-    "time": "2026-06-26T01:43:23.171Z"
+    "time": "2026-06-27T05:17:25.013Z"
   },
   {
-    "id": 1782438203156,
+    "id": 1782537444994,
     "user": "admin",
     "name": "Administrator",
     "action": "UPDATE_SHIP",
     "detail": "Update CTR/GIM/SUB-07/2026/022/NV-ROLL-BIG: status",
-    "time": "2026-06-26T01:43:23.156Z"
+    "time": "2026-06-27T05:17:24.994Z"
   },
   {
-    "id": 1782438203140,
+    "id": 1782537444977,
     "user": "admin",
     "name": "Administrator",
     "action": "UPDATE_SHIP",
     "detail": "Update CTR/GIM/SUB-07/2026/022/NV-POUCH-PUFFY: status",
-    "time": "2026-06-26T01:43:23.140Z"
+    "time": "2026-06-27T05:17:24.977Z"
   },
   {
-    "id": 1782438203126,
+    "id": 1782537444955,
     "user": "admin",
     "name": "Administrator",
     "action": "UPDATE_SHIP",
     "detail": "Update CTR/GIM/SUB-07/2026/022/NV-POUCH-PLW: status",
-    "time": "2026-06-26T01:43:23.126Z"
+    "time": "2026-06-27T05:17:24.955Z"
   },
   {
-    "id": 1782438203116,
+    "id": 1782537444933,
     "user": "admin",
     "name": "Administrator",
     "action": "UPDATE_SHIP",
     "detail": "Update CTR/GIM/SUB-07/2026/022/NV-JPT-LYRA: status",
-    "time": "2026-06-26T01:43:23.116Z"
+    "time": "2026-06-27T05:17:24.933Z"
   },
   {
-    "id": 1782438203109,
+    "id": 1782537444915,
     "user": "admin",
     "name": "Administrator",
     "action": "UPDATE_SHIP",
     "detail": "Update CTR/GIM/SUB-07/2026/022/NV-HR-TAURUSV2: status",
-    "time": "2026-06-26T01:43:23.109Z"
+    "time": "2026-06-27T05:17:24.915Z"
   },
   {
-    "id": 1782438203099,
+    "id": 1782537444899,
     "user": "admin",
     "name": "Administrator",
     "action": "UPDATE_SHIP",
     "detail": "Update CTR/GIM/SUB-07/2026/022/NV-HR-LIBRAV2: status",
-    "time": "2026-06-26T01:43:23.099Z"
+    "time": "2026-06-27T05:17:24.899Z"
   },
   {
-    "id": 1782438203092,
+    "id": 1782537444885,
     "user": "admin",
     "name": "Administrator",
     "action": "UPDATE_SHIP",
     "detail": "Update CTR/GIM/SUB-07/2026/015/NV-HR-ARIES2: status",
-    "time": "2026-06-26T01:43:23.092Z"
+    "time": "2026-06-27T05:17:24.885Z"
   },
   {
-    "id": 1782438203081,
+    "id": 1782537444853,
     "user": "admin",
     "name": "Administrator",
     "action": "UPDATE_SHIP",
     "detail": "Update CTR/GIM/SUB-07/2026/015/NV-DRY-LUNA: status",
-    "time": "2026-06-26T01:43:23.081Z"
+    "time": "2026-06-27T05:17:24.853Z"
   },
   {
-    "id": 1782438203075,
+    "id": 1782537444831,
     "user": "admin",
     "name": "Administrator",
     "action": "UPDATE_SHIP",
     "detail": "Update CTR/GIM/SUB-07/2026/014/NV-SKM-LOVE: status",
-    "time": "2026-06-26T01:43:23.075Z"
+    "time": "2026-06-27T05:17:24.831Z"
   },
   {
-    "id": 1782438203066,
+    "id": 1782537444817,
     "user": "admin",
     "name": "Administrator",
     "action": "UPDATE_SHIP",
     "detail": "Update CTR/GIM/SUB-07/2026/014/NV-SIR-MNLV: status",
-    "time": "2026-06-26T01:43:23.066Z"
+    "time": "2026-06-27T05:17:24.817Z"
   },
   {
-    "id": 1782438203059,
+    "id": 1782537444796,
     "user": "admin",
     "name": "Administrator",
     "action": "UPDATE_SHIP",
     "detail": "Update CTR/GIM/SUB-07/2026/014/NV-SIR-BIGKTK: status",
-    "time": "2026-06-26T01:43:23.059Z"
+    "time": "2026-06-27T05:17:24.796Z"
   },
   {
-    "id": 1782438203049,
+    "id": 1782537444783,
     "user": "admin",
     "name": "Administrator",
     "action": "UPDATE_SHIP",
     "detail": "Update CTR/GIM/SUB-07/2026/014/NV-JPT-HEATLS2: status",
-    "time": "2026-06-26T01:43:23.049Z"
+    "time": "2026-06-27T05:17:24.783Z"
   },
   {
-    "id": 1782438203043,
+    "id": 1782537444770,
     "user": "admin",
     "name": "Administrator",
     "action": "UPDATE_SHIP",
     "detail": "Update CTR/GIM/SUB-07/2026/014/NV-HR-SCORPIO: status",
-    "time": "2026-06-26T01:43:23.043Z"
+    "time": "2026-06-27T05:17:24.770Z"
   },
   {
-    "id": 1782438203033,
+    "id": 1782537444756,
     "user": "admin",
     "name": "Administrator",
     "action": "UPDATE_SHIP",
     "detail": "Update CTR/GIM/SUB-07/2026/014/NV-HR-ARIES2: status",
-    "time": "2026-06-26T01:43:23.033Z"
+    "time": "2026-06-27T05:17:24.756Z"
   },
   {
-    "id": 1782438203027,
-    "user": "admin",
-    "name": "Administrator",
-    "action": "UPDATE_SHIP",
-    "detail": "Update CTR/GIM/SUB-07/2026/013/NV-DRY-MINA: status",
-    "time": "2026-06-26T01:43:23.027Z"
-  },
-  {
-    "id": 1782438203021,
-    "user": "admin",
-    "name": "Administrator",
-    "action": "UPDATE_SHIP",
-    "detail": "Update CTR/GIM/SUB-07/2026/011/NV-HR-SATURN: status",
-    "time": "2026-06-26T01:43:23.021Z"
-  },
-  {
-    "id": 1782438203012,
+    "id": 1782537444741,
     "user": "admin",
     "name": "Administrator",
     "action": "UPDATE_SHIP",
     "detail": "Update CTR/COM/SUB-04/2026/020/PL-BUB2530-MM: status",
-    "time": "2026-06-26T01:43:23.012Z"
+    "time": "2026-06-27T05:17:24.741Z"
   },
   {
-    "id": 1782438203005,
+    "id": 1782537444725,
     "user": "admin",
     "name": "Administrator",
     "action": "UPDATE_SHIP",
     "detail": "Update CTR/COM/SUB-04/2026/020/PL-BUB2530-H: status",
-    "time": "2026-06-26T01:43:23.005Z"
+    "time": "2026-06-27T05:17:24.725Z"
   },
   {
-    "id": 1782438202996,
+    "id": 1782537444707,
     "user": "admin",
     "name": "Administrator",
     "action": "UPDATE_SHIP",
     "detail": "Update CTR/COM/SUB-04/2026/020/PL-BUB1823-MM: status",
-    "time": "2026-06-26T01:43:22.996Z"
+    "time": "2026-06-27T05:17:24.707Z"
   },
   {
-    "id": 1782438202991,
+    "id": 1782537444689,
     "user": "admin",
     "name": "Administrator",
     "action": "UPDATE_SHIP",
     "detail": "Update CTR/COM/SUB-04/2026/020/PL-BUB1823-H: status",
-    "time": "2026-06-26T01:43:22.991Z"
+    "time": "2026-06-27T05:17:24.689Z"
   },
   {
-    "id": 1782438202982,
+    "id": 1782537444672,
     "user": "admin",
     "name": "Administrator",
     "action": "UPDATE_SHIP",
     "detail": "Update CTR/COM/SUB-04/2026/020/PL-BUB1318-H: status",
-    "time": "2026-06-26T01:43:22.982Z"
+    "time": "2026-06-27T05:17:24.672Z"
   },
   {
-    "id": 1782438202975,
+    "id": 1782537444650,
     "user": "admin",
     "name": "Administrator",
     "action": "UPDATE_SHIP",
     "detail": "Update CTR/COM/SUB-04/2026/019/PL-BUB1823-MM: status",
-    "time": "2026-06-26T01:43:22.975Z"
+    "time": "2026-06-27T05:17:24.650Z"
   },
   {
-    "id": 1782438202968,
+    "id": 1782537444632,
     "user": "admin",
     "name": "Administrator",
     "action": "UPDATE_SHIP",
     "detail": "Update CTR/COM/SUB-04/2026/019/PL-BUB1823-H: status",
-    "time": "2026-06-26T01:43:22.968Z"
+    "time": "2026-06-27T05:17:24.632Z"
   },
   {
-    "id": 1782438202961,
+    "id": 1782537444615,
     "user": "admin",
     "name": "Administrator",
     "action": "UPDATE_SHIP",
     "detail": "Update CTR/COM/SUB-04/2026/019/PL-BUB1318-MM: status",
-    "time": "2026-06-26T01:43:22.961Z"
+    "time": "2026-06-27T05:17:24.615Z"
   },
   {
-    "id": 1782438202954,
+    "id": 1782537444599,
     "user": "admin",
     "name": "Administrator",
     "action": "UPDATE_SHIP",
     "detail": "Update CTR/COM/SUB-04/2026/019/PL-BUB1318-H: status",
-    "time": "2026-06-26T01:43:22.954Z"
+    "time": "2026-06-27T05:17:24.599Z"
   },
   {
-    "id": 1782438202947,
+    "id": 1782537444582,
     "user": "admin",
     "name": "Administrator",
     "action": "UPDATE_SHIP",
     "detail": "Update CTR/COM/SUB-04/2026/016/PL-BUB1318-TC: status",
-    "time": "2026-06-26T01:43:22.947Z"
+    "time": "2026-06-27T05:17:24.582Z"
   },
   {
-    "id": 1782438202941,
+    "id": 1782537444565,
     "user": "admin",
     "name": "Administrator",
     "action": "UPDATE_SHIP",
     "detail": "Update CTR/COM/SUB-04/2026/014/PL-BUB1823-P: status",
-    "time": "2026-06-26T01:43:22.941Z"
+    "time": "2026-06-27T05:17:24.565Z"
   },
   {
-    "id": 1782438202933,
+    "id": 1782537444548,
     "user": "admin",
     "name": "Administrator",
     "action": "UPDATE_SHIP",
     "detail": "Update CTR/COM/SUB-04/2026/014/PL-BUB1823-H: status",
-    "time": "2026-06-26T01:43:22.933Z"
+    "time": "2026-06-27T05:17:24.548Z"
   },
   {
-    "id": 1782438202927,
+    "id": 1782537444527,
     "user": "admin",
     "name": "Administrator",
     "action": "UPDATE_SHIP",
     "detail": "Update CTR/COM/SUB-04/2026/014/PL-BUB1318-P: status",
-    "time": "2026-06-26T01:43:22.927Z"
+    "time": "2026-06-27T05:17:24.527Z"
   },
   {
-    "id": 1782438202916,
+    "id": 1782537444508,
     "user": "admin",
     "name": "Administrator",
     "action": "UPDATE_SHIP",
     "detail": "Update CTR/COM/SUB-04/2026/014/PL-BUB1318-H: status",
-    "time": "2026-06-26T01:43:22.916Z"
+    "time": "2026-06-27T05:17:24.508Z"
   },
   {
-    "id": 1782438202909,
-    "user": "admin",
-    "name": "Administrator",
-    "action": "UPDATE_SHIP",
-    "detail": "Update CTR/COM/SUB-04/2026/013/PL-BUB2530-H: status",
-    "time": "2026-06-26T01:43:22.909Z"
-  },
-  {
-    "id": 1782438202897,
-    "user": "admin",
-    "name": "Administrator",
-    "action": "UPDATE_SHIP",
-    "detail": "Update CTR/COM/SUB-04/2026/013/PL-BUB1318-MM: status",
-    "time": "2026-06-26T01:43:22.897Z"
-  },
-  {
-    "id": 1782438202891,
+    "id": 1782537444485,
     "user": "admin",
     "name": "Administrator",
     "action": "UPDATE_SHIP",
     "detail": "Update CTR/BBB/SUB-01/2026/022/HB-TTBAG-YUNA: status",
-    "time": "2026-06-26T01:43:22.891Z"
+    "time": "2026-06-27T05:17:24.485Z"
   },
   {
-    "id": 1782438202883,
+    "id": 1782537444465,
     "user": "admin",
     "name": "Administrator",
     "action": "UPDATE_SHIP",
     "detail": "Update CTR/BBB/SUB-01/2026/022/HB-RB-SORIN: status",
-    "time": "2026-06-26T01:43:22.883Z"
+    "time": "2026-06-27T05:17:24.465Z"
   },
   {
-    "id": 1782438202860,
+    "id": 1782537444442,
     "user": "admin",
     "name": "Administrator",
     "action": "UPDATE_SHIP",
     "detail": "Update CTR/BBB/SUB-01/2026/022/HB-CLR-CHERY: status",
-    "time": "2026-06-26T01:43:22.860Z"
+    "time": "2026-06-27T05:17:24.442Z"
   },
   {
-    "id": 1782438202765,
+    "id": 1782537444408,
     "user": "admin",
     "name": "Administrator",
     "action": "BULK_EDIT",
     "detail": "Edit massal 248 shipment",
-    "time": "2026-06-26T01:43:22.765Z"
+    "time": "2026-06-27T05:17:24.408Z"
   },
   {
-    "id": 1782438202760,
+    "id": 1782537444403,
     "user": "admin",
     "name": "Administrator",
     "action": "UPDATE_SHIP",
     "detail": "Update SAMPLE/PART-NV-HR-LIBRAV2: forwarder, gudang",
-    "time": "2026-06-26T01:43:22.760Z"
+    "time": "2026-06-27T05:17:24.403Z"
   },
   {
-    "id": 1782438202753,
+    "id": 1782537444389,
     "user": "admin",
     "name": "Administrator",
     "action": "UPDATE_SHIP",
     "detail": "Update SAMPLE/PART-PD-CUCI-FARGE: forwarder, gudang",
-    "time": "2026-06-26T01:43:22.753Z"
+    "time": "2026-06-27T05:17:24.389Z"
   },
   {
-    "id": 1782438202746,
+    "id": 1782537444375,
     "user": "admin",
     "name": "Administrator",
     "action": "UPDATE_SHIP",
     "detail": "Update SAMPLE/SHOULDER STRAP BAG: forwarder, gudang",
-    "time": "2026-06-26T01:43:22.746Z"
+    "time": "2026-06-27T05:17:24.375Z"
   },
   {
-    "id": 1782438202741,
+    "id": 1782537444360,
     "user": "admin",
     "name": "Administrator",
     "action": "UPDATE_SHIP",
     "detail": "Update SAMPLE/HOLDER HAIR DRYER: forwarder, gudang",
-    "time": "2026-06-26T01:43:22.741Z"
+    "time": "2026-06-27T05:17:24.360Z"
   },
   {
-    "id": 1782438202732,
+    "id": 1782537444346,
     "user": "admin",
     "name": "Administrator",
     "action": "UPDATE_SHIP",
     "detail": "Update SAMPLE/HAIR DRYER: forwarder, gudang",
-    "time": "2026-06-26T01:43:22.732Z"
+    "time": "2026-06-27T05:17:24.346Z"
   },
   {
-    "id": 1782438202726,
+    "id": 1782537444329,
     "user": "admin",
     "name": "Administrator",
     "action": "UPDATE_SHIP",
     "detail": "Update SAMPLE/TAS JARING: forwarder, gudang",
-    "time": "2026-06-26T01:43:22.726Z"
+    "time": "2026-06-27T05:17:24.329Z"
   },
   {
-    "id": 1782438202720,
+    "id": 1782537444315,
     "user": "admin",
     "name": "Administrator",
     "action": "UPDATE_SHIP",
     "detail": "Update SAMPLE/PLASTIK: forwarder, gudang",
-    "time": "2026-06-26T01:43:22.720Z"
+    "time": "2026-06-27T05:17:24.315Z"
   },
   {
-    "id": 1782438202711,
+    "id": 1782537444302,
     "user": "admin",
     "name": "Administrator",
     "action": "UPDATE_SHIP",
     "detail": "Update SAMPLE/HANDUK KERAMAS: forwarder, gudang",
-    "time": "2026-06-26T01:43:22.711Z"
+    "time": "2026-06-27T05:17:24.302Z"
   },
   {
-    "id": 1782438202705,
+    "id": 1782537444288,
     "user": "admin",
     "name": "Administrator",
     "action": "UPDATE_SHIP",
     "detail": "Update SAMPLE/GANTUNGAN KUNCI: forwarder, gudang",
-    "time": "2026-06-26T01:43:22.705Z"
+    "time": "2026-06-27T05:17:24.288Z"
   },
   {
-    "id": 1782438202691,
+    "id": 1782537444271,
     "user": "admin",
     "name": "Administrator",
     "action": "UPDATE_SHIP",
     "detail": "Update SAMPLE/BEAUTY BLENDER: forwarder, gudang",
-    "time": "2026-06-26T01:43:22.691Z"
+    "time": "2026-06-27T05:17:24.272Z"
   },
   {
-    "id": 1782438202679,
+    "id": 1782537444255,
     "user": "admin",
     "name": "Administrator",
     "action": "UPDATE_SHIP",
     "detail": "Update SAMPLE/KAIN: forwarder, gudang",
-    "time": "2026-06-26T01:43:22.679Z"
+    "time": "2026-06-27T05:17:24.255Z"
   },
   {
-    "id": 1782438202663,
+    "id": 1782537444239,
     "user": "admin",
     "name": "Administrator",
     "action": "UPDATE_SHIP",
     "detail": "Update SAMPLE/CATOKAN + JEPIT: forwarder, gudang",
-    "time": "2026-06-26T01:43:22.663Z"
+    "time": "2026-06-27T05:17:24.239Z"
   },
   {
-    "id": 1782438202655,
+    "id": 1782537444224,
     "user": "admin",
     "name": "Administrator",
     "action": "UPDATE_SHIP",
     "detail": "Update SAMPLE/HEAT PAD: forwarder, gudang",
-    "time": "2026-06-26T01:43:22.655Z"
+    "time": "2026-06-27T05:17:24.224Z"
   },
   {
-    "id": 1782438202645,
+    "id": 1782537444210,
     "user": "admin",
     "name": "Administrator",
     "action": "UPDATE_SHIP",
     "detail": "Update SAMPLE/PD-DRYBJU-SPECTA: forwarder, gudang",
-    "time": "2026-06-26T01:43:22.645Z"
+    "time": "2026-06-27T05:17:24.210Z"
   },
   {
-    "id": 1782438202639,
+    "id": 1782537444191,
     "user": "admin",
     "name": "Administrator",
     "action": "UPDATE_SHIP",
     "detail": "Update SAMPLE/HEAT PAD: forwarder, gudang",
-    "time": "2026-06-26T01:43:22.639Z"
+    "time": "2026-06-27T05:17:24.191Z"
   },
   {
-    "id": 1782438202631,
+    "id": 1782537444177,
     "user": "admin",
     "name": "Administrator",
     "action": "UPDATE_SHIP",
     "detail": "Update SAMPLE/CATOKAN + HAIRCARA: forwarder, gudang",
-    "time": "2026-06-26T01:43:22.631Z"
+    "time": "2026-06-27T05:17:24.177Z"
   },
   {
-    "id": 1782438202625,
+    "id": 1782537444163,
     "user": "admin",
     "name": "Administrator",
     "action": "UPDATE_SHIP",
     "detail": "Update SAMPLE/BUBBLE MAILER: forwarder, gudang",
-    "time": "2026-06-26T01:43:22.625Z"
+    "time": "2026-06-27T05:17:24.163Z"
   },
   {
-    "id": 1782438202620,
+    "id": 1782537444147,
     "user": "admin",
     "name": "Administrator",
     "action": "UPDATE_SHIP",
     "detail": "Update SAMPLE/TAS: forwarder, gudang",
-    "time": "2026-06-26T01:43:22.620Z"
+    "time": "2026-06-27T05:17:24.147Z"
   },
   {
-    "id": 1782438202613,
+    "id": 1782537444133,
     "user": "admin",
     "name": "Administrator",
     "action": "UPDATE_SHIP",
     "detail": "Update SAMPLE/TALI JEMUR: forwarder, gudang",
-    "time": "2026-06-26T01:43:22.613Z"
+    "time": "2026-06-27T05:17:24.133Z"
   },
   {
-    "id": 1782438202608,
+    "id": 1782537444118,
     "user": "admin",
     "name": "Administrator",
     "action": "UPDATE_SHIP",
     "detail": "Update SAMPLE/SISIR: forwarder, gudang",
-    "time": "2026-06-26T01:43:22.608Z"
+    "time": "2026-06-27T05:17:24.118Z"
   },
   {
-    "id": 1782438202603,
+    "id": 1782537444104,
     "user": "admin",
     "name": "Administrator",
     "action": "UPDATE_SHIP",
     "detail": "Update SAMPLE/PLASTIK: forwarder, gudang",
-    "time": "2026-06-26T01:43:22.603Z"
+    "time": "2026-06-27T05:17:24.104Z"
   },
   {
-    "id": 1782438202596,
+    "id": 1782537444090,
     "user": "admin",
     "name": "Administrator",
     "action": "UPDATE_SHIP",
     "detail": "Update SAMPLE/GANTUNGAN KUNCI: forwarder, gudang",
-    "time": "2026-06-26T01:43:22.596Z"
+    "time": "2026-06-27T05:17:24.090Z"
   },
   {
-    "id": 1782438202590,
+    "id": 1782537444075,
     "user": "admin",
     "name": "Administrator",
     "action": "UPDATE_SHIP",
     "detail": "Update SAMPLE/POUCH-GEMINI: forwarder, gudang",
-    "time": "2026-06-26T01:43:22.590Z"
+    "time": "2026-06-27T05:17:24.075Z"
   },
   {
-    "id": 1782438202583,
+    "id": 1782537444058,
     "user": "admin",
     "name": "Administrator",
     "action": "UPDATE_SHIP",
     "detail": "Update SAMPLE/PLASTIK: forwarder, gudang",
-    "time": "2026-06-26T01:43:22.583Z"
+    "time": "2026-06-27T05:17:24.058Z"
   },
   {
-    "id": 1782438202577,
+    "id": 1782537444043,
     "user": "admin",
     "name": "Administrator",
     "action": "UPDATE_SHIP",
     "detail": "Update SAMPLE/PENGAIT TAS: forwarder, gudang",
-    "time": "2026-06-26T01:43:22.577Z"
+    "time": "2026-06-27T05:17:24.043Z"
   },
   {
-    "id": 1782438202571,
+    "id": 1782537444028,
     "user": "admin",
     "name": "Administrator",
     "action": "UPDATE_SHIP",
     "detail": "Update SAMPLE/MINA: forwarder, gudang",
-    "time": "2026-06-26T01:43:22.571Z"
+    "time": "2026-06-27T05:17:24.028Z"
   },
   {
-    "id": 1782438202563,
+    "id": 1782537444013,
     "user": "admin",
     "name": "Administrator",
     "action": "UPDATE_SHIP",
     "detail": "Update SAMPLE/KAIN: forwarder, gudang",
-    "time": "2026-06-26T01:43:22.563Z"
+    "time": "2026-06-27T05:17:24.013Z"
   },
   {
-    "id": 1782438202557,
+    "id": 1782537443998,
     "user": "admin",
     "name": "Administrator",
     "action": "UPDATE_SHIP",
     "detail": "Update SAMPLE/JEPIT: forwarder, gudang",
-    "time": "2026-06-26T01:43:22.557Z"
+    "time": "2026-06-27T05:17:23.998Z"
   },
   {
-    "id": 1782438202550,
+    "id": 1782537443982,
     "user": "admin",
     "name": "Administrator",
     "action": "UPDATE_SHIP",
     "detail": "Update SAMPLE/GEMINI: forwarder, gudang",
-    "time": "2026-06-26T01:43:22.551Z"
+    "time": "2026-06-27T05:17:23.982Z"
   },
   {
-    "id": 1782438202544,
+    "id": 1782537443967,
     "user": "admin",
     "name": "Administrator",
     "action": "UPDATE_SHIP",
     "detail": "Update SAMPLE/TAS: forwarder, gudang",
-    "time": "2026-06-26T01:43:22.544Z"
+    "time": "2026-06-27T05:17:23.967Z"
   },
   {
-    "id": 1782438202539,
+    "id": 1782537443952,
     "user": "admin",
     "name": "Administrator",
     "action": "UPDATE_SHIP",
     "detail": "Update SAMPLE/PEMBERSIH BAJU: forwarder, gudang",
-    "time": "2026-06-26T01:43:22.539Z"
+    "time": "2026-06-27T05:17:23.952Z"
   },
   {
-    "id": 1782438202531,
+    "id": 1782537443936,
     "user": "admin",
     "name": "Administrator",
     "action": "UPDATE_SHIP",
     "detail": "Update SAMPLE/KAIN: forwarder, gudang",
-    "time": "2026-06-26T01:43:22.531Z"
+    "time": "2026-06-27T05:17:23.936Z"
   },
   {
-    "id": 1782438202526,
+    "id": 1782537443916,
     "user": "admin",
     "name": "Administrator",
     "action": "UPDATE_SHIP",
     "detail": "Update SAMPLE/AKSESORIS: forwarder, gudang",
-    "time": "2026-06-26T01:43:22.526Z"
+    "time": "2026-06-27T05:17:23.916Z"
   },
   {
-    "id": 1782438202520,
+    "id": 1782537443900,
     "user": "admin",
     "name": "Administrator",
     "action": "UPDATE_SHIP",
     "detail": "Update PPB/SSS/SUB-06/2026/013/PART-PD-CUCI-FARGE: forwarder, gudang",
-    "time": "2026-06-26T01:43:22.520Z"
+    "time": "2026-06-27T05:17:23.900Z"
   },
   {
-    "id": 1782438202513,
+    "id": 1782537443883,
     "user": "admin",
     "name": "Administrator",
     "action": "UPDATE_SHIP",
     "detail": "Update PPB/SSS/SUB-06/2026/009/PART-PD-CUCI-FARGE: forwarder, gudang",
-    "time": "2026-06-26T01:43:22.513Z"
+    "time": "2026-06-27T05:17:23.883Z"
   },
   {
-    "id": 1782438202508,
+    "id": 1782537443868,
     "user": "admin",
     "name": "Administrator",
     "action": "UPDATE_SHIP",
     "detail": "Update PPB/SSS/SUB-06/2026/009/BOX-PD-CUCI-FARGE: forwarder, gudang",
-    "time": "2026-06-26T01:43:22.508Z"
+    "time": "2026-06-27T05:17:23.868Z"
   },
   {
-    "id": 1782438202501,
+    "id": 1782537443853,
     "user": "admin",
     "name": "Administrator",
     "action": "UPDATE_SHIP",
     "detail": "Update PPB/SSS/SUB-06/2026/008/PD-DRYSPT-SENNA: forwarder, gudang",
-    "time": "2026-06-26T01:43:22.501Z"
+    "time": "2026-06-27T05:17:23.853Z"
   },
   {
-    "id": 1782438202495,
+    "id": 1782537443840,
     "user": "admin",
     "name": "Administrator",
     "action": "UPDATE_SHIP",
     "detail": "Update PPB/SSS/SUB-06/2026/007/PART-PD-IRON-VULGA: forwarder, gudang",
-    "time": "2026-06-26T01:43:22.495Z"
+    "time": "2026-06-27T05:17:23.840Z"
   },
   {
-    "id": 1782438202488,
+    "id": 1782537443826,
     "user": "admin",
     "name": "Administrator",
     "action": "UPDATE_SHIP",
     "detail": "Update PPB/SSS/SUB-06/2026/006/PD-SRGT-IRON: forwarder, gudang",
-    "time": "2026-06-26T01:43:22.488Z"
+    "time": "2026-06-27T05:17:23.826Z"
   },
   {
-    "id": 1782438202482,
+    "id": 1782537443811,
     "user": "admin",
     "name": "Administrator",
     "action": "UPDATE_SHIP",
     "detail": "Update PPB/SSS/SUB-06/2026/004/PART-PD-IRON-VULGA: forwarder, gudang",
-    "time": "2026-06-26T01:43:22.482Z"
+    "time": "2026-06-27T05:17:23.811Z"
   },
   {
-    "id": 1782438202476,
+    "id": 1782537443794,
     "user": "admin",
     "name": "Administrator",
     "action": "UPDATE_SHIP",
     "detail": "Update PPB/RRR/SUB-04/2026/003/RE-COVCL-3846: forwarder, gudang",
-    "time": "2026-06-26T01:43:22.476Z"
+    "time": "2026-06-27T05:17:23.794Z"
   },
   {
-    "id": 1782438202470,
+    "id": 1782537443771,
     "user": "admin",
     "name": "Administrator",
     "action": "UPDATE_SHIP",
     "detail": "Update PPB/RRR/SUB-04/2026/003/RE-COVCL-3846: forwarder",
-    "time": "2026-06-26T01:43:22.470Z"
+    "time": "2026-06-27T05:17:23.771Z"
   },
   {
-    "id": 1782438202463,
+    "id": 1782537443754,
     "user": "admin",
     "name": "Administrator",
     "action": "UPDATE_SHIP",
     "detail": "Update PPB/RRR/SUB-04/2026/001/RE-COVCL-3846: forwarder, gudang",
-    "time": "2026-06-26T01:43:22.463Z"
+    "time": "2026-06-27T05:17:23.754Z"
   },
   {
-    "id": 1782438202457,
+    "id": 1782537443741,
     "user": "admin",
     "name": "Administrator",
     "action": "UPDATE_SHIP",
     "detail": "Update PPB/IAM/SUB/2026/006/JPTBJU-PLKK16-BESI: forwarder, gudang",
-    "time": "2026-06-26T01:43:22.457Z"
+    "time": "2026-06-27T05:17:23.741Z"
   },
   {
-    "id": 1782438202452,
+    "id": 1782537443728,
     "user": "admin",
     "name": "Administrator",
     "action": "UPDATE_SHIP",
     "detail": "Update PPB/IAM/SUB/2026/006/JPT-SG3-PEGAS: forwarder, gudang",
-    "time": "2026-06-26T01:43:22.452Z"
+    "time": "2026-06-27T05:17:23.728Z"
   },
   {
-    "id": 1782438202445,
+    "id": 1782537443713,
     "user": "admin",
     "name": "Administrator",
     "action": "UPDATE_SHIP",
     "detail": "Update PPB/IAM/SUB/2026/005/JPTBJU-PLKK16-BESI: forwarder, gudang",
-    "time": "2026-06-26T01:43:22.445Z"
+    "time": "2026-06-27T05:17:23.713Z"
   },
   {
-    "id": 1782438202439,
+    "id": 1782537443698,
     "user": "admin",
     "name": "Administrator",
     "action": "UPDATE_SHIP",
     "detail": "Update PPB/IAM/SUB/2026/004/JPT-SG3-PL322: forwarder, gudang",
-    "time": "2026-06-26T01:43:22.439Z"
+    "time": "2026-06-27T05:17:23.698Z"
   },
   {
-    "id": 1782438202434,
+    "id": 1782537443686,
     "user": "admin",
     "name": "Administrator",
     "action": "UPDATE_SHIP",
     "detail": "Update PPB/IAM/SUB/2026/002/JPT-SG3-PEGAS: forwarder, gudang",
-    "time": "2026-06-26T01:43:22.434Z"
+    "time": "2026-06-27T05:17:23.686Z"
   },
   {
-    "id": 1782438202428,
+    "id": 1782537443674,
     "user": "admin",
     "name": "Administrator",
     "action": "UPDATE_SHIP",
     "detail": "Update PPB/GIM/SUB-07/2026/020/NV-POUCH-SRTSTTLV: forwarder, gudang",
-    "time": "2026-06-26T01:43:22.428Z"
+    "time": "2026-06-27T05:17:23.674Z"
   },
   {
-    "id": 1782438202423,
+    "id": 1782537443659,
     "user": "admin",
     "name": "Administrator",
     "action": "UPDATE_SHIP",
     "detail": "Update PPB/GIM/SUB-07/2026/020/NV-POUCH-SRTPLS: forwarder, gudang",
-    "time": "2026-06-26T01:43:22.423Z"
+    "time": "2026-06-27T05:17:23.659Z"
   },
   {
-    "id": 1782438202415,
+    "id": 1782537443641,
     "user": "admin",
     "name": "Administrator",
     "action": "UPDATE_SHIP",
     "detail": "Update PPB/GIM/SUB-07/2026/020/NV-POUCH-SRTOV: forwarder, gudang",
-    "time": "2026-06-26T01:43:22.415Z"
+    "time": "2026-06-27T05:17:23.641Z"
   },
   {
-    "id": 1782438202409,
+    "id": 1782537443628,
     "user": "admin",
     "name": "Administrator",
     "action": "UPDATE_SHIP",
     "detail": "Update PPB/GIM/SUB-07/2026/020/NV-POUCH-SRTKT: forwarder, gudang",
-    "time": "2026-06-26T01:43:22.409Z"
+    "time": "2026-06-27T05:17:23.628Z"
   },
   {
-    "id": 1782438202404,
+    "id": 1782537443614,
     "user": "admin",
     "name": "Administrator",
     "action": "UPDATE_SHIP",
     "detail": "Update PPB/GIM/SUB-07/2026/018/BOX-NV-JPT-MUTIARA: forwarder, gudang",
-    "time": "2026-06-26T01:43:22.404Z"
+    "time": "2026-06-27T05:17:23.614Z"
   },
   {
-    "id": 1782438202397,
+    "id": 1782537443597,
     "user": "admin",
     "name": "Administrator",
     "action": "UPDATE_SHIP",
     "detail": "Update PPB/GIM/SUB-07/2026/018/NV-JPT-MUTIARA: forwarder, gudang",
-    "time": "2026-06-26T01:43:22.397Z"
+    "time": "2026-06-27T05:17:23.597Z"
   },
   {
-    "id": 1782438202392,
+    "id": 1782537443582,
     "user": "admin",
     "name": "Administrator",
     "action": "UPDATE_SHIP",
     "detail": "Update PPB/GIM/SUB-07/2026/014/PART-NV-HR-ARIES2: forwarder, gudang",
-    "time": "2026-06-26T01:43:22.392Z"
+    "time": "2026-06-27T05:17:23.582Z"
   },
   {
-    "id": 1782438202387,
+    "id": 1782537443562,
     "user": "admin",
     "name": "Administrator",
     "action": "UPDATE_SHIP",
     "detail": "Update PPB/GIM/SUB-07/2026/014/PART-NV-DRY-LUNA: forwarder, gudang",
-    "time": "2026-06-26T01:43:22.387Z"
+    "time": "2026-06-27T05:17:23.562Z"
   },
   {
-    "id": 1782438202380,
+    "id": 1782537443545,
     "user": "admin",
     "name": "Administrator",
     "action": "UPDATE_SHIP",
     "detail": "Update PPB/GIM/SUB-07/2026/014/PART-NV-HR-SCORPIO: forwarder",
-    "time": "2026-06-26T01:43:22.380Z"
+    "time": "2026-06-27T05:17:23.545Z"
   },
   {
-    "id": 1782438202374,
+    "id": 1782537443531,
     "user": "admin",
     "name": "Administrator",
     "action": "UPDATE_SHIP",
     "detail": "Update PPB/GIM/SUB-07/2026/012/PART-NV-HR-TAURUSV2: forwarder, gudang",
-    "time": "2026-06-26T01:43:22.374Z"
+    "time": "2026-06-27T05:17:23.531Z"
   },
   {
-    "id": 1782438202369,
+    "id": 1782537443504,
     "user": "admin",
     "name": "Administrator",
     "action": "UPDATE_SHIP",
     "detail": "Update PPB/GIM/SUB-07/2026/012/NV-POUCH-CDRND: forwarder, gudang",
-    "time": "2026-06-26T01:43:22.369Z"
+    "time": "2026-06-27T05:17:23.504Z"
   },
   {
-    "id": 1782438202362,
+    "id": 1782537443484,
     "user": "admin",
     "name": "Administrator",
     "action": "UPDATE_SHIP",
     "detail": "Update PPB/GIM/SUB-07/2026/011/PART-NV-HR-TAURUSV2: forwarder, gudang",
-    "time": "2026-06-26T01:43:22.362Z"
+    "time": "2026-06-27T05:17:23.484Z"
   },
   {
-    "id": 1782438202357,
+    "id": 1782537443470,
     "user": "admin",
     "name": "Administrator",
     "action": "UPDATE_SHIP",
     "detail": "Update PPB/GIM/SUB-07/2026/010/NV-JPT-BULU: forwarder, gudang",
-    "time": "2026-06-26T01:43:22.357Z"
+    "time": "2026-06-27T05:17:23.470Z"
   },
   {
-    "id": 1782438202352,
+    "id": 1782537443455,
     "user": "admin",
     "name": "Administrator",
     "action": "UPDATE_SHIP",
     "detail": "Update PPB/GIM/SUB-07/2026/008/TTBAG-PITA: forwarder, gudang",
-    "time": "2026-06-26T01:43:22.352Z"
+    "time": "2026-06-27T05:17:23.455Z"
   },
   {
-    "id": 1782438202344,
+    "id": 1782537443438,
     "user": "admin",
     "name": "Administrator",
     "action": "UPDATE_SHIP",
     "detail": "Update PPB/GIM/SUB-07/2026/008/SIR-EGG: forwarder, gudang",
-    "time": "2026-06-26T01:43:22.344Z"
+    "time": "2026-06-27T05:17:23.438Z"
   },
   {
-    "id": 1782438202340,
+    "id": 1782537443422,
     "user": "admin",
     "name": "Administrator",
     "action": "UPDATE_SHIP",
     "detail": "Update PPB/GIM/SUB-07/2026/008/JPT-KERANG: forwarder, gudang",
-    "time": "2026-06-26T01:43:22.340Z"
+    "time": "2026-06-27T05:17:23.422Z"
   },
   {
-    "id": 1782438202334,
+    "id": 1782537443406,
     "user": "admin",
     "name": "Administrator",
     "action": "UPDATE_SHIP",
     "detail": "Update PPB/GIM/SUB-07/2026/008/GKUN-KERANG: forwarder, gudang",
-    "time": "2026-06-26T01:43:22.334Z"
+    "time": "2026-06-27T05:17:23.406Z"
   },
   {
-    "id": 1782438202327,
+    "id": 1782537443390,
     "user": "admin",
     "name": "Administrator",
     "action": "UPDATE_SHIP",
     "detail": "Update PPB/GIM/SUB-07/2026/007/PART-NV-HR-SATURN: forwarder, gudang",
-    "time": "2026-06-26T01:43:22.327Z"
+    "time": "2026-06-27T05:17:23.390Z"
   },
   {
-    "id": 1782438202322,
+    "id": 1782537443376,
     "user": "admin",
     "name": "Administrator",
     "action": "UPDATE_SHIP",
     "detail": "Update PPB/GIM/SUB-07/2026/007/PART-NV-DRY-LUNA: forwarder, gudang",
-    "time": "2026-06-26T01:43:22.322Z"
+    "time": "2026-06-27T05:17:23.376Z"
   },
   {
-    "id": 1782438202317,
+    "id": 1782537443361,
     "user": "admin",
     "name": "Administrator",
     "action": "UPDATE_SHIP",
     "detail": "Update PPB/GIM/SUB-07/2026/007/PART-NV-DRY-LEO: forwarder, gudang",
-    "time": "2026-06-26T01:43:22.317Z"
+    "time": "2026-06-27T05:17:23.361Z"
   },
   {
-    "id": 1782438202310,
+    "id": 1782537443339,
     "user": "admin",
     "name": "Administrator",
     "action": "UPDATE_SHIP",
     "detail": "Update PPB/GIM/SUB-07/2026/007/PART-NV-HR-SCORPIO: forwarder, gudang",
-    "time": "2026-06-26T01:43:22.310Z"
+    "time": "2026-06-27T05:17:23.339Z"
   },
   {
-    "id": 1782438202305,
+    "id": 1782537443325,
     "user": "admin",
     "name": "Administrator",
     "action": "UPDATE_SHIP",
     "detail": "Update PPB/GIM/SUB-07/2026/007/PART-NV-HR-SAGI: forwarder, gudang",
-    "time": "2026-06-26T01:43:22.305Z"
+    "time": "2026-06-27T05:17:23.325Z"
   },
   {
-    "id": 1782438202297,
+    "id": 1782537443309,
     "user": "admin",
     "name": "Administrator",
     "action": "UPDATE_SHIP",
     "detail": "Update PPB/GIM/SUB-07/2026/007/PART-NV-HR-LIBRA: forwarder, gudang",
-    "time": "2026-06-26T01:43:22.297Z"
+    "time": "2026-06-27T05:17:23.309Z"
   },
   {
-    "id": 1782438202291,
+    "id": 1782537443294,
     "user": "admin",
     "name": "Administrator",
     "action": "UPDATE_SHIP",
     "detail": "Update PPB/GIM/SUB-07/2026/007/PART-NV-HR-CAPRI: forwarder, gudang",
-    "time": "2026-06-26T01:43:22.291Z"
+    "time": "2026-06-27T05:17:23.294Z"
   },
   {
-    "id": 1782438202286,
+    "id": 1782537443281,
     "user": "admin",
     "name": "Administrator",
     "action": "UPDATE_SHIP",
     "detail": "Update PPB/GIM/SUB-07/2026/006/TTBAG-JRG: forwarder, gudang",
-    "time": "2026-06-26T01:43:22.286Z"
+    "time": "2026-06-27T05:17:23.281Z"
   },
   {
-    "id": 1782438202280,
+    "id": 1782537443262,
     "user": "admin",
     "name": "Administrator",
     "action": "UPDATE_SHIP",
     "detail": "Update PPB/GIM/SUB-07/2026/006/GKUN-KERANG: forwarder, gudang",
-    "time": "2026-06-26T01:43:22.280Z"
+    "time": "2026-06-27T05:17:23.262Z"
   },
   {
-    "id": 1782438202274,
+    "id": 1782537443247,
     "user": "admin",
     "name": "Administrator",
     "action": "UPDATE_SHIP",
     "detail": "Update PPB/GIM/SUB-07/2026/005/SIR-EGG: forwarder, gudang",
-    "time": "2026-06-26T01:43:22.274Z"
+    "time": "2026-06-27T05:17:23.247Z"
   },
   {
-    "id": 1782438202267,
+    "id": 1782537443231,
     "user": "admin",
     "name": "Administrator",
     "action": "UPDATE_SHIP",
     "detail": "Update PPB/GIM/SUB-07/2026/005/TTBAG-PITA: forwarder, gudang",
-    "time": "2026-06-26T01:43:22.268Z"
+    "time": "2026-06-27T05:17:23.231Z"
   },
   {
-    "id": 1782438202260,
+    "id": 1782537443217,
     "user": "admin",
     "name": "Administrator",
     "action": "UPDATE_SHIP",
     "detail": "Update PPB/GIM/SUB-07/2026/005/STK-KERANG: forwarder, gudang",
-    "time": "2026-06-26T01:43:22.260Z"
+    "time": "2026-06-27T05:17:23.217Z"
   },
   {
-    "id": 1782438202255,
+    "id": 1782537443197,
     "user": "admin",
     "name": "Administrator",
     "action": "UPDATE_SHIP",
     "detail": "Update PPB/GIM/SUB-07/2026/005/JPT-KERANG: forwarder, gudang",
-    "time": "2026-06-26T01:43:22.255Z"
+    "time": "2026-06-27T05:17:23.197Z"
   },
   {
-    "id": 1782438202249,
+    "id": 1782537443184,
     "user": "admin",
     "name": "Administrator",
     "action": "UPDATE_SHIP",
     "detail": "Update PPB/GIM/SUB-07/2026/004/PART-NV-HR-TAURUSV2: forwarder, gudang",
-    "time": "2026-06-26T01:43:22.249Z"
+    "time": "2026-06-27T05:17:23.184Z"
   },
   {
-    "id": 1782438202243,
+    "id": 1782537443170,
     "user": "admin",
     "name": "Administrator",
     "action": "UPDATE_SHIP",
     "detail": "Update PPB/GIM/SUB-07/2026/003/NV-HDK-KKCNGKSR2: forwarder, gudang",
-    "time": "2026-06-26T01:43:22.243Z"
+    "time": "2026-06-27T05:17:23.170Z"
   },
   {
-    "id": 1782438202237,
+    "id": 1782537443158,
     "user": "admin",
     "name": "Administrator",
     "action": "UPDATE_SHIP",
     "detail": "Update PPB/GIM/SUB-07/2026/003/NV-POUCH-HR: forwarder, gudang",
-    "time": "2026-06-26T01:43:22.237Z"
+    "time": "2026-06-27T05:17:23.158Z"
   },
   {
-    "id": 1782438202230,
+    "id": 1782537443142,
     "user": "admin",
     "name": "Administrator",
     "action": "UPDATE_SHIP",
     "detail": "Update PPB/GIM/SUB-07/2025/010/PART-NV-HR-CANCER: forwarder, gudang",
-    "time": "2026-06-26T01:43:22.230Z"
+    "time": "2026-06-27T05:17:23.142Z"
   },
   {
-    "id": 1782438202225,
+    "id": 1782537443126,
     "user": "admin",
     "name": "Administrator",
     "action": "UPDATE_SHIP",
     "detail": "Update PPB/COM/SUB-CS/2026/003/CS-PLPR-MSM2528: forwarder, gudang",
-    "time": "2026-06-26T01:43:22.225Z"
+    "time": "2026-06-27T05:17:23.126Z"
   },
   {
-    "id": 1782438202219,
+    "id": 1782537443110,
     "user": "admin",
     "name": "Administrator",
     "action": "UPDATE_SHIP",
     "detail": "Update PPB/COM/SUB-CS/2026/003/CS-PLPR-MSM2526: forwarder, gudang",
-    "time": "2026-06-26T01:43:22.220Z"
+    "time": "2026-06-27T05:17:23.110Z"
   },
   {
-    "id": 1782438202212,
+    "id": 1782537443095,
     "user": "admin",
     "name": "Administrator",
     "action": "UPDATE_SHIP",
     "detail": "Update PPB/COM/SUB-CS/2026/003/CS-PLPR-MSG2528: forwarder, gudang",
-    "time": "2026-06-26T01:43:22.212Z"
+    "time": "2026-06-27T05:17:23.095Z"
   },
   {
-    "id": 1782438202207,
+    "id": 1782537443081,
     "user": "admin",
     "name": "Administrator",
     "action": "UPDATE_SHIP",
     "detail": "Update PPB/COM/SUB-CS/2026/003/CS-PLPR-MSG2526: forwarder, gudang",
-    "time": "2026-06-26T01:43:22.207Z"
+    "time": "2026-06-27T05:17:23.081Z"
   },
   {
-    "id": 1782438202201,
+    "id": 1782537443057,
     "user": "admin",
     "name": "Administrator",
     "action": "UPDATE_SHIP",
     "detail": "Update PPB/COM/SUB-CS/2026/003/CS-PLPR-MSG2522: forwarder, gudang",
-    "time": "2026-06-26T01:43:22.201Z"
+    "time": "2026-06-27T05:17:23.057Z"
   },
   {
-    "id": 1782438202195,
+    "id": 1782537443039,
     "user": "admin",
     "name": "Administrator",
     "action": "UPDATE_SHIP",
     "detail": "Update PPB/COM/SUB-08/2026/001/CS-PRINT-HEAD: forwarder, gudang",
-    "time": "2026-06-26T01:43:22.195Z"
+    "time": "2026-06-27T05:17:23.039Z"
   },
   {
-    "id": 1782438202189,
+    "id": 1782537443022,
     "user": "admin",
     "name": "Administrator",
     "action": "UPDATE_SHIP",
     "detail": "Update PPB/COM/SUB-04/2026/007/CUTER-SLSBLT: forwarder, gudang",
-    "time": "2026-06-26T01:43:22.189Z"
+    "time": "2026-06-27T05:17:23.022Z"
   },
   {
-    "id": 1782438202180,
+    "id": 1782537443008,
     "user": "admin",
     "name": "Administrator",
     "action": "UPDATE_SHIP",
     "detail": "Update PPB/COM/SUB-04/2026/006/PL-2842-MGT: forwarder, gudang",
-    "time": "2026-06-26T01:43:22.180Z"
+    "time": "2026-06-27T05:17:23.008Z"
   },
   {
-    "id": 1782438202171,
+    "id": 1782537442991,
     "user": "admin",
     "name": "Administrator",
     "action": "UPDATE_SHIP",
     "detail": "Update PPB/COM/SUB-04/2026/006/PL-2535-P: forwarder, gudang",
-    "time": "2026-06-26T01:43:22.171Z"
+    "time": "2026-06-27T05:17:22.991Z"
   },
   {
-    "id": 1782438202162,
+    "id": 1782537442974,
     "user": "admin",
     "name": "Administrator",
     "action": "UPDATE_SHIP",
     "detail": "Update PPB/COM/SUB-04/2026/006/PL-2535-MGT: forwarder, gudang",
-    "time": "2026-06-26T01:43:22.162Z"
+    "time": "2026-06-27T05:17:22.975Z"
   },
   {
-    "id": 1782438202155,
+    "id": 1782537442962,
     "user": "admin",
     "name": "Administrator",
     "action": "UPDATE_SHIP",
     "detail": "Update PPB/COM/SUB-04/2026/006/PL-2030-MGT: forwarder, gudang",
-    "time": "2026-06-26T01:43:22.155Z"
+    "time": "2026-06-27T05:17:22.962Z"
   },
   {
-    "id": 1782438202150,
+    "id": 1782537442949,
     "user": "admin",
     "name": "Administrator",
     "action": "UPDATE_SHIP",
     "detail": "Update PPB/COM/SUB-04/2026/006/2842P: forwarder, gudang",
-    "time": "2026-06-26T01:43:22.150Z"
+    "time": "2026-06-27T05:17:22.949Z"
   },
   {
-    "id": 1782438202140,
+    "id": 1782537442935,
     "user": "admin",
     "name": "Administrator",
     "action": "UPDATE_SHIP",
     "detail": "Update PPB/COM/SUB-04/2026/006/2030P: forwarder, gudang",
-    "time": "2026-06-26T01:43:22.140Z"
+    "time": "2026-06-27T05:17:22.935Z"
   },
   {
-    "id": 1782438202135,
+    "id": 1782537442921,
     "user": "admin",
     "name": "Administrator",
     "action": "UPDATE_SHIP",
     "detail": "Update PPB/COM/SUB-04/2026/004/PL-2842-MGT: forwarder, gudang",
-    "time": "2026-06-26T01:43:22.135Z"
+    "time": "2026-06-27T05:17:22.921Z"
   },
   {
-    "id": 1782438202128,
+    "id": 1782537442903,
     "user": "admin",
     "name": "Administrator",
     "action": "UPDATE_SHIP",
     "detail": "Update PPB/COM/SUB-04/2026/004/PL-2535-P: forwarder, gudang",
-    "time": "2026-06-26T01:43:22.128Z"
+    "time": "2026-06-27T05:17:22.903Z"
   },
   {
-    "id": 1782438202122,
+    "id": 1782537442887,
     "user": "admin",
     "name": "Administrator",
     "action": "UPDATE_SHIP",
     "detail": "Update PPB/COM/SUB-04/2026/004/PL-2535-MGT: forwarder, gudang",
-    "time": "2026-06-26T01:43:22.122Z"
+    "time": "2026-06-27T05:17:22.887Z"
   },
   {
-    "id": 1782438202114,
+    "id": 1782537442872,
     "user": "admin",
     "name": "Administrator",
     "action": "UPDATE_SHIP",
     "detail": "Update PPB/COM/SUB-04/2026/004/PL-2030-MGT: forwarder, gudang",
-    "time": "2026-06-26T01:43:22.114Z"
+    "time": "2026-06-27T05:17:22.872Z"
   },
   {
-    "id": 1782438202107,
+    "id": 1782537442857,
     "user": "admin",
     "name": "Administrator",
     "action": "UPDATE_SHIP",
     "detail": "Update PPB/COM/SUB-04/2026/004/2842P: forwarder, gudang",
-    "time": "2026-06-26T01:43:22.107Z"
+    "time": "2026-06-27T05:17:22.857Z"
   },
   {
-    "id": 1782438202101,
+    "id": 1782537442839,
     "user": "admin",
     "name": "Administrator",
     "action": "UPDATE_SHIP",
     "detail": "Update PPB/COM/SUB-04/2026/004/2030P: forwarder, gudang",
-    "time": "2026-06-26T01:43:22.101Z"
+    "time": "2026-06-27T05:17:22.839Z"
   },
   {
-    "id": 1782438202094,
+    "id": 1782537442824,
     "user": "admin",
     "name": "Administrator",
     "action": "UPDATE_SHIP",
     "detail": "Update PPB/COM/SUB-04/2026/003/SEA-LONJONG: forwarder, gudang",
-    "time": "2026-06-26T01:43:22.094Z"
+    "time": "2026-06-27T05:17:22.824Z"
   },
   {
-    "id": 1782438202089,
+    "id": 1782537442810,
     "user": "admin",
     "name": "Administrator",
     "action": "UPDATE_SHIP",
     "detail": "Update PPB/COM/SUB-04/2026/003/PSEA-1725-50PCS: forwarder, gudang",
-    "time": "2026-06-26T01:43:22.089Z"
+    "time": "2026-06-27T05:17:22.810Z"
   },
   {
-    "id": 1782438202083,
+    "id": 1782537442795,
     "user": "admin",
     "name": "Administrator",
     "action": "UPDATE_SHIP",
     "detail": "Update PPB/COM/SUB-04/2026/003/PL-2842-MGT: forwarder, gudang",
-    "time": "2026-06-26T01:43:22.083Z"
+    "time": "2026-06-27T05:17:22.795Z"
   },
   {
-    "id": 1782438202076,
+    "id": 1782537442780,
     "user": "admin",
     "name": "Administrator",
     "action": "UPDATE_SHIP",
     "detail": "Update PPB/COM/SUB-04/2026/003/PL-2535-MGT: forwarder, gudang",
-    "time": "2026-06-26T01:43:22.076Z"
+    "time": "2026-06-27T05:17:22.780Z"
   },
   {
-    "id": 1782438202070,
+    "id": 1782537442759,
     "user": "admin",
     "name": "Administrator",
     "action": "UPDATE_SHIP",
     "detail": "Update PPB/COM/SUB-04/2026/003/PL-2030-MGT: forwarder, gudang",
-    "time": "2026-06-26T01:43:22.070Z"
+    "time": "2026-06-27T05:17:22.759Z"
   },
   {
-    "id": 1782438202063,
+    "id": 1782537442748,
     "user": "admin",
     "name": "Administrator",
     "action": "UPDATE_SHIP",
     "detail": "Update PPB/COM/SUB-04/2026/003/2030P: forwarder, gudang",
-    "time": "2026-06-26T01:43:22.063Z"
+    "time": "2026-06-27T05:17:22.748Z"
   },
   {
-    "id": 1782438202057,
+    "id": 1782537442737,
     "user": "admin",
     "name": "Administrator",
     "action": "UPDATE_SHIP",
     "detail": "Update PPB/COM/SUB-04/2026/003/CUTER-SLSBLT: forwarder, gudang",
-    "time": "2026-06-26T01:43:22.057Z"
+    "time": "2026-06-27T05:17:22.737Z"
   },
   {
-    "id": 1782438202052,
+    "id": 1782537442725,
     "user": "admin",
     "name": "Administrator",
     "action": "UPDATE_SHIP",
     "detail": "Update PPB/BBB/SUB-05/2025/004/HB-ICE-TURLEN: forwarder, gudang",
-    "time": "2026-06-26T01:43:22.052Z"
+    "time": "2026-06-27T05:17:22.725Z"
   },
   {
-    "id": 1782438202046,
+    "id": 1782537442713,
     "user": "admin",
     "name": "Administrator",
     "action": "UPDATE_SHIP",
     "detail": "Update PPB/BBB/SUB-01/2026/005/HB-ICE-TURLEN: forwarder, gudang",
-    "time": "2026-06-26T01:43:22.046Z"
+    "time": "2026-06-27T05:17:22.713Z"
   },
   {
-    "id": 1782438202041,
+    "id": 1782537442701,
     "user": "admin",
     "name": "Administrator",
     "action": "UPDATE_SHIP",
     "detail": "Update PPB/BBB/SUB-01/2026/004/GKUN-WEBBING: forwarder, gudang",
-    "time": "2026-06-26T01:43:22.041Z"
+    "time": "2026-06-27T05:17:22.701Z"
   },
   {
-    "id": 1782438202036,
+    "id": 1782537442687,
     "user": "admin",
     "name": "Administrator",
     "action": "UPDATE_SHIP",
     "detail": "Update PPB/BBB/SUB-01/2026/003/HB-ICE-TURLEN: forwarder, gudang",
-    "time": "2026-06-26T01:43:22.036Z"
+    "time": "2026-06-27T05:17:22.687Z"
   },
   {
-    "id": 1782438202030,
+    "id": 1782537442676,
     "user": "admin",
     "name": "Administrator",
     "action": "UPDATE_SHIP",
     "detail": "Update PPB/BBB/SUB-01/2025/035/GKUN-WEBBING: forwarder, gudang",
-    "time": "2026-06-26T01:43:22.030Z"
+    "time": "2026-06-27T05:17:22.676Z"
   },
   {
-    "id": 1782438202025,
+    "id": 1782537442664,
     "user": "admin",
     "name": "Administrator",
     "action": "UPDATE_SHIP",
     "detail": "Update CTR/SSS/SUB-06/2026/021/KRJ-GGSLG: gudang, tags",
-    "time": "2026-06-26T01:43:22.025Z"
+    "time": "2026-06-27T05:17:22.664Z"
   },
   {
-    "id": 1782438202020,
+    "id": 1782537442646,
     "user": "admin",
     "name": "Administrator",
     "action": "UPDATE_SHIP",
     "detail": "Update CTR/SSS/SUB-06/2026/021/BOX-8SLT: gudang, tags",
-    "time": "2026-06-26T01:43:22.020Z"
+    "time": "2026-06-27T05:17:22.646Z"
   },
   {
-    "id": 1782438202015,
+    "id": 1782537442625,
     "user": "admin",
     "name": "Administrator",
     "action": "UPDATE_SHIP",
     "detail": "Update CTR/SSS/SUB-06/2026/021/BOX-6SLT: gudang, tags",
-    "time": "2026-06-26T01:43:22.015Z"
+    "time": "2026-06-27T05:17:22.625Z"
   },
   {
-    "id": 1782438202009,
+    "id": 1782537442607,
     "user": "admin",
     "name": "Administrator",
     "action": "UPDATE_SHIP",
     "detail": "Update CTR/SSS/SUB-06/2026/018/PD-REMOV-BULUGG-PISAU: gudang, tags",
-    "time": "2026-06-26T01:43:22.009Z"
+    "time": "2026-06-27T05:17:22.607Z"
   },
   {
-    "id": 1782438202004,
+    "id": 1782537442591,
     "user": "admin",
     "name": "Administrator",
     "action": "UPDATE_SHIP",
     "detail": "Update CTR/SSS/SUB-06/2026/018/PD-REMOV-BULUGG: gudang, tags",
-    "time": "2026-06-26T01:43:22.004Z"
+    "time": "2026-06-27T05:17:22.591Z"
   },
   {
-    "id": 1782438201997,
+    "id": 1782537442575,
     "user": "admin",
     "name": "Administrator",
     "action": "UPDATE_SHIP",
     "detail": "Update CTR/SSS/SUB-06/2026/017/FARGE-BD-SET: gudang, tags",
-    "time": "2026-06-26T01:43:21.997Z"
+    "time": "2026-06-27T05:17:22.575Z"
   },
   {
-    "id": 1782438201991,
+    "id": 1782537442560,
     "user": "admin",
     "name": "Administrator",
     "action": "UPDATE_SHIP",
     "detail": "Update CTR/SSS/SUB-06/2026/016/PART-PD-IRON-VULGA: forwarder",
-    "time": "2026-06-26T01:43:21.991Z"
+    "time": "2026-06-27T05:17:22.560Z"
   },
   {
-    "id": 1782438201985,
+    "id": 1782537442547,
     "user": "admin",
     "name": "Administrator",
     "action": "UPDATE_SHIP",
     "detail": "Update CTR/SSS/SUB-06/2026/016/PD-MEJA-IRON: gudang, tags",
-    "time": "2026-06-26T01:43:21.985Z"
+    "time": "2026-06-27T05:17:22.547Z"
   },
   {
-    "id": 1782438201976,
+    "id": 1782537442532,
     "user": "admin",
     "name": "Administrator",
     "action": "UPDATE_SHIP",
     "detail": "Update CTR/SSS/SUB-06/2026/016/PD-IRON-VULGA: gudang, tags",
-    "time": "2026-06-26T01:43:21.976Z"
+    "time": "2026-06-27T05:17:22.532Z"
   },
   {
-    "id": 1782438201970,
+    "id": 1782537442516,
     "user": "admin",
     "name": "Administrator",
     "action": "UPDATE_SHIP",
     "detail": "Update CTR/SSS/SUB-06/2026/016/FARGE-DNM: gudang, tags",
-    "time": "2026-06-26T01:43:21.970Z"
+    "time": "2026-06-27T05:17:22.516Z"
   },
   {
-    "id": 1782438201962,
+    "id": 1782537442493,
     "user": "admin",
     "name": "Administrator",
     "action": "UPDATE_SHIP",
     "detail": "Update CTR/SSS/SUB-06/2026/013/PD-DRYBJU-SPECTA: gudang, tags",
-    "time": "2026-06-26T01:43:21.962Z"
+    "time": "2026-06-27T05:17:22.493Z"
   },
   {
-    "id": 1782438201957,
+    "id": 1782537442478,
     "user": "admin",
     "name": "Administrator",
     "action": "UPDATE_SHIP",
     "detail": "Update CTR/SSS/SUB-06/2026/010/FARGE-DNM: gudang, tags",
-    "time": "2026-06-26T01:43:21.957Z"
+    "time": "2026-06-27T05:17:22.478Z"
   },
   {
-    "id": 1782438201952,
+    "id": 1782537442465,
     "user": "admin",
     "name": "Administrator",
     "action": "UPDATE_SHIP",
     "detail": "Update CTR/SSS/SUB-06/2026/007/PD-DRYSPT-SENNA: gudang, tags",
-    "time": "2026-06-26T01:43:21.952Z"
+    "time": "2026-06-27T05:17:22.465Z"
   },
   {
-    "id": 1782438201943,
+    "id": 1782537442450,
     "user": "admin",
     "name": "Administrator",
     "action": "UPDATE_SHIP",
     "detail": "Update CTR/SSS/SUB-06/2026/005/FARGE-BD-SET: gudang, tags",
-    "time": "2026-06-26T01:43:21.943Z"
+    "time": "2026-06-27T05:17:22.450Z"
   },
   {
-    "id": 1782438201937,
+    "id": 1782537442435,
     "user": "admin",
     "name": "Administrator",
     "action": "UPDATE_SHIP",
     "detail": "Update CTR/SSS/SUB-06/2026/004/VCP-PND5070: gudang, tags",
-    "time": "2026-06-26T01:43:21.937Z"
+    "time": "2026-06-27T05:17:22.435Z"
   },
   {
-    "id": 1782438201929,
+    "id": 1782537442422,
     "user": "admin",
     "name": "Administrator",
     "action": "UPDATE_SHIP",
     "detail": "Update CTR/SSS/SUB-06/2026/004/PD-HANGBJU-PLTRK: gudang, tags",
-    "time": "2026-06-26T01:43:21.929Z"
+    "time": "2026-06-27T05:17:22.422Z"
   },
   {
-    "id": 1782438201923,
+    "id": 1782537442407,
     "user": "admin",
     "name": "Administrator",
     "action": "UPDATE_SHIP",
     "detail": "Update CTR/RRR/SUB-04/2026/014/RE-PL-1020-50: gudang, tags",
-    "time": "2026-06-26T01:43:21.923Z"
+    "time": "2026-06-27T05:17:22.407Z"
   },
   {
-    "id": 1782438201916,
+    "id": 1782537442392,
     "user": "admin",
     "name": "Administrator",
     "action": "UPDATE_SHIP",
     "detail": "Update CTR/IAM/SUB/2026/029/JPT-SG3-PL322: tags",
-    "time": "2026-06-26T01:43:21.916Z"
+    "time": "2026-06-27T05:17:22.392Z"
   },
   {
-    "id": 1782438201908,
+    "id": 1782537442377,
     "user": "admin",
     "name": "Administrator",
     "action": "UPDATE_SHIP",
     "detail": "Update CTR/IAM/SUB/2026/028/PD-CUCI-ATRONW: tags",
-    "time": "2026-06-26T01:43:21.908Z"
+    "time": "2026-06-27T05:17:22.377Z"
   },
   {
-    "id": 1782438201856,
+    "id": 1782537442361,
     "user": "admin",
     "name": "Administrator",
     "action": "UPDATE_SHIP",
     "detail": "Update CTR/IAM/SUB/2026/027/CS-BEKAM-24: gudang, tags",
-    "time": "2026-06-26T01:43:21.856Z"
+    "time": "2026-06-27T05:17:22.361Z"
   },
   {
-    "id": 1782438201850,
+    "id": 1782537442341,
     "user": "admin",
     "name": "Administrator",
     "action": "UPDATE_SHIP",
     "detail": "Update CTR/IAM/SUB/2026/027/CS-BEKAM-12: gudang, tags",
-    "time": "2026-06-26T01:43:21.850Z"
+    "time": "2026-06-27T05:17:22.341Z"
   },
   {
-    "id": 1782438201842,
+    "id": 1782537442324,
     "user": "admin",
     "name": "Administrator",
     "action": "UPDATE_SHIP",
     "detail": "Update CTR/IAM/SUB/2026/024/CS-BEKAM-24: gudang, tags",
-    "time": "2026-06-26T01:43:21.842Z"
+    "time": "2026-06-27T05:17:22.324Z"
   },
   {
-    "id": 1782438201837,
+    "id": 1782537442308,
     "user": "admin",
     "name": "Administrator",
     "action": "UPDATE_SHIP",
     "detail": "Update CTR/IAM/SUB/2026/024/CS-BEKAM-12: gudang, tags",
-    "time": "2026-06-26T01:43:21.837Z"
+    "time": "2026-06-27T05:17:22.308Z"
   },
   {
-    "id": 1782438201830,
+    "id": 1782537442292,
     "user": "admin",
     "name": "Administrator",
     "action": "UPDATE_SHIP",
     "detail": "Update CTR/IAM/SUB/2026/023/CS-BEKAM-PUMP: gudang, tags",
-    "time": "2026-06-26T01:43:21.830Z"
+    "time": "2026-06-27T05:17:22.292Z"
   },
   {
-    "id": 1782438201825,
+    "id": 1782537442276,
     "user": "admin",
     "name": "Administrator",
     "action": "UPDATE_SHIP",
     "detail": "Update CTR/IAM/SUB/2026/023/CS-BEKAM-B5: gudang, tags",
-    "time": "2026-06-26T01:43:21.825Z"
+    "time": "2026-06-27T05:17:22.276Z"
   },
   {
-    "id": 1782438201820,
+    "id": 1782537442256,
     "user": "admin",
     "name": "Administrator",
     "action": "UPDATE_SHIP",
     "detail": "Update CTR/IAM/SUB/2026/023/CS-BEKAM-B4: gudang, tags",
-    "time": "2026-06-26T01:43:21.820Z"
+    "time": "2026-06-27T05:17:22.257Z"
   },
   {
-    "id": 1782438201812,
+    "id": 1782537442243,
     "user": "admin",
     "name": "Administrator",
     "action": "UPDATE_SHIP",
     "detail": "Update CTR/IAM/SUB/2026/023/CS-BEKAM-B3: gudang, tags",
-    "time": "2026-06-26T01:43:21.812Z"
+    "time": "2026-06-27T05:17:22.243Z"
   },
   {
-    "id": 1782438201807,
+    "id": 1782537442231,
     "user": "admin",
     "name": "Administrator",
     "action": "UPDATE_SHIP",
     "detail": "Update CTR/IAM/SUB/2026/023/CS-BEKAM-B2: gudang, tags",
-    "time": "2026-06-26T01:43:21.807Z"
+    "time": "2026-06-27T05:17:22.231Z"
   },
   {
-    "id": 1782438201803,
+    "id": 1782537442218,
     "user": "admin",
     "name": "Administrator",
     "action": "UPDATE_SHIP",
     "detail": "Update CTR/IAM/SUB/2026/023/CS-BEKAM-B1: gudang, tags",
-    "time": "2026-06-26T01:43:21.803Z"
+    "time": "2026-06-27T05:17:22.218Z"
   },
   {
-    "id": 1782438201795,
+    "id": 1782537442199,
     "user": "admin",
     "name": "Administrator",
     "action": "UPDATE_SHIP",
     "detail": "Update CTR/IAM/SUB/2026/023/CS-BEKAM-B0: gudang, tags",
-    "time": "2026-06-26T01:43:21.795Z"
+    "time": "2026-06-27T05:17:22.199Z"
   },
   {
-    "id": 1782438201791,
+    "id": 1782537442186,
     "user": "admin",
     "name": "Administrator",
     "action": "UPDATE_SHIP",
     "detail": "Update CTR/IAM/SUB/2026/023/CS-BEKAM-24: gudang, tags",
-    "time": "2026-06-26T01:43:21.791Z"
+    "time": "2026-06-27T05:17:22.186Z"
   },
   {
-    "id": 1782438201785,
+    "id": 1782537442170,
     "user": "admin",
     "name": "Administrator",
     "action": "UPDATE_SHIP",
     "detail": "Update CTR/IAM/SUB/2026/023/CS-BEKAM-12: gudang, tags",
-    "time": "2026-06-26T01:43:21.785Z"
+    "time": "2026-06-27T05:17:22.170Z"
   },
   {
-    "id": 1782438201778,
+    "id": 1782537442151,
     "user": "admin",
     "name": "Administrator",
     "action": "UPDATE_SHIP",
     "detail": "Update CTR/IAM/SUB/2026/022/PL-2545-TRANS: gudang, tags",
-    "time": "2026-06-26T01:43:21.778Z"
+    "time": "2026-06-27T05:17:22.151Z"
   },
   {
-    "id": 1782438201773,
+    "id": 1782537442135,
     "user": "admin",
     "name": "Administrator",
     "action": "UPDATE_SHIP",
     "detail": "Update CTR/IAM/SUB/2026/022/PL-1640-TRANS: gudang, tags",
-    "time": "2026-06-26T01:43:21.773Z"
+    "time": "2026-06-27T05:17:22.135Z"
   },
   {
-    "id": 1782438201768,
+    "id": 1782537442122,
     "user": "admin",
     "name": "Administrator",
     "action": "UPDATE_SHIP",
     "detail": "Update CTR/IAM/SUB/2026/010/PART-PD-CUCI-ATRONW: forwarder, gudang",
-    "time": "2026-06-26T01:43:21.768Z"
+    "time": "2026-06-27T05:17:22.122Z"
   },
   {
-    "id": 1782438201760,
+    "id": 1782537442106,
     "user": "admin",
     "name": "Administrator",
     "action": "UPDATE_SHIP",
     "detail": "Update CTR/IAM/SUB/2026/010/PD-CUCI-ATRONW: gudang, tags",
-    "time": "2026-06-26T01:43:21.760Z"
+    "time": "2026-06-27T05:17:22.106Z"
   },
   {
-    "id": 1782438201755,
+    "id": 1782537442092,
     "user": "admin",
     "name": "Administrator",
     "action": "UPDATE_SHIP",
     "detail": "Update CTR/IAM/SUB/2026/008/PD-CUCI-ATRONW: gudang, tags",
-    "time": "2026-06-26T01:43:21.755Z"
+    "time": "2026-06-27T05:17:22.092Z"
   },
   {
-    "id": 1782438201744,
+    "id": 1782537442077,
     "user": "admin",
     "name": "Administrator",
     "action": "UPDATE_SHIP",
     "detail": "Update CTR/IAM/SUB/2026/008/ATRO-KRJ-KUNCI: forwarder, gudang",
-    "time": "2026-06-26T01:43:21.744Z"
+    "time": "2026-06-27T05:17:22.077Z"
   },
   {
-    "id": 1782438201729,
+    "id": 1782537442058,
     "user": "admin",
     "name": "Administrator",
     "action": "UPDATE_SHIP",
     "detail": "Update CTR/IAM/SUB/2026/008/PART-PD-CUCI-ATRONW: forwarder, gudang",
-    "time": "2026-06-26T01:43:21.729Z"
+    "time": "2026-06-27T05:17:22.058Z"
   },
   {
-    "id": 1782438201722,
+    "id": 1782537442036,
     "user": "admin",
     "name": "Administrator",
     "action": "UPDATE_SHIP",
     "detail": "Update CTR/IAM/SUB/2026/008/ATRO-KRJ-KUNCI: forwarder, gudang",
-    "time": "2026-06-26T01:43:21.722Z"
+    "time": "2026-06-27T05:17:22.036Z"
   },
   {
-    "id": 1782438201716,
+    "id": 1782537442022,
     "user": "admin",
     "name": "Administrator",
     "action": "UPDATE_SHIP",
     "detail": "Update CTR/GIM/SUB-07/2029/029/NV-HR-VIRGO2: tags",
-    "time": "2026-06-26T01:43:21.716Z"
+    "time": "2026-06-27T05:17:22.022Z"
   },
   {
-    "id": 1782438201708,
+    "id": 1782537442006,
     "user": "admin",
     "name": "Administrator",
     "action": "UPDATE_SHIP",
     "detail": "Update CTR/GIM/SUB-07/2029/029/NV-HR-SATURN-U: tags",
-    "time": "2026-06-26T01:43:21.708Z"
+    "time": "2026-06-27T05:17:22.006Z"
   },
   {
-    "id": 1782438201701,
+    "id": 1782537441988,
     "user": "admin",
     "name": "Administrator",
     "action": "UPDATE_SHIP",
     "detail": "Update CTR/GIM/SUB-07/2029/029/NV-HR-CANCER: tags",
-    "time": "2026-06-26T01:43:21.701Z"
+    "time": "2026-06-27T05:17:21.988Z"
   },
   {
-    "id": 1782438201692,
+    "id": 1782537441973,
     "user": "admin",
     "name": "Administrator",
     "action": "UPDATE_SHIP",
     "detail": "Update CTR/GIM/SUB-07/2026/063/NV-HR-SATURN: gudang, tags",
-    "time": "2026-06-26T01:43:21.692Z"
+    "time": "2026-06-27T05:17:21.973Z"
   },
   {
-    "id": 1782438201679,
+    "id": 1782537441958,
     "user": "admin",
     "name": "Administrator",
     "action": "UPDATE_SHIP",
     "detail": "Update CTR/GIM/SUB-07/2026/026/NV-HR-SATURN-U: tags",
-    "time": "2026-06-26T01:43:21.679Z"
+    "time": "2026-06-27T05:17:21.958Z"
   },
   {
-    "id": 1782438201670,
+    "id": 1782537441944,
     "user": "admin",
     "name": "Administrator",
     "action": "UPDATE_SHIP",
     "detail": "Update CTR/GIM/SUB-07/2026/025/NV-DRY-LEO: tags",
-    "time": "2026-06-26T01:43:21.670Z"
+    "time": "2026-06-27T05:17:21.944Z"
   },
   {
-    "id": 1782438201657,
+    "id": 1782537441930,
     "user": "admin",
     "name": "Administrator",
     "action": "UPDATE_SHIP",
     "detail": "Update CTR/GIM/SUB-07/2026/022/NV-SKM-LOVE: gudang, tags",
-    "time": "2026-06-26T01:43:21.657Z"
+    "time": "2026-06-27T05:17:21.930Z"
   },
   {
-    "id": 1782438201651,
+    "id": 1782537441916,
     "user": "admin",
     "name": "Administrator",
     "action": "UPDATE_SHIP",
     "detail": "Update CTR/GIM/SUB-07/2026/022/NV-SKM-GRIGI: gudang, tags",
-    "time": "2026-06-26T01:43:21.651Z"
+    "time": "2026-06-27T05:17:21.916Z"
   },
   {
-    "id": 1782438201642,
+    "id": 1782537441896,
     "user": "admin",
     "name": "Administrator",
     "action": "UPDATE_SHIP",
     "detail": "Update CTR/GIM/SUB-07/2026/022/NV-SIR-BIGKTK: gudang, tags",
-    "time": "2026-06-26T01:43:21.642Z"
+    "time": "2026-06-27T05:17:21.896Z"
   },
   {
-    "id": 1782438201636,
+    "id": 1782537441880,
     "user": "admin",
     "name": "Administrator",
     "action": "UPDATE_SHIP",
     "detail": "Update CTR/GIM/SUB-07/2026/022/NV-ROLL-JPT: gudang, tags",
-    "time": "2026-06-26T01:43:21.636Z"
+    "time": "2026-06-27T05:17:21.880Z"
   },
   {
-    "id": 1782438201628,
+    "id": 1782537441865,
     "user": "admin",
     "name": "Administrator",
     "action": "UPDATE_SHIP",
     "detail": "Update CTR/GIM/SUB-07/2026/022/NV-ROLL-BIG: gudang, tags",
-    "time": "2026-06-26T01:43:21.628Z"
+    "time": "2026-06-27T05:17:21.865Z"
   },
   {
-    "id": 1782438201622,
+    "id": 1782537441849,
     "user": "admin",
     "name": "Administrator",
     "action": "UPDATE_SHIP",
     "detail": "Update CTR/GIM/SUB-07/2026/022/NV-POUCH-PUFFY: gudang, tags",
-    "time": "2026-06-26T01:43:21.622Z"
+    "time": "2026-06-27T05:17:21.849Z"
   },
   {
-    "id": 1782438201615,
+    "id": 1782537441835,
     "user": "admin",
     "name": "Administrator",
     "action": "UPDATE_SHIP",
     "detail": "Update CTR/GIM/SUB-07/2026/022/NV-POUCH-PLW: gudang, tags",
-    "time": "2026-06-26T01:43:21.615Z"
+    "time": "2026-06-27T05:17:21.835Z"
   },
   {
-    "id": 1782438201609,
+    "id": 1782537441819,
     "user": "admin",
     "name": "Administrator",
     "action": "UPDATE_SHIP",
     "detail": "Update CTR/GIM/SUB-07/2026/022/NV-JPT-LYRA: gudang, tags",
-    "time": "2026-06-26T01:43:21.609Z"
+    "time": "2026-06-27T05:17:21.819Z"
   },
   {
-    "id": 1782438201603,
+    "id": 1782537441802,
     "user": "admin",
     "name": "Administrator",
     "action": "UPDATE_SHIP",
     "detail": "Update CTR/GIM/SUB-07/2026/022/NV-HR-TAURUSV2: gudang, tags",
-    "time": "2026-06-26T01:43:21.603Z"
+    "time": "2026-06-27T05:17:21.802Z"
   },
   {
-    "id": 1782438201597,
+    "id": 1782537441788,
     "user": "admin",
     "name": "Administrator",
     "action": "UPDATE_SHIP",
     "detail": "Update CTR/GIM/SUB-07/2026/022/NV-HR-LIBRAV2: gudang, tags",
-    "time": "2026-06-26T01:43:21.597Z"
+    "time": "2026-06-27T05:17:21.788Z"
   },
   {
-    "id": 1782438201591,
+    "id": 1782537441775,
     "user": "admin",
     "name": "Administrator",
     "action": "UPDATE_SHIP",
     "detail": "Update CTR/GIM/SUB-07/2026/015/NV-HR-ARIES2: gudang, tags",
-    "time": "2026-06-26T01:43:21.591Z"
+    "time": "2026-06-27T05:17:21.775Z"
   },
   {
-    "id": 1782438201586,
+    "id": 1782537441763,
     "user": "admin",
     "name": "Administrator",
     "action": "UPDATE_SHIP",
     "detail": "Update CTR/GIM/SUB-07/2026/015/NV-DRY-LUNA: gudang, tags",
-    "time": "2026-06-26T01:43:21.586Z"
+    "time": "2026-06-27T05:17:21.763Z"
   },
   {
-    "id": 1782438201578,
+    "id": 1782537441746,
     "user": "admin",
     "name": "Administrator",
     "action": "UPDATE_SHIP",
     "detail": "Update CTR/GIM/SUB-07/2026/014/NV-SKM-LOVE: gudang, tags",
-    "time": "2026-06-26T01:43:21.578Z"
+    "time": "2026-06-27T05:17:21.746Z"
   },
   {
-    "id": 1782438201573,
+    "id": 1782537441733,
     "user": "admin",
     "name": "Administrator",
     "action": "UPDATE_SHIP",
     "detail": "Update CTR/GIM/SUB-07/2026/014/NV-SIR-MNLV: gudang, tags",
-    "time": "2026-06-26T01:43:21.573Z"
+    "time": "2026-06-27T05:17:21.733Z"
   },
   {
-    "id": 1782438201568,
+    "id": 1782537441720,
     "user": "admin",
     "name": "Administrator",
     "action": "UPDATE_SHIP",
     "detail": "Update CTR/GIM/SUB-07/2026/014/NV-SIR-BIGKTK: gudang, tags",
-    "time": "2026-06-26T01:43:21.568Z"
+    "time": "2026-06-27T05:17:21.720Z"
   },
   {
-    "id": 1782438201560,
+    "id": 1782537441707,
     "user": "admin",
     "name": "Administrator",
     "action": "UPDATE_SHIP",
     "detail": "Update CTR/GIM/SUB-07/2026/014/NV-JPT-HEATLS2: gudang, tags",
-    "time": "2026-06-26T01:43:21.560Z"
+    "time": "2026-06-27T05:17:21.707Z"
   },
   {
-    "id": 1782438201554,
+    "id": 1782537441693,
     "user": "admin",
     "name": "Administrator",
     "action": "UPDATE_SHIP",
     "detail": "Update CTR/GIM/SUB-07/2026/014/NV-HR-SCORPIO: gudang, tags",
-    "time": "2026-06-26T01:43:21.554Z"
+    "time": "2026-06-27T05:17:21.693Z"
   },
   {
-    "id": 1782438201548,
+    "id": 1782537441681,
     "user": "admin",
     "name": "Administrator",
     "action": "UPDATE_SHIP",
     "detail": "Update CTR/GIM/SUB-07/2026/014/NV-HR-ARIES2: gudang, tags",
-    "time": "2026-06-26T01:43:21.548Z"
+    "time": "2026-06-27T05:17:21.681Z"
   },
   {
-    "id": 1782438201540,
+    "id": 1782537441669,
     "user": "admin",
     "name": "Administrator",
     "action": "UPDATE_SHIP",
     "detail": "Update CTR/GIM/SUB-07/2026/013/NV-DRY-MINA: gudang, tags",
-    "time": "2026-06-26T01:43:21.540Z"
+    "time": "2026-06-27T05:17:21.669Z"
   },
   {
-    "id": 1782438201536,
+    "id": 1782537441657,
     "user": "admin",
     "name": "Administrator",
     "action": "UPDATE_SHIP",
     "detail": "Update CTR/GIM/SUB-07/2026/012/NV-HR-TAURUSV2: gudang, tags",
-    "time": "2026-06-26T01:43:21.536Z"
+    "time": "2026-06-27T05:17:21.657Z"
   },
   {
-    "id": 1782438201528,
+    "id": 1782537441644,
     "user": "admin",
     "name": "Administrator",
     "action": "UPDATE_SHIP",
     "detail": "Update CTR/GIM/SUB-07/2026/011/NV-HR-SATURN: gudang, tags",
-    "time": "2026-06-26T01:43:21.528Z"
+    "time": "2026-06-27T05:17:21.644Z"
   },
   {
-    "id": 1782438201522,
+    "id": 1782537441630,
     "user": "admin",
     "name": "Administrator",
     "action": "UPDATE_SHIP",
     "detail": "Update CTR/GIM/SUB-07/2026/011/NV-POP-MASKOT: gudang, tags",
-    "time": "2026-06-26T01:43:21.522Z"
+    "time": "2026-06-27T05:17:21.630Z"
   },
   {
-    "id": 1782438201517,
+    "id": 1782537441614,
     "user": "admin",
     "name": "Administrator",
     "action": "UPDATE_SHIP",
     "detail": "Update CTR/GIM/SUB-07/2026/011/NV-HR-SATURN: gudang, tags",
-    "time": "2026-06-26T01:43:21.517Z"
+    "time": "2026-06-27T05:17:21.614Z"
   },
   {
-    "id": 1782438201510,
+    "id": 1782537441597,
     "user": "admin",
     "name": "Administrator",
     "action": "UPDATE_SHIP",
     "detail": "Update CTR/GIM/SUB-07/2026/011/NV-HR-SAGI: gudang, tags",
-    "time": "2026-06-26T01:43:21.510Z"
+    "time": "2026-06-27T05:17:21.597Z"
   },
   {
-    "id": 1782438201506,
+    "id": 1782537441582,
     "user": "admin",
     "name": "Administrator",
     "action": "UPDATE_SHIP",
     "detail": "Update CTR/GIM/SUB-07/2026/011/NV-HR-CAPRI: gudang, tags",
-    "time": "2026-06-26T01:43:21.506Z"
+    "time": "2026-06-27T05:17:21.582Z"
   },
   {
-    "id": 1782438201501,
+    "id": 1782537441568,
     "user": "admin",
     "name": "Administrator",
     "action": "UPDATE_SHIP",
     "detail": "Update CTR/GIM/SUB-07/2026/011/NV-GKUN-KKYUPING: gudang, tags",
-    "time": "2026-06-26T01:43:21.501Z"
+    "time": "2026-06-27T05:17:21.568Z"
   },
   {
-    "id": 1782438201493,
+    "id": 1782537441551,
     "user": "admin",
     "name": "Administrator",
     "action": "UPDATE_SHIP",
     "detail": "Update CTR/GIM/SUB-07/2026/009/NV-HR-LIBRAV2: gudang, tags",
-    "time": "2026-06-26T01:43:21.493Z"
+    "time": "2026-06-27T05:17:21.551Z"
   },
   {
-    "id": 1782438201486,
+    "id": 1782537441536,
     "user": "admin",
     "name": "Administrator",
     "action": "UPDATE_SHIP",
     "detail": "Update CTR/GIM/SUB-07/2026/007/NV-HR-TAURUSV2: gudang, tags",
-    "time": "2026-06-26T01:43:21.486Z"
+    "time": "2026-06-27T05:17:21.536Z"
   },
   {
-    "id": 1782438201478,
+    "id": 1782537441519,
     "user": "admin",
     "name": "Administrator",
     "action": "UPDATE_SHIP",
     "detail": "Update CTR/GIM/SUB-07/2026/007/NV-HR-LIBRAV2: gudang, tags",
-    "time": "2026-06-26T01:43:21.478Z"
+    "time": "2026-06-27T05:17:21.519Z"
   },
   {
-    "id": 1782438201472,
+    "id": 1782537441501,
     "user": "admin",
     "name": "Administrator",
     "action": "UPDATE_SHIP",
     "detail": "Update CTR/GIM/SUB-07/2026/007/NV-HR-AQUAV2: gudang, tags",
-    "time": "2026-06-26T01:43:21.472Z"
+    "time": "2026-06-27T05:17:21.501Z"
   },
   {
-    "id": 1782438201466,
+    "id": 1782537441484,
     "user": "admin",
     "name": "Administrator",
     "action": "UPDATE_SHIP",
     "detail": "Update CTR/GIM/SUB-07/2026/007/NV-DRY-LEO: gudang, tags",
-    "time": "2026-06-26T01:43:21.466Z"
+    "time": "2026-06-27T05:17:21.484Z"
   },
   {
-    "id": 1782438201457,
+    "id": 1782537441462,
     "user": "admin",
     "name": "Administrator",
     "action": "UPDATE_SHIP",
     "detail": "Update CTR/GIM/SUB-07/2026/006/NV-HR-SATURN-U: gudang, tags",
-    "time": "2026-06-26T01:43:21.457Z"
+    "time": "2026-06-27T05:17:21.462Z"
   },
   {
-    "id": 1782438201450,
+    "id": 1782537441447,
     "user": "admin",
     "name": "Administrator",
     "action": "UPDATE_SHIP",
     "detail": "Update CTR/GIM/SUB-07/2026/006/NV-HR-SATURN: gudang, tags",
-    "time": "2026-06-26T01:43:21.450Z"
+    "time": "2026-06-27T05:17:21.447Z"
   },
   {
-    "id": 1782438201442,
+    "id": 1782537441432,
     "user": "admin",
     "name": "Administrator",
     "action": "UPDATE_SHIP",
     "detail": "Update CTR/GIM/SUB-07/2026/006/NV-HR-ARIES2: gudang, tags",
-    "time": "2026-06-26T01:43:21.442Z"
+    "time": "2026-06-27T05:17:21.432Z"
   },
   {
-    "id": 1782438201435,
+    "id": 1782537441417,
     "user": "admin",
     "name": "Administrator",
     "action": "UPDATE_SHIP",
     "detail": "Update CTR/GIM/SUB-07/2026/006/NV-DRY-MINA: gudang, tags",
-    "time": "2026-06-26T01:43:21.435Z"
+    "time": "2026-06-27T05:17:21.417Z"
   },
   {
-    "id": 1782438201427,
+    "id": 1782537441403,
     "user": "admin",
     "name": "Administrator",
     "action": "UPDATE_SHIP",
     "detail": "Update CTR/GIM/SUB-07/2026/006/NV-DRY-LUNA: gudang, tags",
-    "time": "2026-06-26T01:43:21.427Z"
+    "time": "2026-06-27T05:17:21.403Z"
   },
   {
-    "id": 1782438201422,
+    "id": 1782537441389,
     "user": "admin",
     "name": "Administrator",
     "action": "UPDATE_SHIP",
     "detail": "Update CTR/GIM/SUB-07/2026/004/NV-TTBAG-HR: gudang, tags",
-    "time": "2026-06-26T01:43:21.422Z"
+    "time": "2026-06-27T05:17:21.389Z"
   },
   {
-    "id": 1782438201417,
+    "id": 1782537441375,
     "user": "admin",
     "name": "Administrator",
     "action": "UPDATE_SHIP",
     "detail": "Update CTR/GIM/SUB-07/2026/004/NV-SIR-OVPONI: gudang, tags",
-    "time": "2026-06-26T01:43:21.417Z"
+    "time": "2026-06-27T05:17:21.375Z"
   },
   {
-    "id": 1782438201408,
+    "id": 1782537441361,
     "user": "admin",
     "name": "Administrator",
     "action": "UPDATE_SHIP",
     "detail": "Update CTR/GIM/SUB-07/2026/004/NV-SIR-BIGKTK: gudang, tags",
-    "time": "2026-06-26T01:43:21.408Z"
+    "time": "2026-06-27T05:17:21.361Z"
   },
   {
-    "id": 1782438201403,
+    "id": 1782537441348,
     "user": "admin",
     "name": "Administrator",
     "action": "UPDATE_SHIP",
     "detail": "Update CTR/GIM/SUB-07/2026/004/NV-ROLL-BIG: gudang, tags",
-    "time": "2026-06-26T01:43:21.403Z"
+    "time": "2026-06-27T05:17:21.348Z"
   },
   {
-    "id": 1782438201397,
+    "id": 1782537441334,
     "user": "admin",
     "name": "Administrator",
     "action": "UPDATE_SHIP",
     "detail": "Update CTR/GIM/SUB-07/2026/004/NV-HR-SATURN-U: gudang, tags",
-    "time": "2026-06-26T01:43:21.397Z"
+    "time": "2026-06-27T05:17:21.334Z"
   },
   {
-    "id": 1782438201390,
+    "id": 1782537441316,
     "user": "admin",
     "name": "Administrator",
     "action": "UPDATE_SHIP",
     "detail": "Update CTR/GIM/SUB-07/2026/004/NV-HR-AQUAV2: gudang, tags",
-    "time": "2026-06-26T01:43:21.390Z"
+    "time": "2026-06-27T05:17:21.316Z"
   },
   {
-    "id": 1782438201386,
+    "id": 1782537441303,
     "user": "admin",
     "name": "Administrator",
     "action": "UPDATE_SHIP",
     "detail": "Update CTR/GIM/SUB-07/2026/003/NV-HR-SCORPIO: gudang, tags",
-    "time": "2026-06-26T01:43:21.386Z"
+    "time": "2026-06-27T05:17:21.303Z"
   },
   {
-    "id": 1782438201379,
+    "id": 1782537441291,
     "user": "admin",
     "name": "Administrator",
     "action": "UPDATE_SHIP",
     "detail": "Update CTR/GIM/SUB-07/2026/002/NV-DRY-LEO: gudang, tags",
-    "time": "2026-06-26T01:43:21.379Z"
+    "time": "2026-06-27T05:17:21.291Z"
   },
   {
-    "id": 1782438201372,
+    "id": 1782537441277,
     "user": "admin",
     "name": "Administrator",
     "action": "UPDATE_SHIP",
     "detail": "Update CTR/GIM/SUB-07/2026/001/NV-DRY-LEO: gudang, tags",
-    "time": "2026-06-26T01:43:21.372Z"
+    "time": "2026-06-27T05:17:21.277Z"
   },
   {
-    "id": 1782438201368,
+    "id": 1782537441263,
     "user": "admin",
     "name": "Administrator",
     "action": "UPDATE_SHIP",
     "detail": "Update CTR/COM/SUB-04/2026/026/PL-BUB1823-TC: tags",
-    "time": "2026-06-26T01:43:21.368Z"
+    "time": "2026-06-27T05:17:21.263Z"
   },
   {
-    "id": 1782438201361,
+    "id": 1782537441249,
     "user": "admin",
     "name": "Administrator",
     "action": "UPDATE_SHIP",
     "detail": "Update CTR/COM/SUB-04/2026/026/PL-BUB1823-MM: tags",
-    "time": "2026-06-26T01:43:21.361Z"
+    "time": "2026-06-27T05:17:21.249Z"
   },
   {
-    "id": 1782438201357,
+    "id": 1782537441234,
     "user": "admin",
     "name": "Administrator",
     "action": "UPDATE_SHIP",
     "detail": "Update CTR/COM/SUB-04/2026/026/PL-BUB1823-H: tags",
-    "time": "2026-06-26T01:43:21.357Z"
+    "time": "2026-06-27T05:17:21.234Z"
   },
   {
-    "id": 1782438201352,
+    "id": 1782537441221,
     "user": "admin",
     "name": "Administrator",
     "action": "UPDATE_SHIP",
     "detail": "Update CTR/COM/SUB-04/2026/026/PL-BUB1318-TC: tags",
-    "time": "2026-06-26T01:43:21.352Z"
+    "time": "2026-06-27T05:17:21.221Z"
   },
   {
-    "id": 1782438201347,
+    "id": 1782537441206,
     "user": "admin",
     "name": "Administrator",
     "action": "UPDATE_SHIP",
     "detail": "Update CTR/COM/SUB-04/2026/026/PL-BUB1318-P: tags",
-    "time": "2026-06-26T01:43:21.347Z"
+    "time": "2026-06-27T05:17:21.206Z"
   },
   {
-    "id": 1782438201340,
+    "id": 1782537441193,
     "user": "admin",
     "name": "Administrator",
     "action": "UPDATE_SHIP",
     "detail": "Update CTR/COM/SUB-04/2026/026/PL-BUB1318-MM: tags",
-    "time": "2026-06-26T01:43:21.340Z"
+    "time": "2026-06-27T05:17:21.193Z"
   },
   {
-    "id": 1782438201335,
+    "id": 1782537441175,
     "user": "admin",
     "name": "Administrator",
     "action": "UPDATE_SHIP",
     "detail": "Update CTR/COM/SUB-04/2026/020/PL-BUB2530-MM: gudang, tags",
-    "time": "2026-06-26T01:43:21.335Z"
+    "time": "2026-06-27T05:17:21.175Z"
   },
   {
-    "id": 1782438201330,
+    "id": 1782537441161,
     "user": "admin",
     "name": "Administrator",
     "action": "UPDATE_SHIP",
     "detail": "Update CTR/COM/SUB-04/2026/020/PL-BUB2530-H: gudang, tags",
-    "time": "2026-06-26T01:43:21.330Z"
+    "time": "2026-06-27T05:17:21.161Z"
   },
   {
-    "id": 1782438201323,
+    "id": 1782537441148,
     "user": "admin",
     "name": "Administrator",
     "action": "UPDATE_SHIP",
     "detail": "Update CTR/COM/SUB-04/2026/020/PL-BUB1823-MM: gudang, tags",
-    "time": "2026-06-26T01:43:21.323Z"
+    "time": "2026-06-27T05:17:21.148Z"
   },
   {
-    "id": 1782438201318,
+    "id": 1782537441134,
     "user": "admin",
     "name": "Administrator",
     "action": "UPDATE_SHIP",
     "detail": "Update CTR/COM/SUB-04/2026/020/PL-BUB1823-H: gudang, tags",
-    "time": "2026-06-26T01:43:21.318Z"
+    "time": "2026-06-27T05:17:21.134Z"
   },
   {
-    "id": 1782438201309,
+    "id": 1782537441120,
     "user": "admin",
     "name": "Administrator",
     "action": "UPDATE_SHIP",
     "detail": "Update CTR/COM/SUB-04/2026/020/PL-BUB1318-H: gudang, tags",
-    "time": "2026-06-26T01:43:21.309Z"
+    "time": "2026-06-27T05:17:21.120Z"
   },
   {
-    "id": 1782438201304,
+    "id": 1782537441105,
     "user": "admin",
     "name": "Administrator",
     "action": "UPDATE_SHIP",
     "detail": "Update CTR/COM/SUB-04/2026/019/PL-BUB1823-MM: gudang, tags",
-    "time": "2026-06-26T01:43:21.304Z"
+    "time": "2026-06-27T05:17:21.105Z"
   },
   {
-    "id": 1782438201300,
+    "id": 1782537441091,
     "user": "admin",
     "name": "Administrator",
     "action": "UPDATE_SHIP",
     "detail": "Update CTR/COM/SUB-04/2026/019/PL-BUB1823-H: gudang, tags",
-    "time": "2026-06-26T01:43:21.300Z"
+    "time": "2026-06-27T05:17:21.091Z"
   },
   {
-    "id": 1782438201293,
+    "id": 1782537441078,
     "user": "admin",
     "name": "Administrator",
     "action": "UPDATE_SHIP",
     "detail": "Update CTR/COM/SUB-04/2026/019/PL-BUB1318-MM: gudang, tags",
-    "time": "2026-06-26T01:43:21.293Z"
+    "time": "2026-06-27T05:17:21.078Z"
   },
   {
-    "id": 1782438201288,
+    "id": 1782537441063,
     "user": "admin",
     "name": "Administrator",
     "action": "UPDATE_SHIP",
     "detail": "Update CTR/COM/SUB-04/2026/019/PL-BUB1318-H: gudang, tags",
-    "time": "2026-06-26T01:43:21.288Z"
+    "time": "2026-06-27T05:17:21.063Z"
   },
   {
-    "id": 1782438201284,
+    "id": 1782537441046,
     "user": "admin",
     "name": "Administrator",
     "action": "UPDATE_SHIP",
     "detail": "Update CTR/COM/SUB-04/2026/016/PL-BUB1318-TC: gudang, tags",
-    "time": "2026-06-26T01:43:21.284Z"
+    "time": "2026-06-27T05:17:21.046Z"
   },
   {
-    "id": 1782438201277,
+    "id": 1782537441033,
     "user": "admin",
     "name": "Administrator",
     "action": "UPDATE_SHIP",
     "detail": "Update CTR/COM/SUB-04/2026/014/PL-BUB1823-P: gudang, tags",
-    "time": "2026-06-26T01:43:21.277Z"
+    "time": "2026-06-27T05:17:21.033Z"
   },
   {
-    "id": 1782438201272,
+    "id": 1782537441020,
     "user": "admin",
     "name": "Administrator",
     "action": "UPDATE_SHIP",
     "detail": "Update CTR/COM/SUB-04/2026/014/PL-BUB1823-H: gudang, tags",
-    "time": "2026-06-26T01:43:21.272Z"
+    "time": "2026-06-27T05:17:21.020Z"
   },
   {
-    "id": 1782438201268,
+    "id": 1782537441007,
     "user": "admin",
     "name": "Administrator",
     "action": "UPDATE_SHIP",
     "detail": "Update CTR/COM/SUB-04/2026/014/PL-BUB1318-P: gudang, tags",
-    "time": "2026-06-26T01:43:21.268Z"
+    "time": "2026-06-27T05:17:21.007Z"
   },
   {
-    "id": 1782438201263,
+    "id": 1782537440993,
     "user": "admin",
     "name": "Administrator",
     "action": "UPDATE_SHIP",
     "detail": "Update CTR/COM/SUB-04/2026/014/PL-BUB1318-H: gudang, tags",
-    "time": "2026-06-26T01:43:21.263Z"
+    "time": "2026-06-27T05:17:20.993Z"
   },
   {
-    "id": 1782438201256,
+    "id": 1782537440978,
     "user": "admin",
     "name": "Administrator",
     "action": "UPDATE_SHIP",
     "detail": "Update CTR/COM/SUB-04/2026/013/PL-BUB2530-H: gudang, tags",
-    "time": "2026-06-26T01:43:21.256Z"
+    "time": "2026-06-27T05:17:20.978Z"
   },
   {
-    "id": 1782438201249,
+    "id": 1782537440964,
     "user": "admin",
     "name": "Administrator",
     "action": "UPDATE_SHIP",
     "detail": "Update CTR/COM/SUB-04/2026/013/PL-BUB1318-MM: gudang, tags",
-    "time": "2026-06-26T01:43:21.249Z"
+    "time": "2026-06-27T05:17:20.964Z"
   },
   {
-    "id": 1782438201241,
+    "id": 1782537440951,
     "user": "admin",
     "name": "Administrator",
     "action": "UPDATE_SHIP",
     "detail": "Update CTR/COM/SUB-04/2026/012/PL-BUB1823-MM: gudang, tags",
-    "time": "2026-06-26T01:43:21.241Z"
+    "time": "2026-06-27T05:17:20.951Z"
   },
   {
-    "id": 1782438201236,
+    "id": 1782537440936,
     "user": "admin",
     "name": "Administrator",
     "action": "UPDATE_SHIP",
     "detail": "Update CTR/COM/SUB-04/2026/011/PL-BUB1823-TC: gudang, tags",
-    "time": "2026-06-26T01:43:21.236Z"
+    "time": "2026-06-27T05:17:20.936Z"
   },
   {
-    "id": 1782438201231,
+    "id": 1782537440919,
     "user": "admin",
     "name": "Administrator",
     "action": "UPDATE_SHIP",
     "detail": "Update CTR/COM/SUB-04/2026/011/PL-BUB1823-MM: gudang, tags",
-    "time": "2026-06-26T01:43:21.231Z"
+    "time": "2026-06-27T05:17:20.919Z"
   },
   {
-    "id": 1782438201223,
+    "id": 1782537440898,
     "user": "admin",
     "name": "Administrator",
     "action": "UPDATE_SHIP",
     "detail": "Update CTR/COM/SUB-04/2026/011/PL-BUB1318-P: gudang, tags",
-    "time": "2026-06-26T01:43:21.223Z"
+    "time": "2026-06-27T05:17:20.898Z"
   },
   {
-    "id": 1782438201218,
+    "id": 1782537440884,
     "user": "admin",
     "name": "Administrator",
     "action": "UPDATE_SHIP",
     "detail": "Update CTR/COM/SUB-04/2026/003/PL-BUB2530-H: gudang, tags",
-    "time": "2026-06-26T01:43:21.218Z"
+    "time": "2026-06-27T05:17:20.884Z"
   },
   {
-    "id": 1782438201209,
+    "id": 1782537440868,
     "user": "admin",
     "name": "Administrator",
     "action": "UPDATE_SHIP",
     "detail": "Update CTR/COM/SUB-04/2026/003/PL-BUB1823-TC: gudang, tags",
-    "time": "2026-06-26T01:43:21.209Z"
+    "time": "2026-06-27T05:17:20.868Z"
   },
   {
-    "id": 1782438201202,
+    "id": 1782537440854,
     "user": "admin",
     "name": "Administrator",
     "action": "UPDATE_SHIP",
     "detail": "Update CTR/COM/SUB-04/2026/003/PL-BUB1823-MM: gudang, tags",
-    "time": "2026-06-26T01:43:21.202Z"
+    "time": "2026-06-27T05:17:20.854Z"
   },
   {
-    "id": 1782438201197,
+    "id": 1782537440839,
     "user": "admin",
     "name": "Administrator",
     "action": "UPDATE_SHIP",
     "detail": "Update CTR/COM/SUB-04/2026/003/PL-BUB1318-MM: gudang, tags",
-    "time": "2026-06-26T01:43:21.197Z"
+    "time": "2026-06-27T05:17:20.839Z"
   },
   {
-    "id": 1782438201190,
+    "id": 1782537440823,
     "user": "admin",
     "name": "Administrator",
     "action": "UPDATE_SHIP",
     "detail": "Update CTR/COM/SUB-04/2026/003/PL-BUB1318-H: gudang, tags",
-    "time": "2026-06-26T01:43:21.190Z"
+    "time": "2026-06-27T05:17:20.823Z"
   },
   {
-    "id": 1782438201186,
+    "id": 1782537440809,
     "user": "admin",
     "name": "Administrator",
     "action": "UPDATE_SHIP",
     "detail": "Update CTR/BBB/SUB-01/2029/029/HB-TTBAG-YUNA: tags",
-    "time": "2026-06-26T01:43:21.186Z"
+    "time": "2026-06-27T05:17:20.809Z"
   },
   {
-    "id": 1782438201181,
+    "id": 1782537440792,
     "user": "admin",
     "name": "Administrator",
     "action": "UPDATE_SHIP",
     "detail": "Update CTR/BBB/SUB-01/2029/029/HB-RB-POPPY: tags",
-    "time": "2026-06-26T01:43:21.181Z"
+    "time": "2026-06-27T05:17:20.792Z"
   },
   {
-    "id": 1782438201175,
+    "id": 1782537440773,
     "user": "admin",
     "name": "Administrator",
     "action": "UPDATE_SHIP",
     "detail": "Update CTR/BBB/SUB-01/2029/029/HB-RB-JOLLY: tags",
-    "time": "2026-06-26T01:43:21.175Z"
+    "time": "2026-06-27T05:17:20.773Z"
   },
   {
-    "id": 1782438201171,
+    "id": 1782537440756,
     "user": "admin",
     "name": "Administrator",
     "action": "UPDATE_SHIP",
     "detail": "Update CTR/BBB/SUB-01/2029/029/HB-RB-ASHLEY: tags",
-    "time": "2026-06-26T01:43:21.171Z"
+    "time": "2026-06-27T05:17:20.756Z"
   },
   {
-    "id": 1782438201166,
+    "id": 1782537440732,
     "user": "admin",
     "name": "Administrator",
     "action": "UPDATE_SHIP",
     "detail": "Update CTR/BBB/SUB-01/2029/029/HB-CLR-ASHLEY: tags",
-    "time": "2026-06-26T01:43:21.166Z"
+    "time": "2026-06-27T05:17:20.732Z"
   },
   {
-    "id": 1782438201160,
+    "id": 1782537440714,
     "user": "admin",
     "name": "Administrator",
     "action": "UPDATE_SHIP",
     "detail": "Update CTR/BBB/SUB-01/2026/026/HB-KA-HBO-120: tags",
-    "time": "2026-06-26T01:43:21.160Z"
+    "time": "2026-06-27T05:17:20.714Z"
   },
   {
-    "id": 1782438201156,
+    "id": 1782537440700,
     "user": "admin",
     "name": "Administrator",
     "action": "UPDATE_SHIP",
     "detail": "Update CTR/BBB/SUB-01/2026/022/HB-TTBAG-YUNA: gudang, tags",
-    "time": "2026-06-26T01:43:21.156Z"
+    "time": "2026-06-27T05:17:20.700Z"
   },
   {
-    "id": 1782438201152,
+    "id": 1782537440685,
     "user": "admin",
     "name": "Administrator",
     "action": "UPDATE_SHIP",
     "detail": "Update CTR/BBB/SUB-01/2026/022/HB-RB-SORIN: gudang, tags",
-    "time": "2026-06-26T01:43:21.152Z"
+    "time": "2026-06-27T05:17:20.685Z"
   },
   {
-    "id": 1782438201146,
+    "id": 1782537440671,
     "user": "admin",
     "name": "Administrator",
     "action": "UPDATE_SHIP",
     "detail": "Update CTR/BBB/SUB-01/2026/022/HB-CLR-CHERY: gudang, tags",
-    "time": "2026-06-26T01:43:21.146Z"
+    "time": "2026-06-27T05:17:20.671Z"
   },
   {
-    "id": 1782438201140,
+    "id": 1782537440656,
     "user": "admin",
     "name": "Administrator",
     "action": "UPDATE_SHIP",
     "detail": "Update CTR/BBB/SUB-01/2026/004/HB-RB-POPPY: gudang, tags",
-    "time": "2026-06-26T01:43:21.140Z"
+    "time": "2026-06-27T05:17:20.656Z"
   },
   {
-    "id": 1782438201136,
+    "id": 1782537440643,
     "user": "admin",
     "name": "Administrator",
     "action": "UPDATE_SHIP",
     "detail": "Update CTR/BBB/SUB-01/2026/004/HB-RB-JOLLY: gudang, tags",
-    "time": "2026-06-26T01:43:21.136Z"
+    "time": "2026-06-27T05:17:20.643Z"
   },
   {
-    "id": 1782438201131,
+    "id": 1782537440630,
     "user": "admin",
     "name": "Administrator",
     "action": "UPDATE_SHIP",
     "detail": "Update CTR/BBB/SUB-01/2026/004/HB-RB-ASHLEY: gudang, tags",
-    "time": "2026-06-26T01:43:21.131Z"
+    "time": "2026-06-27T05:17:20.630Z"
   },
   {
-    "id": 1782438201125,
+    "id": 1782537440617,
     "user": "admin",
     "name": "Administrator",
     "action": "UPDATE_SHIP",
     "detail": "Update CTR/BBB/SUB-01/2026/004/HB-CLR-ASHLEY: gudang, tags",
-    "time": "2026-06-26T01:43:21.125Z"
+    "time": "2026-06-27T05:17:20.617Z"
   },
   {
-    "id": 1782438201092,
+    "id": 1782537440566,
     "user": "system",
     "name": "Sheets Pull",
     "action": "SHEETS_PULL",
     "detail": "Tarik dari Sheets: +250 baru, ~0 update",
-    "time": "2026-06-26T01:43:21.092Z"
+    "time": "2026-06-27T05:17:20.566Z"
   },
   {
-    "id": 1782437980393,
-    "user": "system",
-    "name": "Auto Sync",
-    "action": "AUTO_SYNC_PUSH_FAIL",
-    "detail": "HTTP 404",
-    "time": "2026-06-26T01:39:40.393Z"
+    "id": 1782537297555,
+    "user": "admin",
+    "name": "Administrator",
+    "action": "DELETE_SHIP",
+    "detail": "Hapus SAMPLE — PART-NV-HR-LIBRAV2",
+    "time": "2026-06-27T05:14:57.555Z"
   },
   {
-    "id": 1782437980388,
-    "user": "system",
-    "name": "Sheets Push Queue",
-    "action": "SHEETS_PUSH_QUEUE",
-    "detail": "Enqueue push ulang karena error: HTTP 404",
-    "time": "2026-06-26T01:39:40.388Z"
+    "id": 1782537297541,
+    "user": "admin",
+    "name": "Administrator",
+    "action": "DELETE_SHIP",
+    "detail": "Hapus SAMPLE — PART-PD-CUCI-FARGE",
+    "time": "2026-06-27T05:14:57.542Z"
   },
   {
-    "id": 1782437979449,
-    "user": "system",
-    "name": "Auto Sync",
-    "action": "AUTO_SYNC_PULL_FAIL",
-    "detail": "HTTP 404: Not Found",
-    "time": "2026-06-26T01:39:39.449Z"
+    "id": 1782537297528,
+    "user": "admin",
+    "name": "Administrator",
+    "action": "DELETE_SHIP",
+    "detail": "Hapus SAMPLE — SHOULDER STRAP BAG",
+    "time": "2026-06-27T05:14:57.528Z"
+  },
+  {
+    "id": 1782537297514,
+    "user": "admin",
+    "name": "Administrator",
+    "action": "DELETE_SHIP",
+    "detail": "Hapus SAMPLE — HOLDER HAIR DRYER",
+    "time": "2026-06-27T05:14:57.514Z"
+  },
+  {
+    "id": 1782537297500,
+    "user": "admin",
+    "name": "Administrator",
+    "action": "DELETE_SHIP",
+    "detail": "Hapus SAMPLE — HAIR DRYER",
+    "time": "2026-06-27T05:14:57.500Z"
+  },
+  {
+    "id": 1782537297487,
+    "user": "admin",
+    "name": "Administrator",
+    "action": "DELETE_SHIP",
+    "detail": "Hapus SAMPLE — TAS JARING",
+    "time": "2026-06-27T05:14:57.487Z"
+  },
+  {
+    "id": 1782537297472,
+    "user": "admin",
+    "name": "Administrator",
+    "action": "DELETE_SHIP",
+    "detail": "Hapus SAMPLE — PLASTIK",
+    "time": "2026-06-27T05:14:57.472Z"
+  },
+  {
+    "id": 1782537297457,
+    "user": "admin",
+    "name": "Administrator",
+    "action": "DELETE_SHIP",
+    "detail": "Hapus SAMPLE — HANDUK KERAMAS",
+    "time": "2026-06-27T05:14:57.457Z"
+  },
+  {
+    "id": 1782537297436,
+    "user": "admin",
+    "name": "Administrator",
+    "action": "DELETE_SHIP",
+    "detail": "Hapus SAMPLE — GANTUNGAN KUNCI",
+    "time": "2026-06-27T05:14:57.436Z"
+  },
+  {
+    "id": 1782537297416,
+    "user": "admin",
+    "name": "Administrator",
+    "action": "DELETE_SHIP",
+    "detail": "Hapus SAMPLE — BEAUTY BLENDER",
+    "time": "2026-06-27T05:14:57.416Z"
+  },
+  {
+    "id": 1782537297401,
+    "user": "admin",
+    "name": "Administrator",
+    "action": "DELETE_SHIP",
+    "detail": "Hapus SAMPLE — KAIN",
+    "time": "2026-06-27T05:14:57.401Z"
+  },
+  {
+    "id": 1782537297387,
+    "user": "admin",
+    "name": "Administrator",
+    "action": "DELETE_SHIP",
+    "detail": "Hapus SAMPLE — CATOKAN + JEPIT",
+    "time": "2026-06-27T05:14:57.387Z"
+  },
+  {
+    "id": 1782537297373,
+    "user": "admin",
+    "name": "Administrator",
+    "action": "DELETE_SHIP",
+    "detail": "Hapus SAMPLE — HEAT PAD",
+    "time": "2026-06-27T05:14:57.373Z"
+  },
+  {
+    "id": 1782537297357,
+    "user": "admin",
+    "name": "Administrator",
+    "action": "DELETE_SHIP",
+    "detail": "Hapus SAMPLE — PD-DRYBJU-SPECTA",
+    "time": "2026-06-27T05:14:57.357Z"
+  },
+  {
+    "id": 1782537297341,
+    "user": "admin",
+    "name": "Administrator",
+    "action": "DELETE_SHIP",
+    "detail": "Hapus SAMPLE — HEAT PAD",
+    "time": "2026-06-27T05:14:57.341Z"
+  },
+  {
+    "id": 1782537297328,
+    "user": "admin",
+    "name": "Administrator",
+    "action": "DELETE_SHIP",
+    "detail": "Hapus SAMPLE — CATOKAN + HAIRCARA",
+    "time": "2026-06-27T05:14:57.328Z"
+  },
+  {
+    "id": 1782537297314,
+    "user": "admin",
+    "name": "Administrator",
+    "action": "DELETE_SHIP",
+    "detail": "Hapus SAMPLE — BUBBLE MAILER",
+    "time": "2026-06-27T05:14:57.314Z"
+  },
+  {
+    "id": 1782537297300,
+    "user": "admin",
+    "name": "Administrator",
+    "action": "DELETE_SHIP",
+    "detail": "Hapus SAMPLE — TAS",
+    "time": "2026-06-27T05:14:57.300Z"
+  },
+  {
+    "id": 1782537297289,
+    "user": "admin",
+    "name": "Administrator",
+    "action": "DELETE_SHIP",
+    "detail": "Hapus SAMPLE — TALI JEMUR",
+    "time": "2026-06-27T05:14:57.289Z"
+  },
+  {
+    "id": 1782537297275,
+    "user": "admin",
+    "name": "Administrator",
+    "action": "DELETE_SHIP",
+    "detail": "Hapus SAMPLE — SISIR",
+    "time": "2026-06-27T05:14:57.275Z"
+  },
+  {
+    "id": 1782537297258,
+    "user": "admin",
+    "name": "Administrator",
+    "action": "DELETE_SHIP",
+    "detail": "Hapus SAMPLE — PLASTIK",
+    "time": "2026-06-27T05:14:57.258Z"
+  },
+  {
+    "id": 1782537297243,
+    "user": "admin",
+    "name": "Administrator",
+    "action": "DELETE_SHIP",
+    "detail": "Hapus SAMPLE — GANTUNGAN KUNCI",
+    "time": "2026-06-27T05:14:57.243Z"
+  },
+  {
+    "id": 1782537297231,
+    "user": "admin",
+    "name": "Administrator",
+    "action": "DELETE_SHIP",
+    "detail": "Hapus SAMPLE — POUCH-GEMINI",
+    "time": "2026-06-27T05:14:57.231Z"
+  },
+  {
+    "id": 1782537297217,
+    "user": "admin",
+    "name": "Administrator",
+    "action": "DELETE_SHIP",
+    "detail": "Hapus SAMPLE — PLASTIK",
+    "time": "2026-06-27T05:14:57.217Z"
+  },
+  {
+    "id": 1782537297206,
+    "user": "admin",
+    "name": "Administrator",
+    "action": "DELETE_SHIP",
+    "detail": "Hapus SAMPLE — PENGAIT TAS",
+    "time": "2026-06-27T05:14:57.206Z"
+  },
+  {
+    "id": 1782537297190,
+    "user": "admin",
+    "name": "Administrator",
+    "action": "DELETE_SHIP",
+    "detail": "Hapus SAMPLE — MINA",
+    "time": "2026-06-27T05:14:57.190Z"
+  },
+  {
+    "id": 1782537297174,
+    "user": "admin",
+    "name": "Administrator",
+    "action": "DELETE_SHIP",
+    "detail": "Hapus SAMPLE — KAIN",
+    "time": "2026-06-27T05:14:57.174Z"
+  },
+  {
+    "id": 1782537297163,
+    "user": "admin",
+    "name": "Administrator",
+    "action": "DELETE_SHIP",
+    "detail": "Hapus SAMPLE — JEPIT",
+    "time": "2026-06-27T05:14:57.163Z"
+  },
+  {
+    "id": 1782537297151,
+    "user": "admin",
+    "name": "Administrator",
+    "action": "DELETE_SHIP",
+    "detail": "Hapus SAMPLE — GEMINI",
+    "time": "2026-06-27T05:14:57.151Z"
+  },
+  {
+    "id": 1782537297139,
+    "user": "admin",
+    "name": "Administrator",
+    "action": "DELETE_SHIP",
+    "detail": "Hapus SAMPLE — TAS",
+    "time": "2026-06-27T05:14:57.139Z"
+  },
+  {
+    "id": 1782537297127,
+    "user": "admin",
+    "name": "Administrator",
+    "action": "DELETE_SHIP",
+    "detail": "Hapus SAMPLE — PEMBERSIH BAJU",
+    "time": "2026-06-27T05:14:57.127Z"
+  },
+  {
+    "id": 1782537297104,
+    "user": "admin",
+    "name": "Administrator",
+    "action": "DELETE_SHIP",
+    "detail": "Hapus SAMPLE — KAIN",
+    "time": "2026-06-27T05:14:57.104Z"
+  },
+  {
+    "id": 1782537297086,
+    "user": "admin",
+    "name": "Administrator",
+    "action": "DELETE_SHIP",
+    "detail": "Hapus SAMPLE — AKSESORIS",
+    "time": "2026-06-27T05:14:57.086Z"
+  },
+  {
+    "id": 1782537297071,
+    "user": "admin",
+    "name": "Administrator",
+    "action": "DELETE_SHIP",
+    "detail": "Hapus PPB/SSS/SUB-06/2026/013 — PART-PD-CUCI-FARGE",
+    "time": "2026-06-27T05:14:57.071Z"
+  },
+  {
+    "id": 1782537297055,
+    "user": "admin",
+    "name": "Administrator",
+    "action": "DELETE_SHIP",
+    "detail": "Hapus PPB/SSS/SUB-06/2026/011 — PART-PD-REMOV-BULUGG",
+    "time": "2026-06-27T05:14:57.055Z"
+  },
+  {
+    "id": 1782537297040,
+    "user": "admin",
+    "name": "Administrator",
+    "action": "DELETE_SHIP",
+    "detail": "Hapus PPB/SSS/SUB-06/2026/009 — PART-PD-CUCI-FARGE",
+    "time": "2026-06-27T05:14:57.040Z"
+  },
+  {
+    "id": 1782537297023,
+    "user": "admin",
+    "name": "Administrator",
+    "action": "DELETE_SHIP",
+    "detail": "Hapus PPB/SSS/SUB-06/2026/009 — BOX-PD-CUCI-FARGE",
+    "time": "2026-06-27T05:14:57.023Z"
+  },
+  {
+    "id": 1782537297006,
+    "user": "admin",
+    "name": "Administrator",
+    "action": "DELETE_SHIP",
+    "detail": "Hapus PPB/SSS/SUB-06/2026/008 — PD-DRYSPT-SENNA",
+    "time": "2026-06-27T05:14:57.006Z"
+  },
+  {
+    "id": 1782537296990,
+    "user": "admin",
+    "name": "Administrator",
+    "action": "DELETE_SHIP",
+    "detail": "Hapus PPB/SSS/SUB-06/2026/007 — PART-PD-IRON-VULGA",
+    "time": "2026-06-27T05:14:56.990Z"
+  },
+  {
+    "id": 1782537296974,
+    "user": "admin",
+    "name": "Administrator",
+    "action": "DELETE_SHIP",
+    "detail": "Hapus PPB/SSS/SUB-06/2026/006 — PD-SRGT-IRON",
+    "time": "2026-06-27T05:14:56.974Z"
+  },
+  {
+    "id": 1782537296959,
+    "user": "admin",
+    "name": "Administrator",
+    "action": "DELETE_SHIP",
+    "detail": "Hapus PPB/SSS/SUB-06/2026/004 — PART-PD-IRON-VULGA",
+    "time": "2026-06-27T05:14:56.959Z"
+  },
+  {
+    "id": 1782537296944,
+    "user": "admin",
+    "name": "Administrator",
+    "action": "DELETE_SHIP",
+    "detail": "Hapus PPB/RRR/SUB-04/2026/003 — RE-COVCL-3846",
+    "time": "2026-06-27T05:14:56.944Z"
+  },
+  {
+    "id": 1782537296924,
+    "user": "admin",
+    "name": "Administrator",
+    "action": "DELETE_SHIP",
+    "detail": "Hapus PPB/RRR/SUB-04/2026/003 — RE-COVCL-3846",
+    "time": "2026-06-27T05:14:56.924Z"
+  },
+  {
+    "id": 1782537296908,
+    "user": "admin",
+    "name": "Administrator",
+    "action": "DELETE_SHIP",
+    "detail": "Hapus PPB/RRR/SUB-04/2026/001 — RE-COVCL-3846",
+    "time": "2026-06-27T05:14:56.908Z"
+  },
+  {
+    "id": 1782537296892,
+    "user": "admin",
+    "name": "Administrator",
+    "action": "DELETE_SHIP",
+    "detail": "Hapus PPB/IAM/SUB/2026/008 — JPTBJU-PLKK16-BESI",
+    "time": "2026-06-27T05:14:56.892Z"
+  },
+  {
+    "id": 1782537296870,
+    "user": "admin",
+    "name": "Administrator",
+    "action": "DELETE_SHIP",
+    "detail": "Hapus PPB/IAM/SUB/2026/006 — JPTBJU-PLKK16-BESI",
+    "time": "2026-06-27T05:14:56.870Z"
+  },
+  {
+    "id": 1782537296853,
+    "user": "admin",
+    "name": "Administrator",
+    "action": "DELETE_SHIP",
+    "detail": "Hapus PPB/IAM/SUB/2026/006 — JPT-SG3-PEGAS",
+    "time": "2026-06-27T05:14:56.853Z"
+  },
+  {
+    "id": 1782537296832,
+    "user": "admin",
+    "name": "Administrator",
+    "action": "DELETE_SHIP",
+    "detail": "Hapus PPB/IAM/SUB/2026/005 — JPTBJU-PLKK16-BESI",
+    "time": "2026-06-27T05:14:56.832Z"
+  },
+  {
+    "id": 1782537296819,
+    "user": "admin",
+    "name": "Administrator",
+    "action": "DELETE_SHIP",
+    "detail": "Hapus PPB/IAM/SUB/2026/004 — JPT-SG3-PL322",
+    "time": "2026-06-27T05:14:56.819Z"
+  },
+  {
+    "id": 1782537296806,
+    "user": "admin",
+    "name": "Administrator",
+    "action": "DELETE_SHIP",
+    "detail": "Hapus PPB/IAM/SUB/2026/002 — JPT-SG3-PEGAS",
+    "time": "2026-06-27T05:14:56.806Z"
+  },
+  {
+    "id": 1782537296795,
+    "user": "admin",
+    "name": "Administrator",
+    "action": "DELETE_SHIP",
+    "detail": "Hapus PPB/GIM/SUB-07/2026/020 — NV-POUCH-SRTSTTLV",
+    "time": "2026-06-27T05:14:56.795Z"
+  },
+  {
+    "id": 1782537296784,
+    "user": "admin",
+    "name": "Administrator",
+    "action": "DELETE_SHIP",
+    "detail": "Hapus PPB/GIM/SUB-07/2026/020 — NV-POUCH-SRTPLS",
+    "time": "2026-06-27T05:14:56.784Z"
+  },
+  {
+    "id": 1782537296772,
+    "user": "admin",
+    "name": "Administrator",
+    "action": "DELETE_SHIP",
+    "detail": "Hapus PPB/GIM/SUB-07/2026/020 — NV-POUCH-SRTOV",
+    "time": "2026-06-27T05:14:56.772Z"
+  },
+  {
+    "id": 1782537296759,
+    "user": "admin",
+    "name": "Administrator",
+    "action": "DELETE_SHIP",
+    "detail": "Hapus PPB/GIM/SUB-07/2026/020 — NV-POUCH-SRTKT",
+    "time": "2026-06-27T05:14:56.759Z"
+  },
+  {
+    "id": 1782537296749,
+    "user": "admin",
+    "name": "Administrator",
+    "action": "DELETE_SHIP",
+    "detail": "Hapus PPB/GIM/SUB-07/2026/018 — BOX-NV-JPT-MUTIARA",
+    "time": "2026-06-27T05:14:56.749Z"
+  },
+  {
+    "id": 1782537296738,
+    "user": "admin",
+    "name": "Administrator",
+    "action": "DELETE_SHIP",
+    "detail": "Hapus PPB/GIM/SUB-07/2026/018 — NV-JPT-MUTIARA",
+    "time": "2026-06-27T05:14:56.738Z"
+  },
+  {
+    "id": 1782537296728,
+    "user": "admin",
+    "name": "Administrator",
+    "action": "DELETE_SHIP",
+    "detail": "Hapus PPB/GIM/SUB-07/2026/014 — PART-NV-HR-ARIES2",
+    "time": "2026-06-27T05:14:56.728Z"
+  },
+  {
+    "id": 1782537296717,
+    "user": "admin",
+    "name": "Administrator",
+    "action": "DELETE_SHIP",
+    "detail": "Hapus PPB/GIM/SUB-07/2026/014 — PART-NV-DRY-LUNA",
+    "time": "2026-06-27T05:14:56.717Z"
+  },
+  {
+    "id": 1782537296706,
+    "user": "admin",
+    "name": "Administrator",
+    "action": "DELETE_SHIP",
+    "detail": "Hapus PPB/GIM/SUB-07/2026/014 — PART-NV-HR-SCORPIO",
+    "time": "2026-06-27T05:14:56.706Z"
+  },
+  {
+    "id": 1782537296696,
+    "user": "admin",
+    "name": "Administrator",
+    "action": "DELETE_SHIP",
+    "detail": "Hapus PPB/GIM/SUB-07/2026/012 — PART-NV-HR-TAURUSV2",
+    "time": "2026-06-27T05:14:56.696Z"
+  },
+  {
+    "id": 1782537296684,
+    "user": "admin",
+    "name": "Administrator",
+    "action": "DELETE_SHIP",
+    "detail": "Hapus PPB/GIM/SUB-07/2026/012 — NV-POUCH-CDRND",
+    "time": "2026-06-27T05:14:56.684Z"
+  },
+  {
+    "id": 1782537296674,
+    "user": "admin",
+    "name": "Administrator",
+    "action": "DELETE_SHIP",
+    "detail": "Hapus PPB/GIM/SUB-07/2026/011 — PART-NV-HR-TAURUSV2",
+    "time": "2026-06-27T05:14:56.674Z"
+  },
+  {
+    "id": 1782537296663,
+    "user": "admin",
+    "name": "Administrator",
+    "action": "DELETE_SHIP",
+    "detail": "Hapus PPB/GIM/SUB-07/2026/010 — NV-JPT-BULU",
+    "time": "2026-06-27T05:14:56.663Z"
+  },
+  {
+    "id": 1782537296653,
+    "user": "admin",
+    "name": "Administrator",
+    "action": "DELETE_SHIP",
+    "detail": "Hapus PPB/GIM/SUB-07/2026/008 — TTBAG-PITA",
+    "time": "2026-06-27T05:14:56.653Z"
+  },
+  {
+    "id": 1782537296639,
+    "user": "admin",
+    "name": "Administrator",
+    "action": "DELETE_SHIP",
+    "detail": "Hapus PPB/GIM/SUB-07/2026/008 — SIR-EGG",
+    "time": "2026-06-27T05:14:56.639Z"
+  },
+  {
+    "id": 1782537296628,
+    "user": "admin",
+    "name": "Administrator",
+    "action": "DELETE_SHIP",
+    "detail": "Hapus PPB/GIM/SUB-07/2026/008 — JPT-KERANG",
+    "time": "2026-06-27T05:14:56.628Z"
+  },
+  {
+    "id": 1782537296615,
+    "user": "admin",
+    "name": "Administrator",
+    "action": "DELETE_SHIP",
+    "detail": "Hapus PPB/GIM/SUB-07/2026/008 — GKUN-KERANG",
+    "time": "2026-06-27T05:14:56.615Z"
+  },
+  {
+    "id": 1782537296603,
+    "user": "admin",
+    "name": "Administrator",
+    "action": "DELETE_SHIP",
+    "detail": "Hapus PPB/GIM/SUB-07/2026/007 — PART-NV-HR-SATURN",
+    "time": "2026-06-27T05:14:56.603Z"
+  },
+  {
+    "id": 1782537296590,
+    "user": "admin",
+    "name": "Administrator",
+    "action": "DELETE_SHIP",
+    "detail": "Hapus PPB/GIM/SUB-07/2026/007 — PART-NV-DRY-LUNA",
+    "time": "2026-06-27T05:14:56.590Z"
+  },
+  {
+    "id": 1782537296577,
+    "user": "admin",
+    "name": "Administrator",
+    "action": "DELETE_SHIP",
+    "detail": "Hapus PPB/GIM/SUB-07/2026/007 — PART-NV-DRY-LEO",
+    "time": "2026-06-27T05:14:56.577Z"
+  },
+  {
+    "id": 1782537296563,
+    "user": "admin",
+    "name": "Administrator",
+    "action": "DELETE_SHIP",
+    "detail": "Hapus PPB/GIM/SUB-07/2026/007 — PART-NV-HR-SCORPIO",
+    "time": "2026-06-27T05:14:56.563Z"
+  },
+  {
+    "id": 1782537296540,
+    "user": "admin",
+    "name": "Administrator",
+    "action": "DELETE_SHIP",
+    "detail": "Hapus PPB/GIM/SUB-07/2026/007 — PART-NV-HR-SAGI",
+    "time": "2026-06-27T05:14:56.540Z"
+  },
+  {
+    "id": 1782537296526,
+    "user": "admin",
+    "name": "Administrator",
+    "action": "DELETE_SHIP",
+    "detail": "Hapus PPB/GIM/SUB-07/2026/007 — PART-NV-HR-LIBRA",
+    "time": "2026-06-27T05:14:56.526Z"
+  },
+  {
+    "id": 1782537296509,
+    "user": "admin",
+    "name": "Administrator",
+    "action": "DELETE_SHIP",
+    "detail": "Hapus PPB/GIM/SUB-07/2026/007 — PART-NV-HR-CAPRI",
+    "time": "2026-06-27T05:14:56.509Z"
+  },
+  {
+    "id": 1782537296494,
+    "user": "admin",
+    "name": "Administrator",
+    "action": "DELETE_SHIP",
+    "detail": "Hapus PPB/GIM/SUB-07/2026/006 — TTBAG-JRG",
+    "time": "2026-06-27T05:14:56.494Z"
+  },
+  {
+    "id": 1782537296478,
+    "user": "admin",
+    "name": "Administrator",
+    "action": "DELETE_SHIP",
+    "detail": "Hapus PPB/GIM/SUB-07/2026/006 — GKUN-KERANG",
+    "time": "2026-06-27T05:14:56.478Z"
   }
 ]

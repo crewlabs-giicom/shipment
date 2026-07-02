@@ -1,0 +1,83 @@
+      <!-- Rumus Forwarder Otomatis -->
+      <div class="master-section">
+        <div class="master-title">🚛 Aturan Forwarder Otomatis</div>
+        <p style="font-size:12px;color:var(--muted);margin-bottom:14px;">
+          Forwarder diisi otomatis berdasarkan kode Kontainer. Aturan dicek dari atas ke bawah — pertama yang cocok digunakan.
+        </p>
+        <div id="forwarderRuleList"></div>
+        <div style="border-top:1px solid var(--border2);margin-top:16px;padding-top:14px;display:flex;gap:8px;flex-wrap:wrap;align-items:flex-end;">
+          <div class="field" style="flex:1;min-width:150px;">
+            <label>Kontainer mengandung kata</label>
+            <input type="text" id="fr_keyword" placeholder="contoh: AIR">
+          </div>
+          <div class="field" style="flex:2;min-width:160px;">
+            <label>Nama Forwarder</label>
+            <input type="text" id="fr_name" placeholder="contoh: Harvest">
+          </div>
+          <button class="btn btn-primary" onclick="addForwarderRule()" style="align-self:flex-end;">+ Tambah</button>
+        </div>
+      </div>
+
+      <!-- Rumus Est. Tiba Gudang -->
+      <div class="master-section">
+        <div class="master-title">📐 Rumus Est. Tiba Gudang</div>
+        <p style="font-size:12px;color:var(--muted);margin-bottom:14px;">
+          Est. Tiba Gudang dihitung dari ETA + jumlah hari sesuai kondisi di bawah. Aturan dicek dari atas ke bawah — kondisi pertama yang cocok akan digunakan.
+        </p>
+        <div id="gudangRuleList"></div>
+        <div style="border-top:1px solid var(--border2);margin-top:16px;padding-top:14px;display:flex;gap:8px;flex-wrap:wrap;align-items:flex-end;">
+          <div class="field" style="flex:1;min-width:140px;">
+            <label>Kondisi (cek di kolom)</label>
+            <select id="gr_field">
+              <option value="container">Kontainer</option>
+              <option value="po">PO</option>
+            </select>
+          </div>
+          <div class="field" style="flex:1;min-width:120px;">
+            <label>Mengandung kata</label>
+            <input type="text" id="gr_keyword" placeholder="contoh: AIR">
+          </div>
+          <div class="field" style="width:100px;">
+            <label>+ Hari</label>
+            <input type="number" id="gr_days" placeholder="3" min="0" max="365">
+          </div>
+          <button class="btn btn-primary" onclick="addGudangRule()" style="align-self:flex-end;">+ Tambah</button>
+        <div style="margin-top:8px;padding:8px 12px;background:var(--surface2);border-radius:var(--radius-sm);font-size:11px;color:var(--muted);">
+          💡 Jika tidak ada kondisi yang cocok, default <strong>ETA +14 hari</strong>. Drag untuk mengurutkan prioritas.
+        </div>
+      </div>
+      </div>
+
+      <!-- Master Status -->
+      <div class="master-section">
+        <div class="master-title">🔵 Master Status</div>
+        <div class="master-list" id="masterStatusList"></div>
+        <div class="master-add">
+          <input type="text" id="ms_name" placeholder="Nama status baru (contoh: On Hold)">
+          <input type="color" id="ms_color" value="#1a6fd4" style="width:44px;padding:4px;border:1px solid var(--border);border-radius:var(--radius-sm);cursor:pointer;">
+          <button class="btn btn-primary" onclick="addStatus()">+ Tambah</button>
+        </div>
+      </div>
+
+      <!-- Master Tags -->
+      <div class="master-section">
+        <div class="master-title">🏷️ Master Tags</div>
+        <div class="master-list" id="masterTagList"></div>
+        <div class="master-add">
+          <input type="text" id="mt_name" placeholder="Nama tag baru (contoh: MYBRAND)">
+          <button class="btn btn-primary" onclick="addTag()">+ Tambah</button>
+        </div>
+      </div>
+
+      <!-- Aturan Tags dari PO -->
+      <div class="master-section">
+        <div class="master-title">⚡ Aturan Auto-Tags dari Kode PO</div>
+        <p style="font-size:12px;color:var(--muted);margin-bottom:12px;">Jika kode PO mengandung kata kunci tertentu, tag akan otomatis diterapkan saat tambah/edit/import shipment.</p>
+        <div id="tagRuleList"></div>
+        <div style="display:flex;gap:8px;margin-top:12px;flex-wrap:wrap;">
+          <div class="field" style="flex:1;min-width:120px;"><label>Kata Kunci di PO</label><input type="text" id="tr_keyword" placeholder="contoh: -01"></div>
+          <div class="field" style="flex:1;min-width:120px;"><label>Tag yang diterapkan</label><select id="tr_tag"></select></div>
+          <div style="display:flex;align-items:flex-end;"><button class="btn btn-primary" onclick="addTagRule()">+ Tambah</button></div>
+        </div>
+        <p style="font-size:11px;color:var(--muted);margin-top:8px;">Pencocokan tidak case-sensitive. Contoh: "-01" cocok dengan "PO-COM-01/2024".</p>
+      </div>

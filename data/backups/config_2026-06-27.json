@@ -1,17 +1,13 @@
 {
   "sheetsWebhookSecret": "8c752d73be56ce329278a1a6053c31ec94e2380ae7a1c930",
-  "sheetsLastSync": "2026-07-02T09:51:47.604Z",
-  "sheetsSyncCount": 10,
-  "sheetsLastResult": {
-    "added": 0,
-    "updated": 256,
-    "total": 256
-  },
+  "sheetsLastSync": null,
+  "sheetsSyncCount": 0,
+  "sheetsLastResult": null,
   "sheetsAutoSync": true,
   "sheetsAutoSyncInterval": 15,
   "sheetsPushQueue": [],
-  "sheetsWebAppUrl": "https://script.google.com/macros/s/AKfycbxzZ2E6adYEe43_uqiggtBu6f2JuXfbu-FzPrXXV-G6Rz--XfwZAdI9DBeXjTQnp53pGw/exec",
-  "sheetsPushUrl": "https://script.google.com/macros/s/AKfycbyYeim3Z9KaVoiJtLNw0oChiQnooNXbcnUTU0A12JEk0rudIq5hi2fg9jBcmpY0HgRzLQ/exec",
+  "sheetsWebAppUrl": "https://script.google.com/macros/s/AKfycbw-EwZzsAFLLUFeKlzbN7Pqks4dnVhM2l0DuVSzPBDXbTBYbKYhz_XTIcegu3xYaU_oWw/exec",
+  "sheetsPushUrl": "https://script.google.com/macros/s/AKfycbwT1dlp341PDnEn4Jp5wQE_u1wMyuHrJPFrV5HnFWlXllhKfsQPRp9M-JqvU0uiGQtVRg/exec",
   "masterStatuses": [
     {
       "name": "Production",
