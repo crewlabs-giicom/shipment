@@ -1,5 +1,21 @@
 [
   {
+    "id": 1784192026198,
+    "user": "system",
+    "name": "Auto Sync",
+    "action": "AUTO_SYNC_PUSH",
+    "detail": "Auto push sukses: 318 shipment",
+    "time": "2026-07-16T08:53:46.198Z"
+  },
+  {
+    "id": 1784192021044,
+    "user": "system",
+    "name": "Sheets Pull",
+    "action": "SHEETS_PULL",
+    "detail": "Tarik dari Sheets: +62 baru, ~244 update",
+    "time": "2026-07-16T08:53:41.044Z"
+  },
+  {
     "id": 1782985907610,
     "user": "system",
     "name": "Sheets Push",
@@ -3982,21 +3998,5 @@
     "action": "DELETE_SHIP",
     "detail": "Hapus PPB/GIM/SUB-07/2026/007 — PART-NV-HR-CAPRI",
     "time": "2026-06-27T05:14:56.509Z"
-  },
-  {
-    "id": 1782537296494,
-    "user": "admin",
-    "name": "Administrator",
-    "action": "DELETE_SHIP",
-    "detail": "Hapus PPB/GIM/SUB-07/2026/006 — TTBAG-JRG",
-    "time": "2026-06-27T05:14:56.494Z"
-  },
-  {
-    "id": 1782537296478,
-    "user": "admin",
-    "name": "Administrator",
-    "action": "DELETE_SHIP",
-    "detail": "Hapus PPB/GIM/SUB-07/2026/006 — GKUN-KERANG",
-    "time": "2026-06-27T05:14:56.478Z"
   }
 ]
