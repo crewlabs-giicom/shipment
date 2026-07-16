@@ -1951,8 +1951,9 @@ function renderCalendar(){
   filtered.forEach(s=>{
     addEv(s.etd, s, 'Sailed',    'etd',   '#2563eb','🚢');
     addEv(s.eta, s, 'Arrived', 'eta',   '#db2777','⚓');
-    const g=s.gudang||calcGudang(s.po,s.eta,s.container);
-    addEv(g,     s, 'Est. Tiba','gudang','#16a34a','🏭');
+    const isDone=['Delivered','Cleared'].includes(s.status);
+    const g=isDone?(s.deliveredDate||''):(s.gudang||calcGudang(s.po,s.eta,s.container));
+    addEv(g,     s, isDone&&s.deliveredDate?'Tgl Datang':'Est. Tiba', 'gudang', '#16a34a', isDone&&s.deliveredDate?'✅':'🏭');
   });
 
   // Count
