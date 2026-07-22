@@ -2239,7 +2239,7 @@ let _aiOpen=false,_aiHist=[],_aiLoading=false;
 async function aiInit(){
   document.getElementById('aiSetupDiv').style.display='none';
   const cd=document.getElementById('aiChatDiv');cd.style.display='flex';
-  if(_aiHist.length===0)aiAddMsg('bot','Halo! Saya asisten GII Commerce.\n\nSaya bisa jawab:\n• Rangkuman / rekap shipment\n• Shipment terlambat & tiba minggu ini\n• Total RMB pengiriman / per status\n• Supplier & forwarder tercepat/terlambat\n• Rata-rata waktu pengiriman\n• Lead time per item (misal: "lead time NV-DRY-LUNA")\n• PO tanpa kontainer (masih produksi)\n• Bandingkan lead time antar tags\n• Berapa PO dari supplier/tag tertentu\n• Cari PO / kontainer / item\n\nKetik pertanyaan atau klik tombol di bawah 👇');
+  if(_aiHist.length===0)aiAddMsg('bot','Halo! Saya asisten GII COMMERCE.\n\nSaya bisa jawab:\n• Rangkuman / rekap shipment\n• Shipment terlambat & tiba minggu ini\n• Total RMB pengiriman / per status\n• Supplier & forwarder tercepat/terlambat\n• Rata-rata waktu pengiriman\n• Lead time per item (misal: "lead time NV-DRY-LUNA")\n• PO tanpa kontainer (masih produksi)\n• Bandingkan lead time antar tags\n• Berapa PO dari supplier/tag tertentu\n• Cari PO / kontainer / item\n\nKetik pertanyaan atau klik tombol di bawah 👇');
 }
 function aiToggle(){
   _aiOpen=!_aiOpen;

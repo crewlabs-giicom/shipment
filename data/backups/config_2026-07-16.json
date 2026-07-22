@@ -1,11 +1,11 @@
 {
   "sheetsWebhookSecret": "8c752d73be56ce329278a1a6053c31ec94e2380ae7a1c930",
-  "sheetsLastSync": "2026-07-16T09:23:46.591Z",
-  "sheetsSyncCount": 13,
+  "sheetsLastSync": "2026-07-02T09:59:06.803Z",
+  "sheetsSyncCount": 11,
   "sheetsLastResult": {
     "added": 0,
-    "updated": 318,
-    "total": 318
+    "updated": 256,
+    "total": 256
   },
   "sheetsAutoSync": true,
   "sheetsAutoSyncInterval": 15,

@@ -1,5 +1,37 @@
 [
   {
+    "id": 1784193826596,
+    "user": "system",
+    "name": "Auto Sync",
+    "action": "AUTO_SYNC_PUSH",
+    "detail": "Auto push sukses: 318 shipment",
+    "time": "2026-07-16T09:23:46.596Z"
+  },
+  {
+    "id": 1784193821739,
+    "user": "system",
+    "name": "Sheets Pull",
+    "action": "SHEETS_PULL",
+    "detail": "Tarik dari Sheets: +0 baru, ~306 update",
+    "time": "2026-07-16T09:23:41.739Z"
+  },
+  {
+    "id": 1784192935269,
+    "user": "system",
+    "name": "Auto Sync",
+    "action": "AUTO_SYNC_PUSH",
+    "detail": "Auto push sukses: 318 shipment",
+    "time": "2026-07-16T09:08:55.270Z"
+  },
+  {
+    "id": 1784192930095,
+    "user": "system",
+    "name": "Sheets Pull",
+    "action": "SHEETS_PULL",
+    "detail": "Tarik dari Sheets: +62 baru, ~244 update",
+    "time": "2026-07-16T09:08:50.095Z"
+  },
+  {
     "id": 1784192026198,
     "user": "system",
     "name": "Auto Sync",
@@ -3966,37 +3998,5 @@
     "action": "DELETE_SHIP",
     "detail": "Hapus PPB/GIM/SUB-07/2026/007 — PART-NV-DRY-LEO",
     "time": "2026-06-27T05:14:56.577Z"
-  },
-  {
-    "id": 1782537296563,
-    "user": "admin",
-    "name": "Administrator",
-    "action": "DELETE_SHIP",
-    "detail": "Hapus PPB/GIM/SUB-07/2026/007 — PART-NV-HR-SCORPIO",
-    "time": "2026-06-27T05:14:56.563Z"
-  },
-  {
-    "id": 1782537296540,
-    "user": "admin",
-    "name": "Administrator",
-    "action": "DELETE_SHIP",
-    "detail": "Hapus PPB/GIM/SUB-07/2026/007 — PART-NV-HR-SAGI",
-    "time": "2026-06-27T05:14:56.540Z"
-  },
-  {
-    "id": 1782537296526,
-    "user": "admin",
-    "name": "Administrator",
-    "action": "DELETE_SHIP",
-    "detail": "Hapus PPB/GIM/SUB-07/2026/007 — PART-NV-HR-LIBRA",
-    "time": "2026-06-27T05:14:56.526Z"
-  },
-  {
-    "id": 1782537296509,
-    "user": "admin",
-    "name": "Administrator",
-    "action": "DELETE_SHIP",
-    "detail": "Hapus PPB/GIM/SUB-07/2026/007 — PART-NV-HR-CAPRI",
-    "time": "2026-06-27T05:14:56.509Z"
   }
 ]
